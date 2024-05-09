@@ -1,0 +1,202 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 375px;
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+
+  .paris-section {
+    background-color:#EAEAEA;
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    height: 50px; /* Ajustez la hauteur selon vos besoins */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin-bottom: -20px;
+  } 
+  
+  .location-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    font-weight: 500;
+    line-height: 18.75px;
+  
+  }
+  
+  .réservez-le-menu-texte  {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    text-align: center; /* Centrer le texte */
+  }
+  
+  .réservez-le-menu-texte > span {
+    display: block; /* Pour s'assurer que chaque ligne soit sur une ligne différente */
+  }
+  
+  .découvrez-des-restau-texte {
+    position: absolute;
+    align-items: center;
+    top: 50%; /* Positionne l'élément à 50% du haut de la page */
+    left: 50%; /* Positionne l'élément à 50% de la gauche de la page */
+    transform: translate(-50%, -50%); /* Déplace l'élément de moitié de sa largeur et de moitié de sa hauteur vers l'arrière, centrant ainsi l'élément */
+    width: 315px;
+    height: 46px;
+    gap: 0px;
+    opacity: 0px;
+    margin-top: -50px;
+    margin-left: 20px;
+  }
+  
+  .boutton-explorer-nos-restau {
+    width: 70%;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    border-color: #FF79DA;
+    color: white;
+    font-size: 16px; /* Ajuste la taille de la police si nécessaire */
+    font-weight: bold; /* Ajoute une épaisseur à la police */
+    margin-top: 100px; /* Ajoute un espacement entre le bouton et le texte précédent */
+    margin-left: 30px;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+  }
+  
+  .resrv-decvr-button {
+    background-color: #F6F6F6;
+    height: 260px;
+    
+  } 
+  
+  .fonctionnement {
+    height: 300px;
+    
+  }
+  
+  .fonctionnement-texte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    margin-top: 40px;
+    margin-left: -160px;
+    margin-bottom: 30px;
+  } 
+  
+  #rectangle-fonctionnement-section {
+    width: 322.49px;
+    height: 72.38px;
+    top: 505px;
+    left: 32.51px;
+    gap: 0px;
+    border-radius: 20px ;
+    opacity: 0px;
+    margin-top: 20px;
+    color: #F6F6F6;
+    border-color: #F6F6F6;
+    justify-content: center;
+  }
+  
+  .mobile-screen-button {
+    color:#7e7e7e;
+    text-align: left;
+    margin-bottom: -15px;
+    margin-left: 30px;
+  }
+  
+  .list-ul {
+    color:#7e7e7e;
+    text-align: left;
+    margin-bottom: -15px;
+    margin-left: 30px;
+  }  
+  
+  .store {
+    color:#7e7e7e;
+    text-align: left;
+    margin-bottom: -15px;
+    margin-left: 30px;
+  }  
+  
+  .txt-fonctionnement-section {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    color: #000000;
+  
+  }
+  
+  .restaurants {
+    height: 1200px;
+    background-color: #F6F6F6;
+    margin-top: 110px;
+  }
+  
+  .restaurants-texte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    margin-top: 40px;
+    margin-left: -200px;
+    margin-bottom: 30px;
+  }
+
+  .img-restaurants {
+    width: 310px;
+    height: 150px;
+    top: -57px;
+    left: -3px;
+    gap: 0px;
+    opacity: 0px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+    image-rendering: auto
+    
+  }
+  
+  .card-texte-restaurant-1 {
+    width: 267px;
+    height: 20px;
+    top: 190px;
+    left: 13px;
+    gap: 0px;
+    opacity: 0px;
+    color: #000000;
+    margin-left: 10px;
+    margin-top: 10px;
+   
+  }  
+  
+  .card-texte-restaurant-2 {
+    width: 247px;
+    height: 24px;
+    top: 215px;
+    left: 13px;
+    gap: 0px;
+    opacity: 0px;
+    color: #000000;
+    margin-left: 10px;
+    margin-top: -10px;
+  }
+  
+  .fa-heart {
+    width: 22px;
+    height: 41px;
+    margin-left: 250px;
+    margin-bottom: -140px;
+  }

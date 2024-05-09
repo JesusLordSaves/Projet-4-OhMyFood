@@ -1,0 +1,131 @@
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    margin-left: -100px;
+}
+
+.header-title {
+    width: 162px;
+    height: 44px;
+    font-style: italic;
+    font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+    font-size: 3rem; 
+    text-align: center;
+}
+
+.body {
+    margin: 0; /* Supprime toutes les marges */
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 375px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+  
+.image {
+    width: 375px;
+    height: 275px;
+    top: 63px;
+    object-fit: cover;
+    image-rendering: auto;
+    
+}
+
+
+.la-palette-du-goût {
+    width: 375px;
+    height: 1060px;
+    background-color: #F6F6F6;
+    padding: 20px;
+    border-radius: 45px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titre-section-menu {
+    width: auto;
+    height: 40.82px;
+    font-family: Shrikhand;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 40.82px;
+    text-align: left;
+}    
+
+.fa-heart {
+    color: #000000;
+    width: 22px;
+    height: 21px;
+}
+
+.entrées-titre {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18.75px;
+    text-align: left;
+}
+
+.rectangle {
+    width: 349px;
+    height: 69px;
+    border-radius: 15.04px;    
+    background-color: #FFFFFF;
+}
+
+.rectangle-texte-1 {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.09px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: -20px;
+}
+
+.rectangle-texte-2 {
+    font-family: Roboto;
+    font-size: 15.04px;
+    font-weight: 300;
+    line-height: 17.63px;
+    text-align: left;
+    
+}
+
+.prix {
+    font-family: Roboto;
+    font-size: 15.04px;
+    font-weight: 700;
+    line-height: 17.63px;
+    text-align: left; /* Alignement à gauche */
+    margin-top: -40px;
+    margin-left: 300px;
+}
+
+.boutton-commander {
+    width: 186px;
+    height: 50px;
+    margin-top: 50px;
+    border-radius: 25px;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    margin-left: 50px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
