@@ -1,5 +1,10 @@
 /****** General ***********/
 @import "abstract/variables" ;
+@import "abstract/mixin";
+@import "components/card";
+@import "components/footer";
+@import "components/header";
+@import "components/menu";
 
 .logo, .header-title {
     font-family: 'Shrikhand', cursive;

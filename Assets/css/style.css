@@ -1,200 +1,5 @@
+@charset "UTF-8";
 /****** General ***********/
-.logo, .header-title {
-  font-family: "Shrikhand", cursive;
-}
-
-body {
-  font-family: Roboto;
-  
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 375px;
-  padding: 0 50px;
-  box-sizing: border-box;
-}
-
-.header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centre les éléments horizontalement */
-  margin-left: -100px;
-}
-
-.header-title {
-  width: 162px;
-  height: 44px;
-  font-style: italic;
-  font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
-  font-size: 3rem; 
-}/*# sourceMappingURL=style.css.map */
-
-
-
-.fa-location-dot {
-  width: 12px;
-  height: 16px;
-  gap: 0px;
-  opacity: 0px;
-  color:  #000000;
-  margin-right: 10px;
-}
-
-.paris-section {
-  background-color:#EAEAEA;
-  width: 100%; /* Ajustez la largeur selon vos besoins */
-  height: 50px; /* Ajustez la hauteur selon vos besoins */
-  display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
-  margin-bottom: -20px;
-} 
-
-.location-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centre les éléments horizontalement */
-  font-weight: 500;
-  line-height: 18.75px;
-
-}
-
-.réservez-le-menu-texte  {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centre les éléments horizontalement */
-  justify-content: center; /* Centre les éléments verticalement */
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28.13px;
-  text-align: center; /* Centrer le texte */
-}
-
-.réservez-le-menu-texte > span {
-  display: block; /* Pour s'assurer que chaque ligne soit sur une ligne différente */
-}
-
-.découvrez-des-restau-texte {
-  position: absolute;
-  align-items: center;
-  top: 50%; /* Positionne l'élément à 50% du haut de la page */
-  left: 50%; /* Positionne l'élément à 50% de la gauche de la page */
-  transform: translate(-50%, -50%); /* Déplace l'élément de moitié de sa largeur et de moitié de sa hauteur vers l'arrière, centrant ainsi l'élément */
-  width: 315px;
-  height: 46px;
-  gap: 0px;
-  opacity: 0px;
-  margin-top: -50px;
-  margin-left: 20px;
-}
-
-.boutton-explorer-nos-restau {
-  width: 70%;
-  height: 50px;
-  border-radius: 25px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  border-color: #FF79DA;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
-  margin-left: auto; /* Centrez horizontalement */
-  margin-right: auto; /* Centrez horizontalement */
-  display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
-}
-
-.resrv-decvr-button {
-  background-color: #F6F6F6;
-  height: 260px;
-  
-} 
-
-.fonctionnement {
-  height: 300px;
-  display: flex; /* Ajoutez cette ligne pour transformer le conteneur en flexbox */
-  flex-direction: column; /* Ajustez la direction en colonne pour aligner verticalement */
-  align-items: center; /* Centre les éléments verticalement */
-}
-
-.fonctionnement-texte {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28.13px;
-  margin-top: 40px;
-  margin-left: -160px;
-  margin-bottom: 30px;
-} 
-
-.rectangle-button-container {
-  display: flex; /* Transforme les boutons en flexbox */
-  justify-content: center; /* Centre les boutons horizontalement */
-  align-items: center; /* Centre les boutons verticalement */
-}
-
-#rectangle-fonctionnement-section {
-  width: 322.49px;
-  height: 72.38px;
-  top: 505px;
-  left: 32.51px;
-  gap: 0px;
-  border-radius: 20px ;
-  opacity: 0px;
-  margin-top: 20px;
-  color: #F6F6F6;
-  border-color: #F6F6F6;
-}
-
-.élément-nombre {
-  color: #9356dc;
-  text-align: left;
-  margin-left: -20px; /* Ajustez la marge à gauche */
-  margin-right: 10px; /* Ajoutez une marge à droite pour l'espace */
-}  
-
-
-.mobile-screen-button,
-.list-ul,
-.store {
-  color: #7e7e7e;
-  text-align: left;
-  margin-left: 10px; /* Ajustez la marge à gauche */
-  margin-right: 10px; /* Ajoutez une marge à droite pour l'espace */
-  margin-bottom: -15px;
-}  
-
-.txt-fonctionnement-section {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
-  color: #000000;
-
-}
-
-.restaurants {
-  height: 1200px;
-  background-color: #F6F6F6;
-  margin-top: 110px;
-
-}
-
-.restaurants-texte {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28.13px;
-  margin-top: 20px;
-}
-
 .cards-container {
   display: flex;
   flex-wrap: wrap; /* Assurez-vous que les cards se répartissent sur plusieurs lignes si nécessaire */
@@ -218,6 +23,223 @@ body {
   position: relative;
 }
 
+footer {
+  margin-top: 80px;
+  background-color: #353535;
+  padding: 20px;
+}
+footer h2 {
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  color: #FFFFFF;
+  margin-top: 0;
+}
+footer .fa-solid {
+  color: #FFFFFF;
+  margin-right: 3px;
+}
+footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+footer ul li {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  color: #FFFFFF;
+  line-height: 30px;
+}
+footer ul li a {
+  color: #FFFFFF;
+  padding-left: 0;
+  margin-left: 0;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Centre les éléments horizontalement */
+  justify-content: center; /* Centre le contenu horizontalement */
+}
+.header title {
+  display: flex;
+  align-items: center;
+  width: 162px;
+  height: 44px;
+  font-style: italic;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 375px;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.paris-section {
+  background-color: #EAEAEA;
+  width: 100%; /* Ajustez la largeur selon vos besoins */
+  height: 50px; /* Ajustez la hauteur selon vos besoins */
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  margin-bottom: -20px;
+}
+
+.location-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre les éléments horizontalement */
+  font-weight: 500;
+  line-height: 18.75px;
+  margin-left: 20px;
+}
+
+.réservez-le-menu-texte {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre les éléments horizontalement */
+  justify-content: center; /* Centre les éléments verticalement */
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.13px;
+  text-align: center; /* Centrer le texte */
+  margin-bottom: 90px;
+}
+
+.réservez-le-menu-texte > span {
+  display: block; /* Pour s'assurer que chaque ligne soit sur une ligne différente */
+}
+
+.découvrez-des-restau-texte {
+  position: absolute;
+  align-items: center;
+  top: 50%; /* Positionne l'élément à 50% du haut de la page */
+  left: 50%; /* Positionne l'élément à 50% de la gauche de la page */
+  transform: translate(-50%, -50%); /* Déplace l'élément de moitié de sa largeur et de moitié de sa hauteur vers l'arrière, centrant ainsi l'élément */
+  width: 315px;
+  height: 46px;
+  gap: 0px;
+  opacity: 0px;
+  margin-top: -90px;
+  margin-left: 20px;
+}
+
+.boutton-explorer-nos-restau {
+  width: 70%;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-color: #FF79DA;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
+  margin-left: auto; /* Centrez horizontalement */
+  margin-right: auto; /* Centrez horizontalement */
+  display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
+}
+
+.resrv-decvr-button {
+  background-color: #F6F6F6;
+  height: 260px;
+}
+
+.fonctionnement {
+  height: 300px;
+  height: 300px;
+  display: flex; /* Ajoutez cette ligne pour transformer le conteneur en flexbox */
+  flex-direction: column; /* Ajustez la direction en colonne pour aligner verticalement */
+  align-items: center; /* Centre les éléments verticalement */
+}
+
+.rectangle-button-container {
+  display: flex; /* Transforme les boutons en flexbox */
+  justify-content: center; /* Centre les boutons horizontalement */
+  align-items: center; /* Centre les boutons verticalement */
+}
+
+.fonctionnement-texte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.13px;
+  margin-top: 40px;
+  margin-left: -160px;
+  margin-bottom: 30px;
+}
+
+#rectangle-fonctionnement-section {
+  width: 322.49px;
+  height: 72.38px;
+  top: 505px;
+  left: 32.51px;
+  gap: 0px;
+  border-radius: 20px;
+  opacity: 0px;
+  margin-top: 20px;
+  color: #F6F6F6;
+  border-color: #F6F6F6;
+}
+
+.mobile-screen-button {
+  color: #7e7e7e;
+  text-align: left;
+  margin-bottom: -15px;
+  margin-left: 30px;
+}
+
+.list-ul {
+  color: #7e7e7e;
+  text-align: left;
+  margin-bottom: -15px;
+  margin-left: 30px;
+}
+
+.store {
+  color: #7e7e7e;
+  text-align: left;
+  margin-bottom: -15px;
+  margin-left: 30px;
+}
+
+.txt-fonctionnement-section {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  color: #000000;
+}
+
+.restaurants {
+  height: 1200px;
+  background-color: #F6F6F6;
+  margin-top: 110px;
+}
+
+.restaurants-texte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.13px;
+  margin-top: 40px;
+  margin-left: -200px;
+  margin-bottom: 30px;
+}
+
 .img-restaurants {
   width: 310px;
   height: 150px;
@@ -226,9 +248,9 @@ body {
   gap: 0px;
   opacity: 0px;
   border-radius: 20px 20px 0px 0px;
-  object-fit: cover;
-  image-rendering: auto
-  
+  -o-object-fit: cover;
+     object-fit: cover;
+  image-rendering: auto;
 }
 
 .card-texte-restaurant-1 {
@@ -241,8 +263,7 @@ body {
   color: #000000;
   margin-left: 10px;
   margin-top: 10px;
- 
-}  
+}
 
 .card-texte-restaurant-2 {
   width: 247px;
@@ -257,65 +278,16 @@ body {
 }
 
 .fa-heart {
-  font-size: 30px; /* Ajustez la taille de l'icône à votre convenance */
-  height: 70px;
-  position: absolute; /* Utilisez une position absolue pour placer l'icône */
-  top: 170px; /* Ajustez la position verticale selon vos besoins */
-  right: 25px; /* Placez l'icône à droite de la carte */
-  border: 1px;
-  border-color: #101010;
-}
-
-
-.footer-content {
-  margin-top: 80px;
-  background-color: #353535;
-  height: 200px;
-}
-
-.ohmyfood-texte-footer {
-  width: 137.58px;
-  height: 27px;
-  font-family: Shrikhand;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 400;
-  text-align: left;
-  color: #FFFFFF;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.footer-logo {
-  color: #FFFFFF;
-  margin-left: 20px;
-}
-
-.footer-texte {
-  width: 168px;
-  height: 10px;
-  left: 22px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
-  text-align: left;
-  color: #FFFFFF;
+  width: 22px;
+  height: 41px;
+  margin-left: 250px; /* Aligner à droite */
   margin-top: -20px;
-  margin-left: 50px;
 }
 
-.footer-texte-2 {
-  width: 168px;
-  height: 10px;
-  left: 22px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
-  text-align: left;
-  color: #FFFFFF;
-  margin-left: 18px;
-  margin-top: -7px;
+.logo, .header-title {
+  font-family: "Shrikhand", cursive;
 }
+
+body {
+  font-family: "Roboto", sans-serif;
+}/*# sourceMappingURL=style.css.map */

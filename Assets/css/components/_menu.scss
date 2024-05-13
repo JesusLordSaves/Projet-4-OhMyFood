@@ -24,7 +24,7 @@
     align-items: center; /* Centre les éléments horizontalement */
     font-weight: 500;
     line-height: 18.75px;
-    margin-left: 20px;
+  
   }
   
   .réservez-le-menu-texte  {
@@ -152,8 +152,6 @@
     background-color: #F6F6F6;
     margin-top: 110px;
   }
-
-  
   
   .restaurants-texte {
     display: flex;
@@ -209,5 +207,5 @@
     width: 22px;
     height: 41px;
     margin-left: 250px; /* Aligner à droite */
-    margin-top: -20px;
+    margin-bottom: -30px; /* Ajuster la position verticale si nécessaire */
   }
