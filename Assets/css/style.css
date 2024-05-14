@@ -193,6 +193,15 @@ footer ul li a {
   border-color: #F6F6F6;
 }
 
+.fa-circle {
+  margin-left: -160px;
+}
+
+.fa-stack-1x {
+  margin-left: -160px;
+  margin-top: 4px;
+}
+
 .mobile-screen-button {
   color: #7e7e7e;
   text-align: left;
@@ -236,8 +245,9 @@ footer ul li a {
   font-weight: 700;
   line-height: 28.13px;
   margin-top: 40px;
-  margin-left: -200px;
+  margin-left: -160px; /* Réduisez cette marge */
   margin-bottom: 30px;
+  margin-right: 20px; /* Ajoutez une marge à droite pour créer de l'espace */
 }
 
 .img-restaurants {
@@ -277,11 +287,28 @@ footer ul li a {
   margin-top: -10px;
 }
 
+.card-restaurants {
+  position: relative;
+}
+
 .fa-heart {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 22px;
-  height: 41px;
-  margin-left: 250px; /* Aligner à droite */
-  margin-top: -20px;
+  height: 22px;
+  margin-top: 180px;
+  margin-right: 20px;
+}
+
+/* Menu scss pages restau */
+.la-palette-du-goût {
+  width: 325px;
+  height: 1060px;
+  background-color: #F6F6F6;
+  padding: 20px;
+  border-radius: 45px;
+  margin-bottom: -80px;
 }
 
 .logo, .header-title {
