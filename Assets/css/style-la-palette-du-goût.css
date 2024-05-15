@@ -48,11 +48,7 @@
     margin-bottom: -80px;
 }
 
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .titre-section-menu {
     width: auto;
