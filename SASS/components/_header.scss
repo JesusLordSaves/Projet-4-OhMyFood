@@ -1,12 +1,15 @@
 .header {
-  display: flex;
-  align-items: center; /* Centre les éléments horizontalement */
-  justify-content: center; /* Centre le contenu horizontalement */
+  position: relative;
+  text-align: center;
+  height: 100px; /* Ajustez la hauteur selon vos besoins */
   h1 {
-    display: flex;
-    align-items: center;
-    width: 162px;
-    height: 44px;
+    width: 222px;
+    height: 30px;
     font-style: italic;
+    font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+    font-size: 2rem; 
+    text-align: center;
+    margin: 0 auto;
+    
   }
 }

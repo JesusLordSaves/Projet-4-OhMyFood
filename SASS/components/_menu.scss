@@ -169,11 +169,13 @@
   padding: 0 50px;
   box-sizing: border-box;
   .image {
-    width: auto;
-    height: 275px;
-    top: 63px;
+    width: 100%; /* Ajustez cette valeur pour changer la largeur */
     object-fit: cover;
-    image-rendering: auto;
+    position: absolute; /* Ajouté */
+    top: 70px; /* Ajustez si nécessaire */
+    left: 50%; /* Centré horizontalement */
+    transform: translateX(-50%); /* Centré horizontalement */
+    z-index: -1;
   }
   .la-palette-du-goût {
     width: auto;
@@ -181,7 +183,11 @@
     background-color: $grey-color-section;
     padding: 20px;
     border-radius: 45px;
+    margin-top: 140px;
     margin-bottom: -80px;
+    position: relative; /* Assurez que la section est positionnée correctement */
+    z-index: 1;
+    box-sizing: border-box;
   }
     .h2 {
       font-family: Shrikhand;
@@ -195,6 +201,7 @@
         color: $black-color;
         width: 22px;
         height: 21px;
+        margin-bottom: 20px;
       }
     .h3{
       font-family: Roboto;
