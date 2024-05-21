@@ -285,7 +285,7 @@ footer ul li a {
 }
 
 
-/* Menu scss pages restau */
+/* style css pages restau */
 .main {
   display: flex;
   flex-direction: column;
@@ -294,6 +294,7 @@ footer ul li a {
   max-width: 375px;
   padding: 0 50px;
   box-sizing: border-box;
+  position: relative;
 }
 .image {
   width: 375px; /* Ajustez cette valeur pour changer la largeur */
@@ -423,3 +424,4 @@ footer ul li a {
 body {
   font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=style.css.map */
+
