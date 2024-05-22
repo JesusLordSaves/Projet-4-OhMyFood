@@ -235,14 +235,35 @@
 }
 
 .fa-heart {
+  position: absolute; /* Position absolue pour placer l'icône de cœur */
+  top: 180px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
+  right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+  color: #000000;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.heart-toggle {
+  display: none;
+}
+
+.heart-toggle:checked + .fa-heart {
+  color: transparent;
+}
+
+.heart-toggle:checked + .fa-heart::before {
+  content: '\f004'; /* Unicode for filled heart */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; /* Font weight for solid icon */
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: absolute;
   top: 0;
-  right: 0;
-  font-size: 30px; /* Ajustez cette valeur pour agrandir ou réduire la taille */
-  color: #000000;
-  margin-top: 170px;
-  margin-right: 20px;
-  border: 1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 footer {
@@ -333,7 +354,7 @@ footer ul li a {
   text-align: left;
 }
 .rectangle {
-  width: 349px;
+  width: 340px;
   height: 69px;
   border-radius: 15.04px;
   background-color: #FFFFFF;
@@ -361,7 +382,7 @@ footer ul li a {
   line-height: 17.63px;
   text-align: left; /* Alignement à gauche */
   margin-top: -40px;
-  margin-left: 290px;
+  margin-left: 300px;
 }
 .boutton-commander {
   width: 186px;
