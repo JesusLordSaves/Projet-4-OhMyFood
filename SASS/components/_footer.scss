@@ -1,0 +1,36 @@
+footer {
+  margin-top: 80px;
+  background-color: $footer-color;
+  padding: 20px;
+  h2 {
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    text-align: left;
+    color: $color-inverse;
+    margin-top : 0;
+  }
+  ul {
+    list-style: none;
+    @include pm-left-0;
+    li  {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18.75px;
+      text-align: left;
+      color: $color-inverse;
+      line-height: 30px;
+      a {
+        color: $color-inverse;
+        @include pm-left-0;
+        text-decoration: none;
+      }
+      .fa-solid {
+        color: $color-inverse;
+        margin-right: 3px;
+      }
+    } 
+  }
+}

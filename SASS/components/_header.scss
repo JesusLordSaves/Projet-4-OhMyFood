@@ -1,0 +1,34 @@
+.header {
+    position: relative;
+    text-align: center;
+    height: 100px; /* Ajustez la hauteur selon vos besoins */
+    h1 {
+      height: 30px;
+      font-style: italic;
+      font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+      font-size: 2rem; 
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  .header {
+    position: relative;
+    text-align: center;
+    height: 100px; /* Ajustez la hauteur selon vos besoins */
+    .a {
+      position: absolute;
+      left: 10px; /* Ajustez selon vos besoins */
+      font-size: 2rem; /* Ajustez la taille selon vos besoins */
+      text-decoration: none;
+      margin-bottom: -15px;
+    }
+    h1 {
+      height: 30px;
+      font-style: italic;
+      font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+      font-size: 2rem; 
+      text-align: center;
+      margin: 0 auto;
+    }
+  }

@@ -37,7 +37,7 @@
     transform: translateX(-50%); /* Centré horizontalement */
     z-index: -1;
   }
-  .la-palette-du-goût {
+  .restaurant-classe {
     width: 100%;
     height: 1060px;
     background-color: $grey-color-section;
@@ -110,15 +110,15 @@
       padding-left: 10px;
       text-align: left;
       font-family: Roboto;
-      .h4 {
+      .rectangle-texte-1 {
         font-size: 18px;
         font-weight: 500;
       }
-      .h5 {
+      .rectangle-texte-2 {
         font-size: 15.04px;
         font-weight: 300;
       }
-      .h6 {
+      .prix {
         font-size: 15.04px;
         font-weight: 700;
       }
