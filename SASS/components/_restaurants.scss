@@ -10,7 +10,6 @@
     margin-bottom: -15px;
   }
   .header-title {
-    height: 30px;
     font-style: italic;
     font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
     font-size: 2rem; 
@@ -19,7 +18,7 @@
   }
 }
 
-.main {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +27,7 @@
   padding: 0 50px;
   box-sizing: border-box;
   position: relative;
-  .image {
+  img {
     width: 100%; /* Ajustez cette valeur pour changer la largeur */
     object-fit: cover;
     position: absolute; /* Ajouté */
@@ -53,7 +52,7 @@
       align-items: center;
       justify-content: center;
       gap: 10px; /* Espace entre le titre et l'icône du cœur */
-      .titre-section-menu {
+      h2 {
         font-family: Shrikhand;
         font-size: 28px;
         font-style: italic;
@@ -90,7 +89,7 @@
         height: 100%;
       }
     }  
-    .repas-titre {
+    h3 {
       font-family: Roboto;
       font-size: 16px;
       font-weight: 300;

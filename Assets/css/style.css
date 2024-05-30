@@ -6,7 +6,6 @@ header {
   height: 100px; /* Ajustez la hauteur selon vos besoins */
 }
 header .header-title {
-  height: 30px;
   font-style: italic;
   font-family: "Shrikhand", cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
   font-size: 2rem;
@@ -305,7 +304,6 @@ footer ul li .fa-solid {
   margin-bottom: -15px;
 }
 .header .header-title {
-  height: 30px;
   font-style: italic;
   font-family: "Shrikhand", cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
   font-size: 2rem;
@@ -313,7 +311,7 @@ footer ul li .fa-solid {
   margin: 0 auto;
 }
 
-.main {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -323,7 +321,7 @@ footer ul li .fa-solid {
   box-sizing: border-box;
   position: relative;
 }
-.main .image {
+main img {
   width: 100%; /* Ajustez cette valeur pour changer la largeur */
   -o-object-fit: cover;
      object-fit: cover;
@@ -333,7 +331,7 @@ footer ul li .fa-solid {
   transform: translateX(-50%); /* Centré horizontalement */
   z-index: -1;
 }
-.main .restaurant-classe {
+main .restaurant-classe {
   width: 100%;
   height: 1060px;
   background-color: #F6F6F6;
@@ -345,13 +343,13 @@ footer ul li .fa-solid {
   z-index: 1;
   box-sizing: border-box;
 }
-.main .restaurant-classe .title-heart-container {
+main .restaurant-classe .title-heart-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px; /* Espace entre le titre et l'icône du cœur */
 }
-.main .restaurant-classe .title-heart-container .titre-section-menu {
+main .restaurant-classe .title-heart-container h2 {
   font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
@@ -359,7 +357,7 @@ footer ul li .fa-solid {
   line-height: 40.82px;
   text-align: center;
 }
-.main .restaurant-classe .title-heart-container .fa-heart {
+main .restaurant-classe .title-heart-container .fa-heart {
   position: absolute; /* Position absolue pour placer l'icône de cœur */
   top: 180px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
   right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
@@ -368,13 +366,13 @@ footer ul li .fa-solid {
   cursor: pointer;
   transition: color 0.3s ease;
 }
-.main .restaurant-classe .title-heart-container .heart-toggle {
+main .restaurant-classe .title-heart-container .heart-toggle {
   display: none;
 }
-.main .restaurant-classe .title-heart-container .heart-toggle:checked + .fa-heart {
+main .restaurant-classe .title-heart-container .heart-toggle:checked + .fa-heart {
   color: transparent;
 }
-.main .restaurant-classe .title-heart-container .heart-toggle:checked + .fa-heart::before {
+main .restaurant-classe .title-heart-container .heart-toggle:checked + .fa-heart::before {
   content: "\f004"; /* Unicode for filled heart */
   font-family: "Font Awesome 5 Free";
   font-weight: 900; /* Font weight for solid icon */
@@ -387,7 +385,7 @@ footer ul li .fa-solid {
   width: 100%;
   height: 100%;
 }
-.main .restaurant-classe .repas-titre {
+main .restaurant-classe h3 {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 300;
@@ -395,12 +393,12 @@ footer ul li .fa-solid {
   text-align: left;
   margin-bottom: 5px;
 }
-.main .restaurant-classe .line-bar {
+main .restaurant-classe .line-bar {
   width: 35px;
   border: 3px 0px 0px 0px;
   border: 2px solid #99E2D0;
 }
-.main .restaurant-classe .rectangle {
+main .restaurant-classe .rectangle {
   width: 70%;
   border-radius: 15.04px;
   background-color: #FFFFFF;
@@ -408,19 +406,19 @@ footer ul li .fa-solid {
   text-align: left;
   font-family: Roboto;
 }
-.main .restaurant-classe .rectangle .rectangle-texte-1 {
+main .restaurant-classe .rectangle .rectangle-texte-1 {
   font-size: 18px;
   font-weight: 500;
 }
-.main .restaurant-classe .rectangle .rectangle-texte-2 {
+main .restaurant-classe .rectangle .rectangle-texte-2 {
   font-size: 15.04px;
   font-weight: 300;
 }
-.main .restaurant-classe .rectangle .prix {
+main .restaurant-classe .rectangle .prix {
   font-size: 15.04px;
   font-weight: 700;
 }
-.main .restaurant-classe .boutton-commander {
+main .restaurant-classe .boutton-commander {
   width: 186px;
   height: 50px;
   margin-top: 50px;
