@@ -3,6 +3,7 @@ header {
     text-align: center;
     height: 100px; /* Ajustez la hauteur selon vos besoins */
     .header-title {
+      height: 30px;
       font-style: italic;
       font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
       font-size: 2rem; 
@@ -83,7 +84,6 @@ main {
   }
 
   .fonctionnement {
-    height: 300px;
     height: 300px;
     display: flex; /* Ajoutez cette ligne pour transformer le conteneur en flexbox */
     flex-direction: column; /* Ajustez la direction en colonne pour aligner verticalement */
@@ -185,7 +185,7 @@ main {
         margin-left: auto;
         margin-right: auto;
         position: relative;
-        .img-restaurants {
+        img {
           width: 310px;
           height: 150px;
           top: -57px;
