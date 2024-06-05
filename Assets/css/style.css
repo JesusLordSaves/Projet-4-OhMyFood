@@ -1,26 +1,35 @@
 @charset "UTF-8";
 /****** General ***********/
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.logo, .header-title {
+  font-family: "Shrikhand", cursive;
+}
+
 header {
   position: relative;
   text-align: center;
-  height: 100px; /* Ajustez la hauteur selon vos besoins */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 header .header-title {
-  height: 30px;
   font-style: italic;
   font-family: "Shrikhand", cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   margin: 0 auto;
+  margin-top: 1em;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 375px;
-  padding: 0 50px;
+  width: 100vw;
   box-sizing: border-box;
 }
 main .paris-section {
@@ -30,36 +39,29 @@ main .paris-section {
   display: flex;
   justify-content: center; /* Centre horizontalement */
   align-items: center; /* Centre verticalement */
-  margin-bottom: -20px;
-}
-main .paris-section .location-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centre les éléments horizontalement */
-  font-weight: 500;
-  line-height: 18.75px;
-  margin-left: 20px;
+  padding: 10px 0;
+  gap: 1em;
 }
 main .resrv-decvr-button {
   background-color: #F6F6F6;
   height: 260px;
-}
-main .resrv-decvr-button .réservez-le-menu-texte {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center; /* Centre les éléments horizontalement */
   justify-content: center; /* Centre les éléments verticalement */
+}
+main .resrv-decvr-button .réservez-le-menu-texte {
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
   text-align: center; /* Centrer le texte */
-  margin-bottom: 90px;
+  margin-bottom: 50px; /* Ajustez la marge selon vos besoins */
 }
 main .resrv-decvr-button .réservez-le-menu-texte .réservez-le-menu-texte > span {
   display: block; /* Pour s'assurer que chaque ligne soit sur une ligne différente */
 }
 main .resrv-decvr-button .découvrez-des-restau-texte {
-  position: absolute;
   align-items: center;
   top: 50%; /* Positionne l'élément à 50% du haut de la page */
   left: 50%; /* Positionne l'élément à 50% de la gauche de la page */
@@ -68,11 +70,17 @@ main .resrv-decvr-button .découvrez-des-restau-texte {
   height: 46px;
   gap: 0px;
   opacity: 0px;
-  margin-top: -90px;
-  margin-left: 20px;
+  text-align: center; /* Centrer le texte */
 }
-main .resrv-decvr-button .boutton-explorer-nos-restau {
-  width: 70%;
+main .resrv-decvr-button .explore-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main .resrv-decvr-button .explore-button-container .boutton-explorer-nos-restau {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 1em;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -84,6 +92,8 @@ main .resrv-decvr-button .boutton-explorer-nos-restau {
   margin-left: auto; /* Centrez horizontalement */
   margin-right: auto; /* Centrez horizontalement */
   display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
+  font-weight: bold;
+  margin-top: 10px;
 }
 main .fonctionnement {
   height: 300px;
@@ -289,194 +299,4 @@ footer ul li a {
 footer ul li .fa-solid {
   color: #FFFFFF;
   margin-right: 3px;
-}
-
-.header {
-  position: relative;
-  text-align: center;
-  height: 100px; /* Ajustez la hauteur selon vos besoins */
-}
-.header .back-arrow {
-  position: absolute;
-  left: 10px; /* Ajustez selon vos besoins */
-  font-size: 2rem; /* Ajustez la taille selon vos besoins */
-  text-decoration: none;
-  margin-bottom: -15px;
-}
-.header .header-title {
-  font-style: italic;
-  font-family: "Shrikhand", cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
-  font-size: 2rem;
-  text-align: center;
-  margin: 0 auto;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 375px;
-  padding: 0 50px;
-  box-sizing: border-box;
-  position: relative;
-}
-main img {
-  width: 100%; /* Ajustez cette valeur pour changer la largeur */
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute; /* Ajouté */
-  top: 70px; /* Ajustez si nécessaire */
-  left: 50%; /* Centré horizontalement */
-  transform: translateX(-50%); /* Centré horizontalement */
-  z-index: -1;
-}
-main .restaurant-classe {
-  width: 100%;
-  height: 1060px;
-  background-color: #F6F6F6;
-  padding: 20px;
-  border-radius: 45px;
-  margin-top: 140px;
-  margin-bottom: -80px;
-  position: relative; /* Assurez que la section est positionnée correctement */
-  z-index: 1;
-  box-sizing: border-box;
-}
-main .restaurant-classe .title-heart-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px; /* Espace entre le titre et l'icône du cœur */
-}
-main .restaurant-classe .title-heart-container h2 {
-  font-family: Shrikhand;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 40.82px;
-  text-align: center;
-}
-main .restaurant-classe .title-heart-container .fa-heart {
-  position: absolute; /* Position absolue pour placer l'icône de cœur */
-  top: 180px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-  right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
-  color: #000000;
-  font-size: 22px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-main .restaurant-classe .title-heart-container .heart-toggle {
-  display: none;
-}
-main .restaurant-classe .title-heart-container .heart-toggle:checked + .fa-heart {
-  color: transparent;
-}
-main .restaurant-classe .title-heart-container .heart-toggle:checked + .fa-heart::before {
-  content: "\f004"; /* Unicode for filled heart */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900; /* Font weight for solid icon */
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-main .restaurant-classe h3 {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 18.75px;
-  text-align: left;
-  margin-bottom: 5px;
-}
-main .restaurant-classe .line-bar {
-  width: 35px;
-  border: 3px 0px 0px 0px;
-  border: 2px solid #99E2D0;
-}
-main .restaurant-classe .rectangle {
-  width: 70%;
-  border-radius: 15.04px;
-  background-color: #FFFFFF;
-  padding-left: 10px;
-  text-align: left;
-  font-family: Roboto;
-}
-main .restaurant-classe .rectangle .rectangle-texte-1 {
-  font-size: 18px;
-  font-weight: 500;
-}
-main .restaurant-classe .rectangle .rectangle-texte-2 {
-  font-size: 15.04px;
-  font-weight: 300;
-}
-main .restaurant-classe .rectangle .prix {
-  font-size: 15.04px;
-  font-weight: 700;
-}
-main .restaurant-classe .boutton-commander {
-  width: 186px;
-  height: 50px;
-  margin-top: 50px;
-  border-radius: 25px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  border-color: #FF79DA;
-  margin-left: 50px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
-  text-align: center;
-  color: #FFFFFF;
-}
-
-footer {
-  margin-top: 80px;
-  background-color: #353535;
-  padding: 20px;
-}
-footer h2 {
-  font-family: Shrikhand;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 400;
-  text-align: left;
-  color: #FFFFFF;
-  margin-top: 0;
-}
-footer .fa-solid {
-  color: #FFFFFF;
-  margin-right: 3px;
-}
-footer ul {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-footer ul li {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
-  text-align: left;
-  color: #FFFFFF;
-  line-height: 30px;
-}
-footer ul li a {
-  color: #FFFFFF;
-  padding-left: 0;
-  margin-left: 0;
-  text-decoration: none;
-}
-
-.logo, .header-title {
-  font-family: "Shrikhand", cursive;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=style.css.map */

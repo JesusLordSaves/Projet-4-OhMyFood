@@ -1,14 +1,25 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.logo, .header-title {
+  font-family: 'Shrikhand', cursive;
+}
+
 header {
     position: relative;
     text-align: center;
-    height: 100px; /* Ajustez la hauteur selon vos besoins */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .header-title {
-      height: 30px;
       font-style: italic;
       font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
-      font-size: 2rem; 
+      font-size: 3rem; 
       text-align: center;
       margin: 0 auto;
+      margin-top: 1em;
     }
   }
 
@@ -16,9 +27,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 375px;
-  padding: 0 50px;
+  width: 100vw;
   box-sizing: border-box;
   .paris-section {
     background-color:$dark-grey;
@@ -27,35 +36,28 @@ main {
     display: flex;
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
-    margin-bottom: -20px;
-    .location-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Centre les éléments horizontalement */
-      font-weight: 500;
-      line-height: 18.75px;
-      margin-left: 20px;
-    }
+    padding: 10px 0;
+    gap: 1em;
   }
   .resrv-decvr-button {
     background-color: $grey-color-section;
     height: 260px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
     .réservez-le-menu-texte {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Centre les éléments horizontalement */
-      justify-content: center; /* Centre les éléments verticalement */
       font-size: 24px;
       font-weight: 700;
       line-height: 28.13px;
       text-align: center; /* Centrer le texte */
-      margin-bottom: 90px;
+      margin-bottom: 50px; /* Ajustez la marge selon vos besoins */
       .réservez-le-menu-texte > span {
         display: block; /* Pour s'assurer que chaque ligne soit sur une ligne différente */
       }
     }   
     .découvrez-des-restau-texte {
-      position: absolute;
       align-items: center;
       top: 50%; /* Positionne l'élément à 50% du haut de la page */
       left: 50%; /* Positionne l'élément à 50% de la gauche de la page */
@@ -64,23 +66,30 @@ main {
       height: 46px;
       gap: 0px;
       opacity: 0px;
-      margin-top: -90px;
-      margin-left: 20px;
+      text-align: center; /* Centrer le texte */
     }
-    .boutton-explorer-nos-restau {
-      width: 70%;
-      height: 50px;
-      border-radius: 25px;
-      background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-      border-color: $secondary;
-      color: $color-inverse;
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
-      margin-left: auto; /* Centrez horizontalement */
-      margin-right: auto; /* Centrez horizontalement */
-      display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
-    }
+    .explore-button-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .boutton-explorer-nos-restau {
+        width: fit-content;
+        padding: 0 1em;
+        height: 50px;
+        border-radius: 25px;
+        background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+        border-color: $secondary;
+        color: $color-inverse;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
+        margin-left: auto; /* Centrez horizontalement */
+        margin-right: auto; /* Centrez horizontalement */
+        display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    }  
   }
 
   .fonctionnement {
