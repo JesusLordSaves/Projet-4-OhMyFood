@@ -17,6 +17,526 @@ body {
   margin-bottom: 2em !important;
   .back-arrow {
     position: relative;
+    font-size: 1.5rem; /* Ajustez la taille selon vos besoins */
+    text-decoration: none;
+    margin-bottom: -15px;
+  }
+  .header-title {
+    font-style: italic;
+      font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+      font-size: 2rem; 
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 0.5em;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation aparrition progressive */
+
+.restaurant-classe .rectangle {
+  opacity: 0;
+  animation: fadeIn 3s forwards; 
+  animation-delay: var(--animation-delay);
+}
+
+.restaurant-classe .rectangle:nth-child(1) {
+  --animation-delay: 0.5s;
+}
+
+.restaurant-classe .rectangle:nth-child(2) {
+  --animation-delay: 1s;
+}
+
+.restaurant-classe .rectangle:nth-child(3) {
+  --animation-delay: 1.5s;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-width: 375px;
+  img {
+    width: 100%; /* Ajustez cette valeur pour changer la largeur */
+    height: 275px;
+    object-fit: cover;
+    box-sizing: border-box;
+    margin: 0;
+    position: absolute; /* Ajouté */
+    top: 70px; /* Ajustez si nécessaire */
+    left: 50%; /* Centré horizontalement */
+    transform: translateX(-50%); /* Centré horizontalement */
+    z-index: -1;
+  }
+  .restaurant-classe {
+    width: 100vw;
+    height: auto;
+    background-color: $grey-color-section;
+    padding: 20px;
+    border-radius: 50px;
+    margin-bottom: -80px;
+    position: relative; /* Assurez que la section est positionnée correctement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 195px;
+    .title-heart-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px; /* Espace entre le titre et l'icône du cœur */
+      h2 {
+        font-family: Shrikhand;
+        font-size: 28px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 40.82px;
+        padding-right: 70px !important;
+      }    
+      .fa-heart {
+        position: absolute; /* Position absolue pour placer l'icône de cœur */
+        top: 55px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
+        right: 360px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+        color: #000000;
+        font-size: 22px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      .heart-toggle {
+        display: none;
+      }
+      .heart-toggle:checked + .fa-heart {
+        color: transparent;
+      }
+      .heart-toggle:checked + .fa-heart::before {
+        content: '\f004'; /* Unicode for filled heart */
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900; /* Font weight for solid icon */
+        background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }  
+    h3 {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 18.75px;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+    .repas-titre {
+     margin-right: auto;
+     margin-bottom: -15px;
+    }
+    .line-bar {
+      width: 35px;
+      border: 3px 0px 0px 0px;
+      border: 2px solid #99E2D0;
+      margin-right: auto;
+    }
+    .rectangle {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      padding: 10px !important;
+      border-radius: 15px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-family: 'Roboto', sans-serif;
+      width: 100% !important ;
+      position: relative;
+      .rectangle-texte-1 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      .rectangle-texte-2 {
+        font-size: 15.04px;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+      .prix {
+        font-size: 18px;
+        font-weight: 700;
+        position: absolute;
+        right: 20px;
+        top: 40px;
+        color: #000;
+      }
+    }
+    .boutton-commander {
+      width: 186px;
+      height: 50px;
+      margin-top: 20px;
+      border-radius: 25px;
+      background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+      border-color: $secondary;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18.75px;
+      text-align: center;
+      color: $color-inverse;
+    }
+  }  
+} 
+         
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre horizontalement le contenu */
+  justify-content: center; /* Centre verticalement le contenu */
+  background-color: $footer-color;
+  padding: 20px;
+  width: 100vw;
+  margin-right: auto ;
+  h2 {
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center; /* Centre le texte horizontalement */
+    color: $color-inverse;
+    margin-top: 0;
+  }
+  ul {
+    list-style: none;
+    @include pm-left-0;
+    padding: 0; /* Enlève le padding par défaut */
+    margin: 0; /* Enlève la marge par défaut */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement les éléments de la liste */
+    li  {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18.75px;
+      text-align: center; /* Centre le texte horizontalement */
+      color: $color-inverse;
+      line-height: 30px;
+      
+      a {
+        color: $color-inverse;
+        @include pm-left-0;
+        text-decoration: none;
+      }
+      .fa-solid {
+        color: $color-inverse;
+        margin-right: 3px;
+      }
+    } 
+  }
+}
+
+.rectangle {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px; /* Assurez-vous qu'il y a assez d'espace pour le carré vert */
+  transition: padding-right 1s ease; /* Animation de déplacement du prix */
+}
+
+.rectangle::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+
+  width: 0;
+  height: 0;
+  background-color: #00a676; /* Couleur du carré vert */
+  border-radius: 5px;
+  transition: width 1s ease, height 1s ease; /* Animation d'agrandissement du carré */
+}
+
+
+.rectangle:hover::after {
+  width: 40px; /* Taille du carré vert */
+  height: 96px; /* Taille du carré vert */
+  margin-top: -20px;
+}
+
+.rectangle .prix {
+  position: relative;
+  z-index: 1; /* Assurez-vous que le prix reste au-dessus du carré vert */
+  transition: transform 1s ease; /* Animation du déplacement du prix */
+}
+
+.rectangle:hover .prix {
+  transform: translateX(-40px); /* Déplace le prix vers la gauche pour faire de la place au carré vert */
+}
+
+.rectangle .checkmark {
+  display: none;
+}
+
+.rectangle:hover .checkmark {
+  display: block;
+  position: absolute;
+  right: 15px; /* Positionnez-le correctement à l'intérieur du carré vert */
+  color: white;
+  font-size: 24px;
+}
+
+
+/* Styles pour les tablettes */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+  }
+  
+  .logo, .header-title {
+    font-family: 'Shrikhand', cursive;
+  }
+  
+  
+  .header {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em !important;
+    .back-arrow {
+      position: relative;
+      font-size: 2rem; /* Ajustez la taille selon vos besoins */
+      text-decoration: none;
+      margin-bottom: -15px;
+    }
+    .header-title {
+      font-style: italic;
+        font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+        font-size: 2rem; 
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 0em;
+    }
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    img {
+      width: 100%; /* Ajustez cette valeur pour changer la largeur */
+      height: 275px;
+      object-fit: cover;
+      box-sizing: border-box;
+      margin: 0;
+      position: absolute; /* Ajouté */
+      top: 70px; /* Ajustez si nécessaire */
+      left: 50%; /* Centré horizontalement */
+      transform: translateX(-50%); /* Centré horizontalement */
+      z-index: -1;
+    }
+    .restaurant-classe {
+      width: 80%;
+      height: auto;
+      background-color: $grey-color-section;
+      padding: 20px;
+      border-radius: 30px;
+      margin-top: 140px;
+      margin-bottom: -80px;
+      position: relative; /* Assurez que la section est positionnée correctement */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      box-sizing: border-box;
+      margin: 0;
+      margin-top: 155px;
+      .title-heart-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Espace entre le titre et l'icône du cœur */
+        h2 {
+          font-family: Shrikhand;
+          font-size: 28px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: 40.82px;
+        }    
+        .fa-heart {
+          position: absolute; /* Position absolue pour placer l'icône de cœur */
+          top: 55px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
+          right: 360px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+          color: #000000;
+          font-size: 22px;
+          cursor: pointer;
+          transition: color 0.3s ease;
+        }
+        .heart-toggle {
+          display: none;
+        }
+        .heart-toggle:checked + .fa-heart {
+          color: transparent;
+        }
+        .heart-toggle:checked + .fa-heart::before {
+          content: '\f004'; /* Unicode for filled heart */
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900; /* Font weight for solid icon */
+          background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }  
+      h3 {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18.75px;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+      .repas-titre {
+       margin-left: -700px !important;
+      }
+      .line-bar {
+        width: 35px;
+        border: 3px 0px 0px 0px;
+        border: 2px solid #99E2D0;
+        margin-left: -700px !important;
+      }
+      .rectangle {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        padding: 20px !important;
+        border-radius: 15px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: 'Roboto', sans-serif;
+        width: 70% !important ;
+        position: relative;
+        .rectangle-texte-1 {
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 5px;
+        }
+        .rectangle-texte-2 {
+          font-size: 15.04px;
+          font-weight: 300;
+          margin-bottom: 10px;
+        }
+        .prix {
+          font-size: 18px;
+          font-weight: 700;
+          position: absolute;
+          right: 20px;
+          top: 40px;
+          color: #000;
+        }
+      }
+      .boutton-commander {
+        width: 186px;
+        height: 50px;
+        margin-top: 50px;
+        border-radius: 25px;
+        background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+        border-color: $secondary;
+        margin-left: 50px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: center;
+        color: $color-inverse;
+      }
+    }  
+  } 
+           
+  footer {
+    flex-direction: row-reverse;
+    margin-top: 80px;
+    background-color: $footer-color;
+    padding: 20px;
+    h2 {
+      font-family: Shrikhand;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      text-align: left;
+      color: $color-inverse;
+      padding-left: 150px !important;
+    }
+    .fa-solid {
+      color: $color-inverse;
+      margin-right: 3px;
+    }
+    ul {
+      list-style: none;
+      @include pm-left-0;
+      li  {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: left;
+        color: $color-inverse;
+        line-height: 30px;
+        a {
+          color: $color-inverse;
+          @include pm-left-0;
+          text-decoration: none;
+        }
+      }
+    } 
+  }
+}
+
+/* Styles pour les desktops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.logo, .header-title {
+  font-family: 'Shrikhand', cursive;
+}
+
+
+.header {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em !important;
+  .back-arrow {
+    position: relative;
     font-size: 2rem; /* Ajustez la taille selon vos besoins */
     text-decoration: none;
     margin-bottom: -15px;
@@ -172,9 +692,10 @@ main {
          
 footer {
   flex-direction: row-reverse;
-  margin-top: 80px;
+  align-items: flex-end;
+  padding: 25px 30px 25px 30px;
   background-color: $footer-color;
-  padding: 20px;
+  display: flex;
   h2 {
     font-family: Shrikhand;
     font-size: 18px;
@@ -204,6 +725,8 @@ footer {
         @include pm-left-0;
         text-decoration: none;
       }
-    } 
+    }
   } 
+}
+
 }
