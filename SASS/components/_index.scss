@@ -30,6 +30,8 @@ main {
   align-items: center;
   width: 100vw;
   box-sizing: border-box;
+  min-width: 375px;
+  max-width: 1024px;
   .paris-section {
     background-color:$dark-grey;
     width: 100%; /* Ajustez la largeur selon vos besoins */
@@ -164,10 +166,11 @@ main {
   }
 
   .restaurants {
-    height: 1000px;
+    height: 1350px;
     background-color: $grey-color-section;
     margin-top: 110px;
     width: 100vw;
+    margin-bottom: 100px;
     .restaurants-texte {
       display: flex;
       flex-direction: column;
@@ -185,12 +188,14 @@ main {
       flex-direction: column; /* Change pour une disposition en colonne */
       align-items: center; /* Centre les cartes horizontalement */
       gap: 30px; /* Ajoute un espace entre les cartes */
+      .link {
+        text-decoration: none;
+      }
       .card-restaurants {
         width: 310px;
         height: 231px;
         border-radius: 20px;
         gap: 4px;
-        position: relative;
         border-color: #D9D9D9;
         border: 2px solid;
         margin-top: 30px;
@@ -203,44 +208,48 @@ main {
         img {
           width: 310px;
           height: 150px;
-          top: -57px;
-          left: -3px;
           gap: 0px;
           opacity: 1;
           border-radius: 20px 20px 0px 0px;
           object-fit: cover;
           image-rendering: auto;
+          z-index: 100;
+          margin-top: -70px;
+        }
+        .nouveau-badge {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background-color: #99E2D0; 
+          color: #008766;
+          padding: 5px 10px;
+          border-radius: 5px;
+          font-size: 0.9em;
+          font-weight: bold;
+          z-index: 100;
         }
         .card-texte-restaurant-1 {
-          width: 267px;
-          height: 20px;
-          top: 190px;
-          left: 13px;
-          gap: 0px;
-          opacity: 0px;
           color: $black-color;
-          margin-left: 10px;
-          margin-top: 10px;
+          font-weight: 700;
+          font-size: 1.2em;
+          padding-top: 0.5em;
+          padding-left: 0.5em;
+          margin-top: 150px;
         }  
         .card-texte-restaurant-2 {
-          width: 247px;
-          height: 24px;
-          top: 215px;
-          left: 13px;
-          gap: 0px;
-          opacity: 0px;
           color: $black-color;
-          margin-left: 10px;
-          margin-top: -10px;
+          text-decoration: none;
+          padding-left: 0.5em;
         }
         .fa-heart {
           position: absolute; /* Position absolue pour placer l'icône de cœur */
-          top: 180px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
           right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
           color: #000000;
           font-size: 22px;
           cursor: pointer;
           transition: color 0.3s ease;
+          top : 20px;
+          margin-top: 150px;
         }
         .heart-toggle {
           display: none;
@@ -261,13 +270,13 @@ main {
           width: 100%;
           height: 100%;
         }
-    
       }
     }
   }
 }
 
 footer {
+  margin-top: -100px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Centre horizontalement le contenu */
@@ -314,169 +323,101 @@ footer {
   }
 }
 
-/* Styles pour les tablettes */
-@media (min-width: 768px) and (max-width: 1024px) {
-  header {
-    .header-title {
-      font-size: 3rem;
-    }
-  }
-
-  .paris-section {
-    height: 70px;
-    .vector {
-      font-size: 1.5rem;
-    }
-    .location-text {
-      font-size: 1.25rem;
-    }
-  }
-
-  
-  .resrv-decvr-button {
-    height: 400px;
-    .réservez-le-menu-texte {
-      font-size: 32px;
-      margin-bottom: 20px;
-      .mobile-only {
-        display: none; /* Masquer le span avec le br en version desktop */
-      }
-      .desktoptablette-only {
-        display: inline; /* Afficher la version sans br */
-      }
-    }
-    .découvrez-des-restau-texte {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .explore-button-container {
-      .boutton-explorer-nos-restau {
-        width: 250px;
-        height: 55px;
-        font-size: 18px;
-        margin-top: 20px;
-      }
-    }
-  }
-
-  .fonctionnement {
-    height: 350px;
-    .fonctionnement-texte {
-      font-size: 28px;
-      margin-bottom: 30px;
-    }
-    .rectangle-button-container {
-      flex-direction: row;
-      justify-content: space-around;
-      width: 100%;
-      #rectangle-fonctionnement-section {
-        width: 200px;
-        height: 90px;
-        margin: 0 10px;
-        .élément-nombre {
-          font-size: 1.5rem;
-        }
-        .fa-circle, .fa-stack-1x {
-          margin: 0;
-        }
-        .mobile-screen-button, .list-ul, .store {
-          margin-left: 5px;
-        }
-        .txt-fonctionnement-section {
-          font-size: 16px;
-        }
-      }
-    }
-  }
-
-  .restaurants {
-    height: auto;
-    .cards-container {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      .card-restaurants {
-        margin: 15px;
-        width: 420px;
-        height: 250px;
-        img {
-          height: 170px;
-        }
-        .card-texte-restaurant-1, .card-texte-restaurant-2 {
-          font-size: 16px;
-        }
-        .heart-label {
-          top: 10px;
-          right: 10px;
-        }
-      }
-    }
-  }
-
-  footer {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px 30px;
-    h2 {
-      font-size: 20px;
-    }
-    ul {
-      flex-direction: row;
-      li {
-        margin: 0 8px;
-      }
-    }
-  }
-}
 
 /* Styles pour les desktops */
 @media (min-width: 1025px) and (max-width: 1440px) {
   body {
-    max-width: 1440px;
-    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    width: 100vw;
   }
-
+  
   header {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .header-title {
-      font-size: 2rem;
+      font-style: italic;
+      font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+      font-size: 2rem; 
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 1em;
     }
   }
-
-  .paris-section {
-    height: 80px;
-    .vector {
-      font-size: 1rem;
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;
+    .paris-section {
+      background-color:$dark-grey;
+      width: 100vw; /* Ajustez la largeur selon vos besoins */
+      height: 50px; /* Ajustez la hauteur selon vos besoins */
+      display: flex;
+      justify-content: center; /* Centre horizontalement */
+      align-items: center; /* Centre verticalement */
+      padding: 10px 0;
+      gap: 1em;
+      font-size: 0.75rem;
+      .vector {
+        font-size: 1rem;
+      } 
     }
-    .location-text {
-      font-size: 1.5rem;
-    }
-  }
-
-  .resrv-decvr-button {
-    height: 400px;
-    .réservez-le-menu-texte {
-      font-size: 32px;
-      margin-bottom: 20px;
-      .mobile-only {
-        display: none; /* Masquer le span avec le br en version desktop */
+    .resrv-decvr-button {
+      background-color: $grey-color-section;
+      height: 260px;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centre les éléments horizontalement */
+      justify-content: center; /* Centre les éléments verticalement */
+      .réservez-le-menu-texte {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.13px;
+        text-align: center; /* Centrer le texte */
+        margin-bottom: 50px; /* Ajustez la marge selon vos besoins */
+        .réservez-le-menu-texte > span {
+          display: block; /* Pour s'assurer que chaque ligne soit sur une ligne différente */
+        }
+        .desktoptablette-only {
+          display: none;
+        }
+      }   
+      .découvrez-des-restau-texte {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
       }
-      .desktoptablette-only {
-        display: inline; /* Afficher la version sans br */
-      }
+      .explore-button-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .boutton-explorer-nos-restau {
+          width: fit-content;
+          padding: 0 1em;
+          height: 50px;
+          border-radius: 25px;
+          background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+          border-color: $secondary;
+          color: $color-inverse;
+          font-size: 16px;
+          font-weight: bold;
+          margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
+          margin-left: auto; /* Centrez horizontalement */
+          margin-right: auto; /* Centrez horizontalement */
+          display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
+          font-weight: bold;
+          margin-top: 10px;
+        }
+      }  
     }
-    .découvrez-des-restau-texte {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .explore-button-container {
-      .boutton-explorer-nos-restau {
-        width: 250px;
-        height: 55px;
-        font-size: 18px;
-        margin-top: 20px;
-      }
-    }
-  }
 
   .fonctionnement {
     height: 400px;
@@ -500,11 +441,10 @@ footer {
        
         .élément-nombre {
           font-size: 1rem;
-           margin-right: 100px !important; 
         }
         .fa-circle, .fa-stack-1x {
           margin: 0;
-         
+         margin-left:   100px;
         }
         .mobile-screen-button, .list-ul, .store {
           margin-left: 10px;
@@ -517,9 +457,10 @@ footer {
   }
 
   .restaurants {
-    height: auto;
+    height: 700px;
     margin-top: 30px !important;
     margin-bottom: -250px;
+    width: fit-content;
     .restaurants-texte {
       text-align: left !important;
     }  
@@ -527,16 +468,16 @@ footer {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         grid-template-rows: repeat(2, 1fr) !important;
-        gap: 10px !important;
         justify-content: center !important;
         align-items: center !important;
         margin-left: 200px;
         .card-restaurants {
-          width: 600px !important; 
+          width: 500px !important; 
           height: auto;
           margin-left: 150px ;
           img {
-            height: auto !important;
+            height: 150px !important;
+            width: 500px !important;
           }
           .card-texte-restaurant-1, .card-texte-restaurant-2 {
             font-size: 18px;
@@ -550,8 +491,10 @@ footer {
   }
 
   footer {
-    flex-direction: row;
+    margin-top: 250px;
+    flex-direction: row-reverse;
     justify-content: space-between;
+    width: 100vw;
     h2 {
       font-size: 24px;
     }
@@ -563,4 +506,5 @@ footer {
       }
     }
   }
+}
 }
