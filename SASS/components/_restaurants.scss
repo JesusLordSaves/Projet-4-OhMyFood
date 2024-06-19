@@ -166,6 +166,7 @@ main {
       font-family: 'Roboto', sans-serif;
       width: 100% !important ;
       position: relative;
+      overflow: hidden;
       .rectangle-texte-1 {
         font-size: 18px;
         font-weight: 500;
@@ -183,6 +184,24 @@ main {
         right: 20px;
         top: 40px;
         color: #000;
+        transition: right 1.25s;
+      }
+      .green-square {
+        width: 0;
+        height: 65px;
+        background-color: green;
+        transition: all 0.3s ease;
+        margin-left: 70px;
+        transform: translateX(-30px); /* Déplace le prix vers la gauche */
+      }
+      .rectangle:hover .prix {
+        transform: translateX(-30px); /* Déplace le prix vers la gauche */
+        transition: transform 0.3s ease; /* Transition pour l'animation */
+      }
+    
+      .rectangle:hover .green-square {
+        width: 20px;
+        opacity: 1; /* Rendre visible le carré vert au survol */
       }
     }
     .boutton-commander {
@@ -250,55 +269,6 @@ footer {
   }
 }
 
-.rectangle {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 50px; /* Assurez-vous qu'il y a assez d'espace pour le carré vert */
-  transition: padding-right 1s ease; /* Animation de déplacement du prix */
-}
-
-.rectangle::after {
-  content: "";
-  position: absolute;
-  right: 10px;
-
-  width: 0;
-  height: 0;
-  background-color: #00a676; /* Couleur du carré vert */
-  border-radius: 5px;
-  transition: width 1s ease, height 1s ease; /* Animation d'agrandissement du carré */
-}
-
-
-.rectangle:hover::after {
-  width: 40px; /* Taille du carré vert */
-  height: 96px; /* Taille du carré vert */
-  margin-top: -20px;
-}
-
-.rectangle .prix {
-  position: relative;
-  z-index: 1; /* Assurez-vous que le prix reste au-dessus du carré vert */
-  transition: transform 1s ease; /* Animation du déplacement du prix */
-}
-
-.rectangle:hover .prix {
-  transform: translateX(-40px); /* Déplace le prix vers la gauche pour faire de la place au carré vert */
-}
-
-.rectangle .checkmark {
-  display: none;
-}
-
-.rectangle:hover .checkmark {
-  display: block;
-  position: absolute;
-  right: 15px; /* Positionnez-le correctement à l'intérieur du carré vert */
-  color: white;
-  font-size: 24px;
-}
 
 
 /* Styles pour les tablettes */
@@ -356,7 +326,7 @@ footer {
     }
     .restaurant-classe {
       width: 80%;
-      height: auto;
+      height: auto ;
       background-color: $grey-color-section;
       padding: 20px;
       border-radius: 30px;
@@ -456,7 +426,22 @@ footer {
           right: 20px;
           top: 40px;
           color: #000;
+          transition: right 1.25s;
         }
+        &:hover {
+          padding-right: 30px;
+          .check-icon {
+            position: absolute;
+            padding-right: 30px;
+            color: green;
+            opacity: 0;
+            transition: right 1.25s, opacity 0.5s, transform 1.25s;
+            opacity: 1;
+            transform: rotate(360deg)
+          }
+          
+        }
+      
       }
       .boutton-commander {
         width: 186px;
@@ -570,7 +555,7 @@ main {
   }
   .restaurant-classe {
     width: 80%;
-    height: auto;
+    height: auto !important;
     background-color: $grey-color-section;
     padding: 20px;
     border-radius: 30px;
@@ -584,6 +569,7 @@ main {
     box-sizing: border-box;
     margin: 0;
     margin-top: 155px;
+    
     .title-heart-container {
       display: flex;
       align-items: center;
@@ -634,13 +620,13 @@ main {
       margin-bottom: 5px;
     }
     .repas-titre {
-     margin-left: -700px !important;
+     margin-right: 700px !important;
     }
     .line-bar {
       width: 35px;
       border: 3px 0px 0px 0px;
       border: 2px solid #99E2D0;
-      margin-left: -700px !important;
+      margin-right: 700px !important;
     }
     .rectangle {
       display: flex !important;

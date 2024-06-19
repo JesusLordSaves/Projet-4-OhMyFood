@@ -30,8 +30,7 @@ main {
   align-items: center;
   width: 100vw;
   box-sizing: border-box;
-  min-width: 375px;
-  max-width: 1024px;
+ 
   .paris-section {
     background-color:$dark-grey;
     width: 100%; /* Ajustez la largeur selon vos besoins */
@@ -74,22 +73,25 @@ main {
       display: flex;
       justify-content: center;
       width: 100%;
-      .boutton-explorer-nos-restau {
-        width: fit-content;
-        padding: 0 1em;
-        height: 50px;
-        border-radius: 25px;
-        background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-        border-color: $secondary;
-        color: $color-inverse;
-        font-size: 16px;
-        font-weight: bold;
-        margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
-        margin-left: auto; /* Centrez horizontalement */
-        margin-right: auto; /* Centrez horizontalement */
-        display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
-        font-weight: bold;
-        margin-top: 10px;
+      .a {
+        text-decoration: none;
+      }  
+        .boutton-explorer-nos-restau {
+          width: fit-content;
+          padding: 0 1em;
+          height: 50px;
+          border-radius: 25px;
+          background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+          border-color: $secondary;
+          color: $color-inverse;
+          font-size: 16px;
+          font-weight: bold;
+          margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
+          margin-left: auto; /* Centrez horizontalement */
+          margin-right: auto; /* Centrez horizontalement */
+          display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
+          font-weight: bold;
+          margin-top: 10px;
       }
     }  
   }
@@ -171,17 +173,14 @@ main {
     margin-top: 110px;
     width: 100vw;
     margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .restaurants-texte {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       font-size: 24px;
       font-weight: 700;
       line-height: 28.13px;
-      margin-top: 40px;
-      margin-left: -160px; /* Réduisez cette marge */
-      margin-bottom: 30px;
-      margin-right: 20px; /* Ajoutez une marge à droite pour créer de l'espace */
+      text-align: left !important;
     }
     .cards-container {
       display: flex;
@@ -243,13 +242,12 @@ main {
         }
         .fa-heart {
           position: absolute; /* Position absolue pour placer l'icône de cœur */
+          top: 180px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
           right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
           color: #000000;
           font-size: 22px;
           cursor: pointer;
           transition: color 0.3s ease;
-          top : 20px;
-          margin-top: 150px;
         }
         .heart-toggle {
           display: none;
@@ -270,10 +268,25 @@ main {
           width: 100%;
           height: 100%;
         }
+          .heart-svg {
+            position: absolute;
+            top: 20px;
+            right: 30px; /* Ajustez cette valeur pour aligner avec les icônes Font Awesome */
+            width: 22px; /* Taille de l'icône SVG */
+            height: 22px; /* Taille de l'icône SVG */
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            fill: #000000; /* Couleur de l'icône SVG */
+            margin-top: 150px;
+        }
+          .heart-svg:hover {
+              transform: scale(1.2); /* Effet de zoom au survol */
+          }
+        }
       }
     }
   }
-}
+
 
 footer {
   margin-top: -100px;
@@ -322,7 +335,6 @@ footer {
     } 
   }
 }
-
 
 /* Styles pour les desktops */
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -423,29 +435,29 @@ footer {
     height: 400px;
     flex-direction: row !important; /* Les éléments sont en ligne */
     justify-content: center !important; /* Centrer les éléments horizontalement */
+    margin-bottom: -100px;
     .fonctionnement-texte {
-      display: block;
-      font-size: 32px;
-      margin-top: -80px !important;
-      margin-left: 110px !important;
+      padding-left: 550px !important;
+      padding-bottom: 150px;
     }
     .rectangle-button-container {
       flex-direction: row;
       justify-content: space-around;
       width: 30%;
-      
+      padding-right: 450px;
       #rectangle-fonctionnement-section {
-        width: 380px !important;
-        height: 100px;
-        margin: 0 20px;
-       
+        width: 340px !important;
+        height: 80px;
+        margin: 0 -300px;
         .élément-nombre {
           font-size: 1rem;
         }
         .fa-circle, .fa-stack-1x {
           margin: 0;
-         margin-left:   100px;
+          margin-left: 100px;
         }
+        .fa-circle {
+        }  
         .mobile-screen-button, .list-ul, .store {
           margin-left: 10px;
         }
@@ -460,9 +472,12 @@ footer {
     height: 700px;
     margin-top: 30px !important;
     margin-bottom: -250px;
-    width: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .restaurants-texte {
-      text-align: left !important;
+      padding-right: 1040px !important;
     }  
       .cards-container {
         display: grid !important;
@@ -470,21 +485,44 @@ footer {
         grid-template-rows: repeat(2, 1fr) !important;
         justify-content: center !important;
         align-items: center !important;
-        margin-left: 200px;
         .card-restaurants {
-          width: 500px !important; 
+          width: 570px !important; 
           height: auto;
-          margin-left: 150px ;
+          margin: 0 auto;
           img {
             height: 150px !important;
-            width: 500px !important;
+            width: 570px !important;
           }
           .card-texte-restaurant-1, .card-texte-restaurant-2 {
             font-size: 18px;
           }
-          .heart-label {
-            top: 10px;
-            right: 10px;
+          .fa-heart {
+            position: absolute; /* Position absolue pour placer l'icône de cœur */
+            top: 170px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
+            right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+            color: #000000;
+            font-size: 22px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+          }
+          .heart-toggle {
+            display: none;
+          }
+          .heart-toggle:checked + .fa-heart {
+            color: transparent;
+          }
+          .heart-toggle:checked + .fa-heart::before {
+            content: '\f004'; /* Unicode for filled heart */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900; /* Font wecight for solid icon */
+            background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
           }
         }
       }
