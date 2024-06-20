@@ -4,25 +4,26 @@ body {
   width: 100vw;
 }
 
-.logo, .header-title {
+.logo,
+.header-title {
   font-family: 'Shrikhand', cursive;
 }
 
 header {
-    position: relative;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .header-title {
+    font-style: italic;
+    font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+    font-size: 3rem;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .header-title {
-      font-style: italic;
-      font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
-      font-size: 3rem; 
-      text-align: center;
-      margin: 0 auto;
-      margin-top: 1em;
-    }
+    margin: 0 auto;
+    margin-top: 1em;
   }
+}
 
 main {
   display: flex;
@@ -30,9 +31,9 @@ main {
   align-items: center;
   width: 100vw;
   box-sizing: border-box;
- 
+
   .paris-section {
-    background-color:$dark-grey;
+    background-color: $dark-grey;
     width: 100%; /* Ajustez la largeur selon vos besoins */
     height: 50px; /* Ajustez la hauteur selon vos besoins */
     display: flex;
@@ -41,10 +42,10 @@ main {
     padding: 10px 0;
     gap: 1em;
   }
-  .resrv-decvr-button {
+  .reservez-découvrez-txt {
     background-color: $grey-color-section;
     height: 260px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center; /* Centre les éléments horizontalement */
@@ -55,45 +56,38 @@ main {
       line-height: 28.13px;
       text-align: center; /* Centrer le texte */
       margin-bottom: 50px; /* Ajustez la marge selon vos besoins */
-      .réservez-le-menu-texte > span {
-        display: block; /* Pour s'assurer que chaque ligne soit sur une ligne différente */
-      }
-      .desktoptablette-only {
-        display: none;
-      }
-    }   
+      max-width: 240px;
+    }
     .découvrez-des-restau-texte {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
+      margin-top: -30px;
     }
-    .explore-button-container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
+  }
       .a {
         text-decoration: none;
-      }  
-        .boutton-explorer-nos-restau {
-          width: fit-content;
-          padding: 0 1em;
-          height: 50px;
-          border-radius: 25px;
-          background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-          border-color: $secondary;
-          color: $color-inverse;
-          font-size: 16px;
-          font-weight: bold;
-          margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
-          margin-left: auto; /* Centrez horizontalement */
-          margin-right: auto; /* Centrez horizontalement */
-          display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
-          font-weight: bold;
-          margin-top: 10px;
       }
-    }  
+      .boutton-explorer-nos-restau {
+        width: fit-content;
+        padding: 0 1em;
+        height: 50px;
+        border-radius: 25px;
+        background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+        border-color: $secondary;
+        color: $color-inverse;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
+        margin-left: auto; /* Centrez horizontalement */
+        margin-right: auto; /* Centrez horizontalement */
+        display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
+        font-weight: bold;
+        margin-top: -50px;
+    }
+    
   }
 
   .fonctionnement {
@@ -111,7 +105,7 @@ main {
       margin-top: 40px;
       margin-left: -160px;
       margin-bottom: 30px;
-    } 
+    }
     .rectangle-button-container {
       display: flex; /* Transforme les boutons en flexbox */
       justify-content: center; /* Centre les boutons horizontalement */
@@ -122,40 +116,40 @@ main {
         top: 505px;
         left: 32.51px;
         gap: 0px;
-        border-radius: 20px ;
+        border-radius: 20px;
         opacity: 0px;
         margin-top: 20px;
         color: $grey-color-section;
         border-color: $grey-color-section;
         .élément-nombre {
           color: $primary;
-        }  
-          .fa-circle {
-            margin-left: -160px;
-          }
-          .fa-stack-1x {
-            margin-left: -160px;
-            margin-top: 4px;
-            color: $color-inverse;
-          }
+        }
+        .fa-circle {
+          margin-left: -160px;
+        }
+        .fa-stack-1x {
+          margin-left: -160px;
+          margin-top: 4px;
+          color: $color-inverse;
+        }
         .mobile-screen-button {
-          color:$color-logo-btn-fonctionnement;
+          color: $color-logo-btn-fonctionnement;
           text-align: left;
           margin-bottom: -15px;
           margin-left: 30px;
         }
         .list-ul {
-          color:$color-logo-btn-fonctionnement;
+          color: $color-logo-btn-fonctionnement;
           text-align: left;
           margin-bottom: -15px;
           margin-left: 30px;
-        }  
+        }
         .store {
-          color:$color-logo-btn-fonctionnement;
+          color: $color-logo-btn-fonctionnement;
           text-align: left;
           margin-bottom: -15px;
           margin-left: 30px;
-        }  
+        }
         .txt-fonctionnement-section {
           font-family: Roboto;
           font-size: 16px;
@@ -195,7 +189,7 @@ main {
         height: 231px;
         border-radius: 20px;
         gap: 4px;
-        border-color: #D9D9D9;
+        border-color: #d9d9d9;
         border: 2px solid;
         margin-top: 30px;
         color: $color-inverse;
@@ -219,7 +213,7 @@ main {
           position: absolute;
           top: 10px;
           right: 10px;
-          background-color: #99E2D0; 
+          background-color: #99e2d0;
           color: #008766;
           padding: 5px 10px;
           border-radius: 5px;
@@ -234,7 +228,7 @@ main {
           padding-top: 0.5em;
           padding-left: 0.5em;
           margin-top: 150px;
-        }  
+        }
         .card-texte-restaurant-2 {
           color: $black-color;
           text-decoration: none;
@@ -259,7 +253,11 @@ main {
           content: '\f004'; /* Unicode for filled heart */
           font-family: 'Font Awesome 5 Free';
           font-weight: 900; /* Font weight for solid icon */
-          background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+          background: linear-gradient(
+            193.33deg,
+            $primary -11.44%,
+            $secondary 123.93%
+          );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           position: absolute;
@@ -268,20 +266,19 @@ main {
           width: 100%;
           height: 100%;
         }
-          .heart-svg {
-            position: absolute;
-            top: 20px;
-            right: 30px; /* Ajustez cette valeur pour aligner avec les icônes Font Awesome */
-            width: 22px; /* Taille de l'icône SVG */
-            height: 22px; /* Taille de l'icône SVG */
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            fill: #000000; /* Couleur de l'icône SVG */
-            margin-top: 150px;
+        .heart-svg {
+          position: absolute;
+          top: 20px;
+          right: 30px; /* Ajustez cette valeur pour aligner avec les icônes Font Awesome */
+          width: 22px; /* Taille de l'icône SVG */
+          height: 22px; /* Taille de l'icône SVG */
+          cursor: pointer;
+          transition: transform 0.3s ease;
+          fill: #000000; /* Couleur de l'icône SVG */
+          margin-top: 150px;
         }
-          .heart-svg:hover {
-              transform: scale(1.2); /* Effet de zoom au survol */
-          }
+        .heart-svg:hover {
+          transform: scale(1.2); /* Effet de zoom au survol */
         }
       }
     }
@@ -296,7 +293,7 @@ footer {
   justify-content: center; /* Centre verticalement le contenu */
   background-color: $footer-color;
   padding: 20px;
-  width: 100vw;
+  width: 100%;
   h2 {
     font-family: Shrikhand;
     font-size: 18px;
@@ -314,7 +311,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centre horizontalement les éléments de la liste */
-    li  {
+    li {
       font-family: Roboto;
       font-size: 16px;
       font-weight: 500;
@@ -322,7 +319,7 @@ footer {
       text-align: center; /* Centre le texte horizontalement */
       color: $color-inverse;
       line-height: 30px;
-      
+
       a {
         color: $color-inverse;
         @include pm-left-0;
@@ -332,217 +329,41 @@ footer {
         color: $color-inverse;
         margin-right: 3px;
       }
-    } 
+    }
   }
+}
+
+/* Styles pour les tablettes */
+@media (min-width: 768px) {
+  .fonctionnement {
+    display: flex;
+    justify-content: center;
+  } 
+  .rectangle-button-container {
+    
+    
+  } 
+  #rectangle-fonctionnement-section {
+   
+  } 
 }
 
 /* Styles pour les desktops */
-@media (min-width: 1025px) and (max-width: 1440px) {
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    width: 100vw;
-  }
-  
-  header {
-    position: relative;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .header-title {
-      font-style: italic;
-      font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
-      font-size: 2rem; 
-      text-align: center;
-      margin: 0 auto;
-      margin-top: 1em;
-    }
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    box-sizing: border-box;
-    .paris-section {
-      background-color:$dark-grey;
-      width: 100vw; /* Ajustez la largeur selon vos besoins */
-      height: 50px; /* Ajustez la hauteur selon vos besoins */
-      display: flex;
-      justify-content: center; /* Centre horizontalement */
-      align-items: center; /* Centre verticalement */
-      padding: 10px 0;
-      gap: 1em;
-      font-size: 0.75rem;
-      .vector {
-        font-size: 1rem;
-      } 
-    }
-    .resrv-decvr-button {
-      background-color: $grey-color-section;
-      height: 260px;
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Centre les éléments horizontalement */
-      justify-content: center; /* Centre les éléments verticalement */
-      .réservez-le-menu-texte {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 28.13px;
-        text-align: center; /* Centrer le texte */
-        margin-bottom: 50px; /* Ajustez la marge selon vos besoins */
-        .réservez-le-menu-texte > span {
-          display: block; /* Pour s'assurer que chaque ligne soit sur une ligne différente */
-        }
-        .desktoptablette-only {
-          display: none;
-        }
-      }   
-      .découvrez-des-restau-texte {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-      }
-      .explore-button-container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        .boutton-explorer-nos-restau {
-          width: fit-content;
-          padding: 0 1em;
-          height: 50px;
-          border-radius: 25px;
-          background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-          border-color: $secondary;
-          color: $color-inverse;
-          font-size: 16px;
-          font-weight: bold;
-          margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
-          margin-left: auto; /* Centrez horizontalement */
-          margin-right: auto; /* Centrez horizontalement */
-          display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
-          font-weight: bold;
-          margin-top: 10px;
-        }
-      }  
-    }
-
+@media (min-width: 1025px) {
   .fonctionnement {
-    height: 400px;
-    flex-direction: row !important; /* Les éléments sont en ligne */
-    justify-content: center !important; /* Centrer les éléments horizontalement */
-    margin-bottom: -100px;
-    .fonctionnement-texte {
-      padding-left: 550px !important;
-      padding-bottom: 150px;
-    }
-    .rectangle-button-container {
-      flex-direction: row;
-      justify-content: space-around;
-      width: 30%;
-      padding-right: 450px;
-      #rectangle-fonctionnement-section {
-        width: 340px !important;
-        height: 80px;
-        margin: 0 -300px;
-        .élément-nombre {
-          font-size: 1rem;
-        }
-        .fa-circle, .fa-stack-1x {
-          margin: 0;
-          margin-left: 100px;
-        }
-        .fa-circle {
-        }  
-        .mobile-screen-button, .list-ul, .store {
-          margin-left: 10px;
-        }
-        .txt-fonctionnement-section {
-          font-size: 18px;
-        }
-      }
-    }
+    flex-direction: row;
+  } 
+  .fonctionnement-texte {
+    margin-top: -70px !important;
+    margin-left: -20px;
+  }  
+  .rectangle-button-container {
+    width: 30%;
+  } 
+  #rectangle-fonctionnement-section {
+    gap: 10px;
+  } 
+  .réservez-le-menu-texte {
+    max-width: 1000px !important;
   }
-
-  .restaurants {
-    height: 700px;
-    margin-top: 30px !important;
-    margin-bottom: -250px;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .restaurants-texte {
-      padding-right: 1040px !important;
-    }  
-      .cards-container {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        grid-template-rows: repeat(2, 1fr) !important;
-        justify-content: center !important;
-        align-items: center !important;
-        .card-restaurants {
-          width: 570px !important; 
-          height: auto;
-          margin: 0 auto;
-          img {
-            height: 150px !important;
-            width: 570px !important;
-          }
-          .card-texte-restaurant-1, .card-texte-restaurant-2 {
-            font-size: 18px;
-          }
-          .fa-heart {
-            position: absolute; /* Position absolue pour placer l'icône de cœur */
-            top: 170px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-            right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
-            color: #000000;
-            font-size: 22px;
-            cursor: pointer;
-            transition: color 0.3s ease;
-          }
-          .heart-toggle {
-            display: none;
-          }
-          .heart-toggle:checked + .fa-heart {
-            color: transparent;
-          }
-          .heart-toggle:checked + .fa-heart::before {
-            content: '\f004'; /* Unicode for filled heart */
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900; /* Font wecight for solid icon */
-            background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-  }
-
-  footer {
-    margin-top: 250px;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 100vw;
-    h2 {
-      font-size: 24px;
-    }
-    ul {
-      flex-direction: row;
-      margin-left: 20px;
-      li {
-        margin: 0 10px;
-      }
-    }
-  }
-}
 }

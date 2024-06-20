@@ -6,7 +6,8 @@ body {
   width: 100vw;
 }
 
-.logo, .header-title {
+.logo,
+.header-title {
   font-family: "Shrikhand", cursive;
 }
 
@@ -43,44 +44,35 @@ main .paris-section {
   padding: 10px 0;
   gap: 1em;
 }
-main .resrv-decvr-button {
+main .reservez-découvrez-txt {
   background-color: #F6F6F6;
   height: 260px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center; /* Centre les éléments horizontalement */
   justify-content: center; /* Centre les éléments verticalement */
 }
-main .resrv-decvr-button .réservez-le-menu-texte {
+main .reservez-découvrez-txt .réservez-le-menu-texte {
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
   text-align: center; /* Centrer le texte */
   margin-bottom: 50px; /* Ajustez la marge selon vos besoins */
+  max-width: 240px;
 }
-main .resrv-decvr-button .réservez-le-menu-texte .réservez-le-menu-texte > span {
-  display: block; /* Pour s'assurer que chaque ligne soit sur une ligne différente */
-}
-main .resrv-decvr-button .réservez-le-menu-texte .desktoptablette-only {
-  display: none;
-}
-main .resrv-decvr-button .découvrez-des-restau-texte {
+main .reservez-découvrez-txt .découvrez-des-restau-texte {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  margin-top: -30px;
 }
-main .resrv-decvr-button .explore-button-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-main .resrv-decvr-button .explore-button-container .a {
+main .a {
   text-decoration: none;
 }
-main .resrv-decvr-button .explore-button-container .boutton-explorer-nos-restau {
+main .boutton-explorer-nos-restau {
   width: -moz-fit-content;
   width: fit-content;
   padding: 0 1em;
@@ -96,15 +88,16 @@ main .resrv-decvr-button .explore-button-container .boutton-explorer-nos-restau 
   margin-right: auto; /* Centrez horizontalement */
   display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: -50px;
 }
-main .fonctionnement {
+
+.fonctionnement {
   height: 300px;
   display: flex; /* Ajoutez cette ligne pour transformer le conteneur en flexbox */
   flex-direction: column; /* Ajustez la direction en colonne pour aligner verticalement */
   align-items: center; /* Centre les éléments verticalement */
 }
-main .fonctionnement .fonctionnement-texte {
+.fonctionnement .fonctionnement-texte {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,12 +108,12 @@ main .fonctionnement .fonctionnement-texte {
   margin-left: -160px;
   margin-bottom: 30px;
 }
-main .fonctionnement .rectangle-button-container {
+.fonctionnement .rectangle-button-container {
   display: flex; /* Transforme les boutons en flexbox */
   justify-content: center; /* Centre les boutons horizontalement */
   align-items: center; /* Centre les boutons verticalement */
 }
-main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section {
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section {
   width: 322.49px;
   height: 72.38px;
   top: 505px;
@@ -132,43 +125,44 @@ main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-secti
   color: #F6F6F6;
   border-color: #F6F6F6;
 }
-main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre {
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre {
   color: #9356DC;
 }
-main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .fa-circle {
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .fa-circle {
   margin-left: -160px;
 }
-main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .fa-stack-1x {
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .fa-stack-1x {
   margin-left: -160px;
   margin-top: 4px;
   color: #FFFFFF;
 }
-main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .mobile-screen-button {
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .mobile-screen-button {
   color: #7e7e7e;
   text-align: left;
   margin-bottom: -15px;
   margin-left: 30px;
 }
-main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .list-ul {
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .list-ul {
   color: #7e7e7e;
   text-align: left;
   margin-bottom: -15px;
   margin-left: 30px;
 }
-main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .store {
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .store {
   color: #7e7e7e;
   text-align: left;
   margin-bottom: -15px;
   margin-left: 30px;
 }
-main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .txt-fonctionnement-section {
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .txt-fonctionnement-section {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
   color: #000000;
 }
-main .restaurants {
+
+.restaurants {
   height: 1350px;
   background-color: #F6F6F6;
   margin-top: 110px;
@@ -178,27 +172,27 @@ main .restaurants {
   flex-direction: column;
   align-items: center;
 }
-main .restaurants .restaurants-texte {
+.restaurants .restaurants-texte {
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
   text-align: left !important;
 }
-main .restaurants .cards-container {
+.restaurants .cards-container {
   display: flex;
   flex-direction: column; /* Change pour une disposition en colonne */
   align-items: center; /* Centre les cartes horizontalement */
   gap: 30px; /* Ajoute un espace entre les cartes */
 }
-main .restaurants .cards-container .link {
+.restaurants .cards-container .link {
   text-decoration: none;
 }
-main .restaurants .cards-container .card-restaurants {
+.restaurants .cards-container .card-restaurants {
   width: 310px;
   height: 231px;
   border-radius: 20px;
   gap: 4px;
-  border-color: #D9D9D9;
+  border-color: #d9d9d9;
   border: 2px solid;
   margin-top: 30px;
   color: #FFFFFF;
@@ -208,7 +202,7 @@ main .restaurants .cards-container .card-restaurants {
   margin-right: auto;
   position: relative;
 }
-main .restaurants .cards-container .card-restaurants img {
+.restaurants .cards-container .card-restaurants img {
   width: 310px;
   height: 150px;
   gap: 0px;
@@ -220,11 +214,11 @@ main .restaurants .cards-container .card-restaurants img {
   z-index: 100;
   margin-top: -70px;
 }
-main .restaurants .cards-container .card-restaurants .nouveau-badge {
+.restaurants .cards-container .card-restaurants .nouveau-badge {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #008766;
   padding: 5px 10px;
   border-radius: 5px;
@@ -232,7 +226,7 @@ main .restaurants .cards-container .card-restaurants .nouveau-badge {
   font-weight: bold;
   z-index: 100;
 }
-main .restaurants .cards-container .card-restaurants .card-texte-restaurant-1 {
+.restaurants .cards-container .card-restaurants .card-texte-restaurant-1 {
   color: #000000;
   font-weight: 700;
   font-size: 1.2em;
@@ -240,12 +234,12 @@ main .restaurants .cards-container .card-restaurants .card-texte-restaurant-1 {
   padding-left: 0.5em;
   margin-top: 150px;
 }
-main .restaurants .cards-container .card-restaurants .card-texte-restaurant-2 {
+.restaurants .cards-container .card-restaurants .card-texte-restaurant-2 {
   color: #000000;
   text-decoration: none;
   padding-left: 0.5em;
 }
-main .restaurants .cards-container .card-restaurants .fa-heart {
+.restaurants .cards-container .card-restaurants .fa-heart {
   position: absolute; /* Position absolue pour placer l'icône de cœur */
   top: 180px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
   right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
@@ -254,13 +248,13 @@ main .restaurants .cards-container .card-restaurants .fa-heart {
   cursor: pointer;
   transition: color 0.3s ease;
 }
-main .restaurants .cards-container .card-restaurants .heart-toggle {
+.restaurants .cards-container .card-restaurants .heart-toggle {
   display: none;
 }
-main .restaurants .cards-container .card-restaurants .heart-toggle:checked + .fa-heart {
+.restaurants .cards-container .card-restaurants .heart-toggle:checked + .fa-heart {
   color: transparent;
 }
-main .restaurants .cards-container .card-restaurants .heart-toggle:checked + .fa-heart::before {
+.restaurants .cards-container .card-restaurants .heart-toggle:checked + .fa-heart::before {
   content: "\f004"; /* Unicode for filled heart */
   font-family: "Font Awesome 5 Free";
   font-weight: 900; /* Font weight for solid icon */
@@ -273,7 +267,7 @@ main .restaurants .cards-container .card-restaurants .heart-toggle:checked + .fa
   width: 100%;
   height: 100%;
 }
-main .restaurants .cards-container .card-restaurants .heart-svg {
+.restaurants .cards-container .card-restaurants .heart-svg {
   position: absolute;
   top: 20px;
   right: 30px; /* Ajustez cette valeur pour aligner avec les icônes Font Awesome */
@@ -284,7 +278,7 @@ main .restaurants .cards-container .card-restaurants .heart-svg {
   fill: #000000; /* Couleur de l'icône SVG */
   margin-top: 150px;
 }
-main .restaurants .cards-container .card-restaurants .heart-svg:hover {
+.restaurants .cards-container .card-restaurants .heart-svg:hover {
   transform: scale(1.2); /* Effet de zoom au survol */
 }
 
@@ -296,7 +290,7 @@ footer {
   justify-content: center; /* Centre verticalement le contenu */
   background-color: #353535;
   padding: 20px;
-  width: 100vw;
+  width: 100%;
 }
 footer h2 {
   font-family: Shrikhand;
@@ -337,209 +331,30 @@ footer ul li .fa-solid {
   margin-right: 3px;
 }
 
+/* Styles pour les tablettes */
+@media (min-width: 768px) {
+  .fonctionnement {
+    display: flex;
+    justify-content: center;
+  }
+}
 /* Styles pour les desktops */
-@media (min-width: 1025px) and (max-width: 1440px) {
-  body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    width: 100vw;
-  }
-  header {
-    position: relative;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  header .header-title {
-    font-style: italic;
-    font-family: "Shrikhand", cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
-    font-size: 2rem;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 1em;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    box-sizing: border-box;
-  }
-  main .paris-section {
-    background-color: #EAEAEA;
-    width: 100vw; /* Ajustez la largeur selon vos besoins */
-    height: 50px; /* Ajustez la hauteur selon vos besoins */
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    padding: 10px 0;
-    gap: 1em;
-    font-size: 0.75rem;
-  }
-  main .paris-section .vector {
-    font-size: 1rem;
-  }
-  main .resrv-decvr-button {
-    background-color: #F6F6F6;
-    height: 260px;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centre les éléments horizontalement */
-    justify-content: center; /* Centre les éléments verticalement */
-  }
-  main .resrv-decvr-button .réservez-le-menu-texte {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28.13px;
-    text-align: center; /* Centrer le texte */
-    margin-bottom: 50px; /* Ajustez la marge selon vos besoins */
-  }
-  main .resrv-decvr-button .réservez-le-menu-texte .réservez-le-menu-texte > span {
-    display: block; /* Pour s'assurer que chaque ligne soit sur une ligne différente */
-  }
-  main .resrv-decvr-button .réservez-le-menu-texte .desktoptablette-only {
-    display: none;
-  }
-  main .resrv-decvr-button .découvrez-des-restau-texte {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  main .resrv-decvr-button .explore-button-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  main .resrv-decvr-button .explore-button-container .boutton-explorer-nos-restau {
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0 1em;
-    height: 50px;
-    border-radius: 25px;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    border-color: #FF79DA;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
-    margin-left: auto; /* Centrez horizontalement */
-    margin-right: auto; /* Centrez horizontalement */
-    display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  main .fonctionnement {
-    height: 400px;
-    flex-direction: row !important; /* Les éléments sont en ligne */
-    justify-content: center !important; /* Centrer les éléments horizontalement */
-    margin-bottom: -100px;
-  }
-  main .fonctionnement .fonctionnement-texte {
-    padding-left: 550px !important;
-    padding-bottom: 150px;
-  }
-  main .fonctionnement .rectangle-button-container {
+@media (min-width: 1025px) {
+  .fonctionnement {
     flex-direction: row;
-    justify-content: space-around;
+  }
+  .fonctionnement-texte {
+    margin-top: -70px !important;
+    margin-left: -20px;
+  }
+  .rectangle-button-container {
     width: 30%;
-    padding-right: 450px;
   }
-  main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section {
-    width: 340px !important;
-    height: 80px;
-    margin: 0 -300px;
+  #rectangle-fonctionnement-section {
+    gap: 10px;
   }
-  main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre {
-    font-size: 1rem;
-  }
-  main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .fa-circle, main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .fa-stack-1x {
-    margin: 0;
-    margin-left: 100px;
-  }
-  main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .mobile-screen-button, main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .list-ul, main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .store {
-    margin-left: 10px;
-  }
-  main .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .txt-fonctionnement-section {
-    font-size: 18px;
-  }
-  main .restaurants {
-    height: 700px;
-    margin-top: 30px !important;
-    margin-bottom: -250px;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main .restaurants .restaurants-texte {
-    padding-right: 1040px !important;
-  }
-  main .restaurants .cards-container {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: repeat(2, 1fr) !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  main .restaurants .cards-container .card-restaurants {
-    width: 570px !important;
-    height: auto;
-    margin: 0 auto;
-  }
-  main .restaurants .cards-container .card-restaurants img {
-    height: 150px !important;
-    width: 570px !important;
-  }
-  main .restaurants .cards-container .card-restaurants .card-texte-restaurant-1, main .restaurants .cards-container .card-restaurants .card-texte-restaurant-2 {
-    font-size: 18px;
-  }
-  main .restaurants .cards-container .card-restaurants .fa-heart {
-    position: absolute; /* Position absolue pour placer l'icône de cœur */
-    top: 170px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-    right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
-    color: #000000;
-    font-size: 22px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  main .restaurants .cards-container .card-restaurants .heart-toggle {
-    display: none;
-  }
-  main .restaurants .cards-container .card-restaurants .heart-toggle:checked + .fa-heart {
-    color: transparent;
-  }
-  main .restaurants .cards-container .card-restaurants .heart-toggle:checked + .fa-heart::before {
-    content: "\f004"; /* Unicode for filled heart */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900; /* Font wecight for solid icon */
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  main footer {
-    margin-top: 250px;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 100vw;
-  }
-  main footer h2 {
-    font-size: 24px;
-  }
-  main footer ul {
-    flex-direction: row;
-    margin-left: 20px;
-  }
-  main footer ul li {
-    margin: 0 10px;
+  .réservez-le-menu-texte {
+    max-width: 1000px !important;
   }
 }
 body {
