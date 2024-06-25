@@ -207,6 +207,7 @@ main {
       font-family: 'Roboto', sans-serif;
       width: 95% !important ;
       position: relative;
+      overflow: hidden;
       .rectangle-texte-1 {
         font-size: 17px;
         font-weight: 500;
@@ -217,6 +218,20 @@ main {
         font-weight: 300;
         margin-bottom: 10px;
       }
+      .rectangle::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -100%; /* Commence caché sur le côté droit */
+        height: 100%; /* Hauteur égale à celle du rectangle */
+        background-color: #99E2D0; /* Couleur verte spécifiée */
+        transition: right 0.5s ease-in-out; /* Animation fluide pour dévoiler le carré */
+      }
+      
+      .rectangle:hover::after {
+        right: 0; /* Dévoile le carré en le déplaçant vers la gauche */
+      }
+      
       .prix {
         font-size: 18px;
         font-weight: 700;
@@ -224,25 +239,13 @@ main {
         right: 20px;
         top: 40px;
         color: #000;
-        transition: right 1.25s;
+        transition: right 0.5s ease-in-out; /* Animer le déplacement du prix */
       }
-      .green-square {
-        width: 0;
-        height: 65px;
-        background-color: green;
-        transition: all 0.3s ease;
-        margin-left: 70px;
-        transform: translateX(-30px); /* Déplace le prix vers la gauche */
-      }
+      
       .rectangle:hover .prix {
-        transform: translateX(-30px); /* Déplace le prix vers la gauche */
-        transition: transform 0.3s ease; /* Transition pour l'animation */
+        right: 120px; /* Déplace le prix vers la gauche lorsque survolé */
       }
-    
-      .rectangle:hover .green-square {
-        width: 20px;
-        opacity: 1; /* Rendre visible le carré vert au survol */
-      }
+      
     }
     .boutton-commander {
       width: 186px;
