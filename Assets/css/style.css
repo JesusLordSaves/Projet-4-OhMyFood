@@ -297,7 +297,13 @@ footer ul {
   flex-direction: column;
   align-items: center; /* Centre horizontalement les éléments de la liste */
 }
-footer ul li {
+footer .fa-utensils {
+  margin-left: 20px;
+}
+footer .fa-handshake-angle {
+  margin-left: -20px;
+}
+footer .ligne-1 {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -305,14 +311,45 @@ footer ul li {
   text-align: center; /* Centre le texte horizontalement */
   color: #FFFFFF;
   line-height: 30px;
+  margin-left: 5px;
 }
-footer ul li a {
+footer .ligne-2 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center; /* Centre le texte horizontalement */
+  color: #FFFFFF;
+  line-height: 30px;
+  margin-left: 5px;
+}
+footer .ligne-3 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center; /* Centre le texte horizontalement */
+  color: #FFFFFF;
+  line-height: 30px;
+  margin-left: -60px;
+}
+footer .ligne-4 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center; /* Centre le texte horizontalement */
+  color: #FFFFFF;
+  line-height: 30px;
+  margin-left: -125px;
+}
+footer a {
   color: #FFFFFF;
   padding-left: 0;
   margin-left: 0;
   text-decoration: none;
 }
-footer ul li .fa-solid {
+footer .fa-solid {
   color: #FFFFFF;
   margin-right: 3px;
 }
@@ -337,6 +374,8 @@ footer ul li .fa-solid {
   }
   .restaurants {
     margin-top: -30px;
+    height: auto;
+    padding-bottom: 40px;
   }
   .fa-1 {
     margin-right: 30px;
@@ -344,6 +383,13 @@ footer ul li .fa-solid {
   footer {
     flex-direction: row-reverse;
     align-items: flex-end;
+  }
+  .cards-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 }
 body {
@@ -564,14 +610,35 @@ main .restaurant-classe .rectangle .rectangle-texte-2 {
 main .restaurant-classe .rectangle .rectangle::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: -100%; /* Commence caché sur le côté droit */
-  height: 100%; /* Hauteur égale à celle du rectangle */
-  background-color: #99E2D0; /* Couleur verte spécifiée */
-  transition: right 0.5s ease-in-out; /* Animation fluide pour dévoiler le carré */
+  right: 10px;
+  width: 0;
+  height: 0;
+  background-color: #00a676; /* Couleur du carré vert */
+  border-radius: 5px;
+  transition: width 1s ease, height 1s ease; /* Animation d'agrandissement du carré */
 }
 main .restaurant-classe .rectangle .rectangle:hover::after {
-  right: 0; /* Dévoile le carré en le déplaçant vers la gauche */
+  width: 40px; /* Taille du carré vert */
+  height: 96px; /* Taille du carré vert */
+  margin-top: -20px;
+}
+main .restaurant-classe .rectangle .rectangle .prix {
+  position: relative;
+  z-index: 1; /* Assurez-vous que le prix reste au-dessus du carré vert */
+  transition: transform 1s ease; /* Animation du déplacement du prix */
+}
+main .restaurant-classe .rectangle .rectangle:hover .prix {
+  transform: translateX(-40px); /* Déplace le prix vers la gauche pour faire de la place au carré vert */
+}
+main .restaurant-classe .rectangle .rectangle .checkmark {
+  display: none;
+}
+main .restaurant-classe .rectangle .rectangle:hover .checkmark {
+  display: block;
+  position: absolute;
+  right: 15px; /* Positionnez-le correctement à l'intérieur du carré vert */
+  color: white;
+  font-size: 24px;
 }
 main .restaurant-classe .rectangle .prix {
   font-size: 18px;
@@ -581,9 +648,6 @@ main .restaurant-classe .rectangle .prix {
   top: 40px;
   color: #000;
   transition: right 0.5s ease-in-out; /* Animer le déplacement du prix */
-}
-main .restaurant-classe .rectangle .rectangle:hover .prix {
-  right: 120px; /* Déplace le prix vers la gauche lorsque survolé */
 }
 main .restaurant-classe .boutton-commander {
   width: 186px;

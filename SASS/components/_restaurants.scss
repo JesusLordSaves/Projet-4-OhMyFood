@@ -219,19 +219,38 @@ main {
         margin-bottom: 10px;
       }
       .rectangle::after {
-        content: '';
+        content: "";
         position: absolute;
-        top: 0;
-        right: -100%; /* Commence caché sur le côté droit */
-        height: 100%; /* Hauteur égale à celle du rectangle */
-        background-color: #99E2D0; /* Couleur verte spécifiée */
-        transition: right 0.5s ease-in-out; /* Animation fluide pour dévoiler le carré */
+        right: 10px;
+        width: 0;
+        height: 0;
+        background-color: #00a676; /* Couleur du carré vert */
+        border-radius: 5px;
+        transition: width 1s ease, height 1s ease; /* Animation d'agrandissement du carré */
       }
-      
       .rectangle:hover::after {
-        right: 0; /* Dévoile le carré en le déplaçant vers la gauche */
+        width: 40px; /* Taille du carré vert */
+        height: 96px; /* Taille du carré vert */
+        margin-top: -20px;
       }
-      
+      .rectangle .prix {
+        position: relative;
+        z-index: 1; /* Assurez-vous que le prix reste au-dessus du carré vert */
+        transition: transform 1s ease; /* Animation du déplacement du prix */
+      }
+      .rectangle:hover .prix {
+        transform: translateX(-40px); /* Déplace le prix vers la gauche pour faire de la place au carré vert */
+      }
+      .rectangle .checkmark {
+        display: none;
+      }
+      .rectangle:hover .checkmark {
+        display: block;
+        position: absolute;
+        right: 15px; /* Positionnez-le correctement à l'intérieur du carré vert */
+        color: white;
+        font-size: 24px;
+      }
       .prix {
         font-size: 18px;
         font-weight: 700;
@@ -241,11 +260,6 @@ main {
         color: #000;
         transition: right 0.5s ease-in-out; /* Animer le déplacement du prix */
       }
-      
-      .rectangle:hover .prix {
-        right: 120px; /* Déplace le prix vers la gauche lorsque survolé */
-      }
-      
     }
     .boutton-commander {
       width: 186px;
