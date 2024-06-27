@@ -330,7 +330,7 @@ footer {
 
 
 /* Styles pour les desktops */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   
 body {
   font-family: 'Roboto', sans-serif;
@@ -518,7 +518,8 @@ footer {
     font-weight: 400;
     text-align: left;
     color: $color-inverse;
-    padding-left: 150px !important;
+    padding-left: 130px;
+    padding-right: 40px;
   }
   .fa-solid {
     color: $color-inverse;
@@ -526,6 +527,8 @@ footer {
   }
   ul {
     list-style: none;
+    flex-direction: row;
+    gap: 2em;
     @include pm-left-0;
     li  {
       font-family: Roboto;

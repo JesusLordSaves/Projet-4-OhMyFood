@@ -3,6 +3,10 @@ body {
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .logo,
@@ -68,213 +72,225 @@ main {
       margin-top: -30px;
     }
   }
-      .a {
-        text-decoration: none;
-      }
-      .boutton-explorer-nos-restau {
-        width: fit-content;
-        padding: 0 1em;
-        height: 50px;
-        border-radius: 25px;
-        background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-        border-color: $secondary;
-        color: $color-inverse;
-        font-size: 16px;
-        font-weight: bold;
-        margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
-        margin-left: auto; /* Centrez horizontalement */
-        margin-right: auto; /* Centrez horizontalement */
-        display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
-        font-weight: bold;
-        margin-top: -50px;
-    }
-    
+  .a {
+    text-decoration: none;
   }
-
-  .fonctionnement {
-    height: 300px;
-    display: flex; /* Ajoutez cette ligne pour transformer le conteneur en flexbox */
-    flex-direction: column; /* Ajustez la direction en colonne pour aligner verticalement */
-    align-items: center; /* Centre les éléments verticalement */
-    .fonctionnement-texte {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 28.13px;
-      margin-top: 40px;
-      margin-left: -160px;
-      margin-bottom: 30px;
-    }
-    .rectangle-button-container {
-      display: flex; /* Transforme les boutons en flexbox */
-      justify-content: center; /* Centre les boutons horizontalement */
-      align-items: center; /* Centre les boutons verticalement */
-      #rectangle-fonctionnement-section {
-        width: 322.49px;
-        height: 72.38px;
-        top: 505px;
-        left: 32.51px;
-        gap: 0px;
-        border-radius: 20px;
-        opacity: 0px;
-        margin-top: 20px;
-        color: $grey-color-section;
-        border-color: $grey-color-section;
-        .élément-nombre {
-          color: $primary;
-        }
-        .fa-circle {
-          margin-left: -160px;
-        }
-        .fa-stack-1x {
-          margin-left: -160px;
-          margin-top: 4px;
-          color: $color-inverse;
-        }
-        .mobile-screen-button {
-          color: $color-logo-btn-fonctionnement;
-          text-align: left;
-          margin-bottom: -15px;
-          margin-left: 30px;
-        }
-        .list-ul {
-          color: $color-logo-btn-fonctionnement;
-          text-align: left;
-          margin-bottom: -15px;
-          margin-left: 30px;
-        }
-        .store {
-          color: $color-logo-btn-fonctionnement;
-          text-align: left;
-          margin-bottom: -15px;
-          margin-left: 30px;
-        }
-        .txt-fonctionnement-section {
-          font-family: Roboto;
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 18.75px;
-          color: $black-color;
-        }
-      }
-    }
+  .boutton-explorer-nos-restau {
+    width: fit-content;
+    padding: 0 1em;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(
+      193.33deg,
+      $primary -11.44%,
+      $secondary 123.93%
+    );
+    border-color: $secondary;
+    color: $color-inverse;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
+    margin-left: auto; /* Centrez horizontalement */
+    margin-right: auto; /* Centrez horizontalement */
+    display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
+    font-weight: bold;
+    margin-top: -50px;
   }
+}
 
-  .restaurants {
-    height: 1350px;
-    background-color: $grey-color-section;
-    margin-top: 110px;
-    width: 100vw;
+.fonctionnement {
+  height: 300px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .fonctionnement-texte {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .restaurants-texte {
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 28.13px;
-      text-align: left !important;
-    }
-    .cards-container {
-      display: flex;
-      flex-direction: column; /* Change pour une disposition en colonne */
-      align-items: center; /* Centre les cartes horizontalement */
-      gap: 30px; /* Ajoute un espace entre les cartes */
-      .link {
-        text-decoration: none;
-      }
-      .card-restaurants {
-        width: 310px;
-        height: 231px;
-        border-radius: 20px;
-        gap: 4px;
-        border-color: #d9d9d9;
-        border: 2px solid;
-        margin-top: 30px;
-        color: $color-inverse;
-        background-color: $color-inverse;
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    margin-top: 40px;
+    margin-left: -160px;
+    margin-bottom: 30px;
+  }
+  .rectangle-button-container {
+    display: flex; /* Transforme les boutons en flexbox */
+    justify-content: center; /* Centre les boutons horizontalement */
+    align-items: center; /* Centre les boutons verticalement */
+    #rectangle-fonctionnement-section {
+      width: 80vw;
+      height: 72.38px;
+      top: 505px;
+      left: 32.51px;
+      gap: 0px;
+      border-radius: 20px;
+      opacity: 0px;
+      margin-top: 20px;
+      color: $grey-color-section;
+      border-color: $grey-color-section;
+      .élément-nombre {
+        color: $primary;
         position: relative;
-        img {
-          width: 310px;
-          height: 150px;
-          gap: 0px;
-          opacity: 1;
-          border-radius: 20px 20px 0px 0px;
-          object-fit: cover;
-          image-rendering: auto;
-          z-index: 100;
-          margin-top: -70px;
-        }
-        .nouveau-badge {
+        .fa-circle {
+          margin-left: -300px;
+          left: 70px;
           position: absolute;
-          top: 10px;
-          right: 10px;
-          background-color: #99e2d0;
-          color: #008766;
-          padding: 5px 10px;
-          border-radius: 5px;
-          font-size: 0.9em;
-          font-weight: bold;
-          z-index: 100;
         }
-        .card-texte-restaurant-1 {
-          color: $black-color;
-          font-weight: 700;
-          font-size: 1.2em;
-          padding-top: 0.5em;
-          padding-left: 0.5em;
-          margin-top: 150px;
-        }
-        .card-texte-restaurant-2 {
-          color: $black-color;
-          text-decoration: none;
-          padding-left: 0.5em;
-        }
-        .fa-heart {
-          position: absolute; /* Position absolue pour placer l'icône de cœur */
-          top: 180px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-          right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
-          color: #000000;
-          font-size: 22px;
-          cursor: pointer;
-          transition: color 0.3s ease;
-        }
-        .heart-toggle {
-          display: none;
-        }
-       
-        .heart-toggle:checked + .fa-heart {
-          color: transparent;
-        }
-        .heart-toggle:checked + .fa-heart::before {
-          content: '\f004'; /* Unicode for filled heart */
-          font-family: 'Font Awesome 5 Free';
-          font-weight: 900; /* Font weight for solid icon */
-          background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: initial;
-          color: transparent;
+        .fa-stack-1x {
+          margin-left: -300px;
+          left: 70px;
+          margin-top: 4px;
+          color: $color-inverse;
           position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
         }
+      }
+      .mobile-screen-button {
+        color: $color-logo-btn-fonctionnement;
+        text-align: left;
+        margin-bottom: -15px;
+        margin-left: 30px;
+      }
+      .list-ul {
+        color: $color-logo-btn-fonctionnement;
+        text-align: left;
+        margin-bottom: -15px;
+        margin-left: 30px;
+      }
+      .store {
+        color: $color-logo-btn-fonctionnement;
+        text-align: left;
+        margin-bottom: -15px;
+        margin-left: 30px;
+      }
+      .txt-fonctionnement-section {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.75px;
+        color: $black-color;
       }
     }
   }
+}
 
+.restaurants {
+  height: 1350px;
+  background-color: $grey-color-section;
+  margin-top: 110px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .restaurants-texte {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    text-align: left !important;
+  }
+  .cards-container {
+    display: flex;
+    flex-direction: column; /* Change pour une disposition en colonne */
+    align-items: center; /* Centre les cartes horizontalement */
+    gap: 30px; /* Ajoute un espace entre les cartes */
+    .link {
+      text-decoration: none;
+    }
+    .card-restaurants {
+      width: 80vw;
+      height: 231px;
+      border-radius: 20px;
+      gap: 4px;
+      border-color: #d9d9d9;
+      border: 2px solid;
+      margin-top: 30px;
+      color: $color-inverse;
+      background-color: $color-inverse;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      img {
+        width: 100%;
+        height: 150px;
+        gap: 0px;
+        opacity: 1;
+        border-radius: 20px 20px 0px 0px;
+        object-fit: cover;
+        image-rendering: auto;
+        z-index: 100;
+        margin-top: -70px;
+      }
+      .nouveau-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #99e2d0;
+        color: #008766;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        font-weight: bold;
+        z-index: 100;
+      }
+      .card-texte-restaurant-1 {
+        color: $black-color;
+        font-weight: 700;
+        font-size: 1.2em;
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+        margin-top: 150px;
+      }
+      .card-texte-restaurant-2 {
+        color: $black-color;
+        text-decoration: none;
+        padding-left: 0.5em;
+      }
+      .fa-heart {
+        position: absolute; /* Position absolue pour placer l'icône de cœur */
+        top: 180px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
+        right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+        color: #000000;
+        font-size: 22px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      .heart-toggle {
+        display: none;
+      }
+
+      .heart-toggle:checked + .fa-heart {
+        color: transparent;
+      }
+      .heart-toggle:checked + .fa-heart::before {
+        content: '\f004'; /* Unicode for filled heart */
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900; /* Font weight for solid icon */
+        background: linear-gradient(
+          193.33deg,
+          $primary -11.44%,
+          $secondary 123.93%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: initial;
+        color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
 
 footer {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: $footer-color;;
+  background-color: $footer-color;
   width: 100%;
   h2 {
     font-family: Shrikhand;
@@ -294,92 +310,105 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centre horizontalement les éléments de la liste */
-    }
-    .fa-utensils {
-      margin-left: 20px;
-    }  
-    .fa-handshake-angle {
-      margin-left: -20px;
-    } 
-    .ligne-1 {
-      font-family: Roboto;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 18.75px;
-      text-align: center; /* Centre le texte horizontalement */
-      color: $color-inverse;
-      line-height: 30px;
-      margin-left: 5px;
-    }
-    .ligne-2 {
-      font-family: Roboto;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 18.75px;
-      text-align: center; /* Centre le texte horizontalement */
-      color: $color-inverse;
-      line-height: 30px;
-      margin-left: 5px;
-    }
-    .ligne-3 {
-      font-family: Roboto;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 18.75px;
-      text-align: center; /* Centre le texte horizontalement */
-      color: $color-inverse;
-      line-height: 30px;
-      margin-left: -60px;
-    }
-    .ligne-4 {
-      font-family: Roboto;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 18.75px;
-      text-align: center; /* Centre le texte horizontalement */
-      color: $color-inverse;
-      line-height: 30px;
-      margin-left: -125px;
-    }
-      a {
-        color: $color-inverse;
-        @include pm-left-0;
-        text-decoration: none;
-      }
-      .fa-solid {
-        color: $color-inverse;
-        margin-right: 3px;
-      }
-    
-  
+  }
+  .fa-utensils {
+    margin-left: 20px;
+  }
+  .fa-handshake-angle {
+    margin-left: -20px;
+  }
+  .ligne-1 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: center; /* Centre le texte horizontalement */
+    color: $color-inverse;
+    line-height: 30px;
+    margin-left: 5px;
+  }
+  .ligne-2 {
+    font-family: Roboto;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: center; /* Centre le texte horizontalement */
+    color: $color-inverse;
+    line-height: 30px;
+    margin-left: 5px;
+  }
+  .ligne-3 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: center; /* Centre le texte horizontalement */
+    color: $color-inverse;
+    line-height: 30px;
+    margin-left: -60px;
+  }
+  .ligne-4 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: center; /* Centre le texte horizontalement */
+    color: $color-inverse;
+    line-height: 30px;
+    margin-left: -125px;
+  }
+  a {
+    color: $color-inverse;
+    @include pm-left-0;
+    text-decoration: none;
+  }
+  .fa-solid {
+    color: $color-inverse;
+    margin-right: 3px;
+  }
 }
 
 /* Styles pour les desktops */
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
   .fonctionnement {
     display: flex;
     flex-direction: row;
+    position: relative;
     .fonctionnement-texte {
       margin-top: -70px !important;
-      margin-left: -70px ;
-    } 
-  } 
+      margin-left: -70px;
+      position: absolute;
+      top: 120px;
+      left: 70px;
+    }
+  }
   .rectangle-button-container {
     width: 30%;
-    margin-right: 20px;
-  } 
+    padding-left: 20px;
+  }
   .réservez-le-menu-texte {
     max-width: 1000px !important;
     margin-top: -60px;
   }
   .restaurants {
-   margin-top: -30px;
-   height: auto;
-   padding-bottom: 40px;
+    margin-top: -30px;
+    height: auto;
+    padding-bottom: 40px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
   }
-  .fa-1 {
-    margin-right: 30px;
+  .card-restaurants {
+    width: 40vw !important;
   }  
+  .fa-circle {
+    left: 100px !important;
+  }
+
+  .fa-stack-1x {
+    left: 100px !important;
+  }
   footer {
     flex-direction: row-reverse;
     align-items: flex-end;
@@ -392,6 +421,5 @@ footer {
     align-items: center !important;
   }
   .card-restaurants {
-    
   }
 }

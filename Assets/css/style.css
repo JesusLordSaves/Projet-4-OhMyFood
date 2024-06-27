@@ -6,6 +6,9 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+body a {
+  text-decoration: none;
+}
 
 .logo,
 .header-title {
@@ -94,9 +97,10 @@ main .boutton-explorer-nos-restau {
 
 .fonctionnement {
   height: 300px;
-  display: flex; /* Ajoutez cette ligne pour transformer le conteneur en flexbox */
-  flex-direction: column; /* Ajustez la direction en colonne pour aligner verticalement */
-  align-items: center; /* Centre les éléments verticalement */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .fonctionnement .fonctionnement-texte {
   display: flex;
@@ -115,7 +119,7 @@ main .boutton-explorer-nos-restau {
   align-items: center; /* Centre les boutons verticalement */
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section {
-  width: 322.49px;
+  width: 80vw;
   height: 72.38px;
   top: 505px;
   left: 32.51px;
@@ -128,14 +132,19 @@ main .boutton-explorer-nos-restau {
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre {
   color: #9356DC;
+  position: relative;
 }
-.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .fa-circle {
-  margin-left: -160px;
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre .fa-circle {
+  margin-left: -300px;
+  left: 70px;
+  position: absolute;
 }
-.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .fa-stack-1x {
-  margin-left: -160px;
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre .fa-stack-1x {
+  margin-left: -300px;
+  left: 70px;
   margin-top: 4px;
   color: #FFFFFF;
+  position: absolute;
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .mobile-screen-button {
   color: #7e7e7e;
@@ -188,7 +197,7 @@ main .boutton-explorer-nos-restau {
   text-decoration: none;
 }
 .restaurants .cards-container .card-restaurants {
-  width: 310px;
+  width: 80vw;
   height: 231px;
   border-radius: 20px;
   gap: 4px;
@@ -203,7 +212,7 @@ main .boutton-explorer-nos-restau {
   position: relative;
 }
 .restaurants .cards-container .card-restaurants img {
-  width: 310px;
+  width: 100%;
   height: 150px;
   gap: 0px;
   opacity: 1;
@@ -355,18 +364,22 @@ footer .fa-solid {
 }
 
 /* Styles pour les desktops */
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
   .fonctionnement {
     display: flex;
     flex-direction: row;
+    position: relative;
   }
   .fonctionnement .fonctionnement-texte {
     margin-top: -70px !important;
     margin-left: -70px;
+    position: absolute;
+    top: 120px;
+    left: 70px;
   }
   .rectangle-button-container {
     width: 30%;
-    margin-right: 20px;
+    padding-left: 20px;
   }
   .réservez-le-menu-texte {
     max-width: 1000px !important;
@@ -376,9 +389,18 @@ footer .fa-solid {
     margin-top: -30px;
     height: auto;
     padding-bottom: 40px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
   }
-  .fa-1 {
-    margin-right: 30px;
+  .card-restaurants {
+    width: 40vw !important;
+  }
+  .fa-circle {
+    left: 100px !important;
+  }
+  .fa-stack-1x {
+    left: 100px !important;
   }
   footer {
     flex-direction: row-reverse;
@@ -713,7 +735,7 @@ footer ul li .fa-solid {
 }
 
 /* Styles pour les desktops */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   body {
     font-family: "Roboto", sans-serif;
     margin: 0;
@@ -896,7 +918,8 @@ footer ul li .fa-solid {
     font-weight: 400;
     text-align: left;
     color: #FFFFFF;
-    padding-left: 150px !important;
+    padding-left: 130px;
+    padding-right: 40px;
   }
   footer .fa-solid {
     color: #FFFFFF;
@@ -904,6 +927,8 @@ footer ul li .fa-solid {
   }
   footer ul {
     list-style: none;
+    flex-direction: row;
+    gap: 2em;
     padding-left: 0;
     margin-left: 0;
   }
