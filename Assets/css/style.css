@@ -64,6 +64,7 @@ main .reservez-découvrez-txt .réservez-le-menu-texte {
   text-align: center; /* Centrer le texte */
   margin-bottom: 50px; /* Ajustez la marge selon vos besoins */
   max-width: 240px;
+  margin-top: -50px !important;
 }
 main .reservez-découvrez-txt .découvrez-des-restau-texte {
   display: flex;
@@ -92,7 +93,7 @@ main .boutton-explorer-nos-restau {
   margin-right: auto; /* Centrez horizontalement */
   display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
   font-weight: bold;
-  margin-top: -50px;
+  margin-top: -80px;
 }
 
 .fonctionnement {
@@ -249,33 +250,34 @@ main .boutton-explorer-nos-restau {
   padding-left: 0.5em;
 }
 .restaurants .cards-container .card-restaurants .fa-heart {
-  position: absolute; /* Position absolue pour placer l'icône de cœur */
-  top: 180px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-  right: 30px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+  position: absolute;
+  top: 180px;
+  right: 30px;
   color: #000000;
   font-size: 22px;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background 0.3s ease;
 }
-.restaurants .cards-container .card-restaurants .heart-toggle {
-  display: none;
+.restaurants .cards-container .card-restaurants .heart-checkbox {
+  display: none; /* Cache la checkbox */
 }
-.restaurants .cards-container .card-restaurants .heart-toggle:checked + .fa-heart {
+.restaurants .cards-container .card-restaurants .heart-checkbox:hover + .fa-heart {
   color: transparent;
-}
-.restaurants .cards-container .card-restaurants .heart-toggle:checked + .fa-heart::before {
-  content: "\f004"; /* Unicode for filled heart */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900; /* Font weight for solid icon */
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-color: linear-gradient(45deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: initial;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
+  padding-right: 22px;
+}
+.restaurants .cards-container .card-restaurants .heart-checkbox:hover + .fa-heart::before {
+  content: "\f004"; /* Code du coeur pour FontAwesome */
+  font-family: "Font Awesome 5 Free"; /* Assurez-vous que la bonne version est utilisée */
+  font-weight: 900; /* Assurez-vous que la bonne version est utilisée */
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  color: transparent;
+  background: linear-gradient(45deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px transparent;
 }
 
 footer {
@@ -293,7 +295,6 @@ footer h2 {
   font-weight: 400;
   text-align: center; /* Centre le texte horizontalement */
   color: #FFFFFF;
-  margin-top: 0;
   margin-left: 20px;
 }
 footer ul {
@@ -365,25 +366,32 @@ footer .fa-solid {
 
 /* Styles pour les desktops */
 @media (min-width: 768px) {
+  .réservez-le-menu-texte {
+    max-width: 1000px !important;
+    margin-top: -60px;
+  }
   .fonctionnement {
     display: flex;
     flex-direction: row;
     position: relative;
+    justify-content: center;
   }
   .fonctionnement .fonctionnement-texte {
     margin-top: -70px !important;
     margin-left: -70px;
     position: absolute;
     top: 120px;
-    left: 70px;
+    left: 160px;
   }
   .rectangle-button-container {
-    width: 30%;
+    width: 26%;
     padding-left: 20px;
   }
-  .réservez-le-menu-texte {
-    max-width: 1000px !important;
-    margin-top: -60px;
+  .rectangle-button-container .fa-circle {
+    left: 125px !important;
+  }
+  .rectangle-button-container .fa-stack-1x {
+    left: 125px !important;
   }
   .restaurants {
     margin-top: -30px;
@@ -393,25 +401,31 @@ footer .fa-solid {
     display: flex;
     flex-direction: column;
   }
-  .card-restaurants {
-    width: 40vw !important;
-  }
-  .fa-circle {
-    left: 100px !important;
-  }
-  .fa-stack-1x {
-    left: 100px !important;
-  }
-  footer {
-    flex-direction: row-reverse;
-    align-items: flex-end;
-  }
-  .cards-container {
+  .restaurants .cards-container {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     grid-template-rows: repeat(2, 1fr) !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+  .restaurants .cards-container .card-restaurants {
+    width: 40vw !important;
+  }
+  footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+  footer h2 {
+    margin-left: -80px;
+  }
+  footer .fa-utensils .ligne-1 {
+    margin-right: 150px !important;
+  }
+  footer .ligne-3 {
+    margin-left: -14px;
+  }
+  footer .ligne-4 {
+    margin-left: -20px;
   }
 }
 body {
@@ -563,30 +577,32 @@ main .restaurant-classe .title-heart-container h2 {
 main .restaurant-classe .title-heart-container .fa-heart {
   position: absolute; /* Position absolue pour placer l'icône de cœur */
   top: 55px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-  right: 40px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+  right: 400px !important; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
   color: #000000;
   font-size: 22px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
-main .restaurant-classe .title-heart-container .heart-toggle {
-  display: none;
+main .restaurant-classe .title-heart-container .heart-checkbox {
+  display: none; /* Cache la checkbox */
 }
-main .restaurant-classe .title-heart-container .heart-toggle:checked + .fa-heart {
+main .restaurant-classe .title-heart-container .heart-checkbox:hover + .fa-heart {
   color: transparent;
-}
-main .restaurant-classe .title-heart-container .heart-toggle:checked + .fa-heart::before {
-  content: "\f004"; /* Unicode for filled heart */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900; /* Font weight for solid icon */
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-color: linear-gradient(45deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding-right: 22px;
+}
+main .restaurant-classe .title-heart-container .heart-checkbox:hover + .fa-heart::before {
+  content: "\f004"; /* Code du coeur pour FontAwesome */
+  font-family: "Font Awesome 5 Free"; /* Assurez-vous que la bonne version est utilisée */
+  font-weight: 900; /* Assurez-vous que la bonne version est utilisée */
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  color: transparent;
+  background: linear-gradient(45deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px transparent;
 }
 main .restaurant-classe h3 {
   font-family: Roboto;
@@ -618,6 +634,7 @@ main .restaurant-classe .rectangle {
   width: 95% !important;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 main .restaurant-classe .rectangle .rectangle-texte-1 {
   font-size: 17px;
@@ -629,38 +646,9 @@ main .restaurant-classe .rectangle .rectangle-texte-2 {
   font-weight: 300;
   margin-bottom: 10px;
 }
-main .restaurant-classe .rectangle .rectangle::after {
-  content: "";
-  position: absolute;
-  right: 10px;
-  width: 0;
-  height: 0;
-  background-color: #00a676; /* Couleur du carré vert */
-  border-radius: 5px;
-  transition: width 1s ease, height 1s ease; /* Animation d'agrandissement du carré */
-}
-main .restaurant-classe .rectangle .rectangle:hover::after {
-  width: 40px; /* Taille du carré vert */
-  height: 96px; /* Taille du carré vert */
-  margin-top: -20px;
-}
-main .restaurant-classe .rectangle .rectangle .prix {
-  position: relative;
-  z-index: 1; /* Assurez-vous que le prix reste au-dessus du carré vert */
-  transition: transform 1s ease; /* Animation du déplacement du prix */
-}
-main .restaurant-classe .rectangle .rectangle:hover .prix {
-  transform: translateX(-40px); /* Déplace le prix vers la gauche pour faire de la place au carré vert */
-}
-main .restaurant-classe .rectangle .rectangle .checkmark {
-  display: none;
-}
-main .restaurant-classe .rectangle .rectangle:hover .checkmark {
+main .restaurant-classe .rectangle .rectangle span {
   display: block;
-  position: absolute;
-  right: 15px; /* Positionnez-le correctement à l'intérieur du carré vert */
-  color: white;
-  font-size: 24px;
+  margin-bottom: 5px;
 }
 main .restaurant-classe .rectangle .prix {
   font-size: 18px;
@@ -669,7 +657,23 @@ main .restaurant-classe .rectangle .prix {
   right: 20px;
   top: 40px;
   color: #000;
-  transition: right 0.5s ease-in-out; /* Animer le déplacement du prix */
+  position: relative;
+  transition: transform 0.5s ease;
+}
+main .restaurant-classe .rectangle .green-square {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  transition: left 0.5s ease;
+}
+main .restaurant-classe .rectangle .checkbox:checked + .label .green-square {
+  left: 0;
+}
+main .restaurant-classe .rectangle .checkbox:checked + .label .prix {
+  transform: translateX(-100%);
 }
 main .restaurant-classe .boutton-commander {
   width: 186px;
