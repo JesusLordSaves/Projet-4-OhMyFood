@@ -134,18 +134,18 @@ main .boutton-explorer-nos-restau {
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre {
   color: #9356DC;
   position: relative;
+  text-align: left;
+  margin-left: 30px;
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre .fa-circle {
-  margin-left: -300px;
-  left: 70px;
   position: absolute;
+  margin-left: -240px;
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre .fa-stack-1x {
-  margin-left: -300px;
-  left: 70px;
   margin-top: 4px;
   color: #FFFFFF;
   position: absolute;
+  margin-left: -240px;
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .mobile-screen-button {
   color: #7e7e7e;
@@ -559,6 +559,7 @@ main .restaurant-classe {
   box-sizing: border-box;
   margin: 0;
   margin-top: 195px;
+  unicode-bidi: isolate !important;
 }
 main .restaurant-classe .title-heart-container {
   display: flex;
@@ -634,7 +635,6 @@ main .restaurant-classe .rectangle {
   width: 95% !important;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
 }
 main .restaurant-classe .rectangle .rectangle-texte-1 {
   font-size: 17px;
@@ -646,10 +646,6 @@ main .restaurant-classe .rectangle .rectangle-texte-2 {
   font-weight: 300;
   margin-bottom: 10px;
 }
-main .restaurant-classe .rectangle .rectangle span {
-  display: block;
-  margin-bottom: 5px;
-}
 main .restaurant-classe .rectangle .prix {
   font-size: 18px;
   font-weight: 700;
@@ -657,23 +653,34 @@ main .restaurant-classe .rectangle .prix {
   right: 20px;
   top: 40px;
   color: #000;
-  position: relative;
-  transition: transform 0.5s ease;
+  transition: right 0.5s ease-in-out; /* Animer le déplacement du prix */
 }
-main .restaurant-classe .rectangle .green-square {
+main .restaurant-classe .rectangle .rectangle::after {
+  content: "✓";
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: green;
-  transition: left 0.5s ease;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #00acc1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
 }
-main .restaurant-classe .rectangle .checkbox:checked + .label .green-square {
-  left: 0;
+main .restaurant-classe .rectangle .rectangle:hover {
+  padding-right: 60px;
 }
-main .restaurant-classe .rectangle .checkbox:checked + .label .prix {
-  transform: translateX(-100%);
+main .restaurant-classe .rectangle .rectangle:hover .prix {
+  right: 60px;
+}
+main .restaurant-classe .rectangle .rectangle:hover::after {
+  right: 10px;
+  opacity: 1;
 }
 main .restaurant-classe .boutton-commander {
   width: 186px;
@@ -739,7 +746,7 @@ footer ul li .fa-solid {
 }
 
 /* Styles pour les desktops */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   body {
     font-family: "Roboto", sans-serif;
     margin: 0;
@@ -856,6 +863,7 @@ footer ul li .fa-solid {
   }
   main .restaurant-classe .repas-titre {
     margin-right: 700px !important;
+    position: initial;
   }
   main .restaurant-classe .line-bar {
     width: 35px;
@@ -908,6 +916,8 @@ footer ul li .fa-solid {
     text-align: center;
     color: #FFFFFF;
   }
+}
+@media (min-width: 768px) {
   footer {
     flex-direction: row-reverse;
     align-items: flex-end;
@@ -923,7 +933,8 @@ footer ul li .fa-solid {
     text-align: left;
     color: #FFFFFF;
     padding-left: 130px;
-    padding-right: 40px;
+    padding-right: 60px;
+    padding-top: 10px;
   }
   footer .fa-solid {
     color: #FFFFFF;
@@ -935,6 +946,7 @@ footer ul li .fa-solid {
     gap: 2em;
     padding-left: 0;
     margin-left: 0;
+    padding-bottom: 10px;
   }
   footer ul li {
     font-family: Roboto;
