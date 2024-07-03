@@ -81,11 +81,7 @@ main {
     padding: 0 1em;
     height: 50px;
     border-radius: 25px;
-    background: linear-gradient(
-      193.33deg,
-      $primary -11.44%,
-      $secondary 123.93%
-    );
+    background: linear-gradient(193.33deg,$primary -11.44%,$secondary 123.93%);
     border-color: $secondary;
     color: $color-inverse;
     font-size: 16px;
@@ -105,16 +101,17 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative !important;
+  padding-top: 70px;
   .fonctionnement-texte {
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-size: 24px;
     font-weight: 700;
     line-height: 28.13px;
-    margin-top: 40px;
-    margin-left: -160px;
-    margin-bottom: 30px;
+    margin-top: -40px;
+    left: 55px;
+    position: absolute !important;
   }
   .rectangle-button-container {
     display: flex; /* Transforme les boutons en flexbox */
@@ -123,28 +120,25 @@ main {
     #rectangle-fonctionnement-section {
       width: 80vw;
       height: 72.38px;
-      top: 505px;
-      left: 32.51px;
       gap: 0px;
       border-radius: 20px;
       opacity: 0px;
       margin-top: 20px;
       color: $grey-color-section;
       border-color: $grey-color-section;
+      position: relative;
       .élément-nombre {
         color: $primary;
-        position: relative;
         text-align: left;
-        margin-left: 30px;
+        position: absolute;
         .fa-circle {
-          position: absolute;
-          margin-left: -240px;
+          margin-left: -15px;
+          margin-top: -1px;
         }
         .fa-stack-1x {
-          margin-top: 4px;
+          margin-top: 3px;
           color: $color-inverse;
-          position: absolute;
-          margin-left: -240px;
+          margin-left: -5px;
         }
       }
       .mobile-screen-button {
@@ -179,22 +173,25 @@ main {
 .restaurants {
   height: 1350px;
   background-color: $grey-color-section;
-  margin-top: 110px;
+  margin-top: 60px;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   .restaurants-texte {
     font-size: 24px;
     font-weight: 700;
     line-height: 28.13px;
-    text-align: left !important;
+    left: 55px;
+    position: absolute;
   }
   .cards-container {
     display: flex;
     flex-direction: column; /* Change pour une disposition en colonne */
     align-items: center; /* Centre les cartes horizontalement */
     gap: 30px; /* Ajoute un espace entre les cartes */
+    padding-top: 60px;
     .link {
       text-decoration: none;
     }
@@ -374,33 +371,34 @@ footer {
   .fonctionnement {
     display: flex;
     flex-direction: row;
-    position: relative;
     justify-content: center;
     .fonctionnement-texte {
-      margin-top: -70px !important;
-      margin-left: -70px;
-      position: absolute;
-      top: 120px;
-      left: 160px;
+      top: 85px;
+      left: 90px;
     }
   }
   .rectangle-button-container {
     width: 26%;
     padding-left: 20px;
+    padding-bottom: 120px;
     .fa-circle {
-      left: 125px !important;
+      left: -3px !important;
     }
     .fa-stack-1x {
-      left: 125px !important;
+      left: -3px !important;
     }
   }
   .restaurants {
-    margin-top: -30px;
+    margin-top: -60px;
     height: auto;
-    padding-bottom: 40px;
+    padding-bottom: 140px;
     width: 100vw;
     display: flex;
     flex-direction: column;
+    position: relative;
+    .restaurants-texte {
+      left: 100px;
+    }
     .cards-container {
       display: grid !important;
       grid-template-columns: repeat(2, 1fr) !important;

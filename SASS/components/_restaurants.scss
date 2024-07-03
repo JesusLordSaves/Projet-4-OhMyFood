@@ -4,10 +4,10 @@ body {
   overflow-x: hidden;
 }
 
-.logo, .header-title {
+.logo,
+.header-title {
   font-family: 'Shrikhand', cursive;
 }
-
 
 .header {
   position: relative;
@@ -24,11 +24,11 @@ body {
   }
   .header-title {
     font-style: italic;
-      font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
-      font-size: 2rem; 
-      text-align: center;
-      margin: 0 auto;
-      margin-top: 0.5em;
+    font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0.5em;
   }
 }
 
@@ -61,13 +61,21 @@ body {
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeIn {
@@ -85,7 +93,7 @@ body {
 
 .restaurant-classe .rectangle {
   opacity: 0;
-  animation: fadeIn 3s forwards; 
+  animation: fadeIn 3s forwards;
   animation-delay: var(--animation-delay);
 }
 
@@ -100,8 +108,6 @@ body {
 .restaurant-classe .rectangle:nth-child(3) {
   --animation-delay: 1.5s;
 }
-
-
 
 main {
   display: flex;
@@ -136,12 +142,13 @@ main {
     box-sizing: border-box;
     margin: 0;
     margin-top: 195px;
-    unicode-bidi: isolate !important; 
+    unicode-bidi: isolate !important;
     .title-heart-container {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px; /* Espace entre le titre et l'icône du cœur */
+      position: relative;
       h2 {
         font-family: Shrikhand;
         font-size: 28px;
@@ -149,11 +156,11 @@ main {
         font-weight: 400;
         line-height: 40.82px;
         padding-right: 70px !important;
-      }    
+      }
       .fa-heart {
-        position: absolute; /* Position absolue pour placer l'icône de cœur */
-        top: 55px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-        right: 400px !important; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+        position: absolute !important; /* Position absolue pour placer l'icône de cœur */
+        top: 32px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
+        right: 0px !important; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
         color: #000000;
         font-size: 22px;
         cursor: pointer;
@@ -164,23 +171,23 @@ main {
       }
       .heart-checkbox:hover + .fa-heart {
         color: transparent;
-        background-color: linear-gradient(45deg, #9356DC, #FF79DA);
+        background-color: linear-gradient(45deg, #9356dc, #ff79da);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         padding-right: 22px;
       }
       .heart-checkbox:hover + .fa-heart::before {
-        content: "\f004"; /* Code du coeur pour FontAwesome */
-        font-family: "Font Awesome 5 Free"; /* Assurez-vous que la bonne version est utilisée */
+        content: '\f004'; /* Code du coeur pour FontAwesome */
+        font-family: 'Font Awesome 5 Free'; /* Assurez-vous que la bonne version est utilisée */
         font-weight: 900; /* Assurez-vous que la bonne version est utilisée */
         position: absolute;
         color: transparent;
-        background: linear-gradient(45deg, #9356DC, #FF79DA);
+        background: linear-gradient(45deg, #9356dc, #ff79da);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px transparent;
       }
-    }  
+    }
     h3 {
       font-family: Roboto;
       font-size: 16px;
@@ -190,13 +197,13 @@ main {
       margin-bottom: 5px;
     }
     .repas-titre {
-     margin-right: auto;
-     margin-bottom: -15px;
+      margin-right: auto;
+      margin-bottom: -15px;
     }
     .line-bar {
       width: 35px;
       border: 3px 0px 0px 0px;
-      border: 2px solid #99E2D0;
+      border: 2px solid #99e2d0;
       margin-right: auto;
     }
     .rectangle {
@@ -211,6 +218,8 @@ main {
       width: 95% !important ;
       position: relative;
       overflow: hidden;
+      cursor: pointer; /* Ajout pour rendre le rectangle cliquable */
+      transition: all 0.5s ease-in-out; /* Ajout pour une transition fluide */
       .rectangle-texte-1 {
         font-size: 17px;
         font-weight: 500;
@@ -230,35 +239,16 @@ main {
         color: #000;
         transition: right 0.5s ease-in-out; /* Animer le déplacement du prix */
       }
-      .rectangle::after {
-        content: '\2713';
-        position: absolute;
-        top: 50%;
-        right: -40px;
-        transform: translateY(-50%);
+      .green-square {
+        height: auto;
         width: 30px;
-        height: 30px;
-        background-color: #00acc1;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
-        opacity: 0;
+        color: #99E2D0;
+        left: 200px;
+        top: 40px;
+        z-index: 100;
       }
-      
-      .rectangle:hover {
-        padding-right: 60px;
-      }
-      
-      .rectangle:hover .prix {
-        right: 60px;
-      }
-      
-      .rectangle:hover::after {
-        right: 10px;
-        opacity: 1;
+      .rectangle:hover  {
+        padding-left: 30px;
       }
     }
     .boutton-commander {
@@ -266,7 +256,11 @@ main {
       height: 50px;
       margin-top: 10px;
       border-radius: 25px;
-      background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+      background: linear-gradient(
+        193.33deg,
+        $primary -11.44%,
+        $secondary 123.93%
+      );
       border-color: $secondary;
       font-family: Roboto;
       font-size: 16px;
@@ -275,9 +269,9 @@ main {
       text-align: center;
       color: $color-inverse;
     }
-  }  
-} 
-         
+  }
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -303,7 +297,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centre horizontalement les éléments de la liste */
-    li  {
+    li {
       font-family: Roboto;
       font-size: 16px;
       font-weight: 500;
@@ -311,7 +305,7 @@ footer {
       text-align: center; /* Centre le texte horizontalement */
       color: $color-inverse;
       line-height: 30px;
-      
+
       a {
         color: $color-inverse;
         @include pm-left-0;
@@ -321,235 +315,236 @@ footer {
         color: $color-inverse;
         margin-right: 3px;
       }
-    } 
+    }
   }
 }
-
-
-
-
 
 /* Styles pour les desktops */
-@media (min-width: 1024px)  {
-  
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-}
-
-.logo, .header-title {
-  font-family: 'Shrikhand', cursive;
-}
-
-
-.header {
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2em !important;
-  .back-arrow {
-    position: relative;
-    font-size: 2rem; /* Ajustez la taille selon vos besoins */
-    text-decoration: none;
-    margin-bottom: -15px;
+@media (min-width: 1024px) {
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
   }
+
+  .logo,
   .header-title {
-    font-style: italic;
+    font-family: 'Shrikhand', cursive;
+  }
+
+  .header {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em !important;
+    .back-arrow {
+      position: relative;
+      font-size: 2rem; /* Ajustez la taille selon vos besoins */
+      text-decoration: none;
+      margin-bottom: -15px;
+    }
+    .header-title {
+      font-style: italic;
       font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
-      font-size: 2rem; 
+      font-size: 2rem;
       text-align: center;
       margin: 0 auto;
       margin-top: 0em;
+    }
   }
-}
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  img {
-    width: 100%; /* Ajustez cette valeur pour changer la largeur */
-    height: 275px;
-    object-fit: cover;
-    box-sizing: border-box;
-    margin: 0;
-    position: absolute; /* Ajouté */
-    top: 70px; /* Ajustez si nécessaire */
-    left: 50%; /* Centré horizontalement */
-    transform: translateX(-50%); /* Centré horizontalement */
-    z-index: -1;
-  }
-  .restaurant-classe {
-    width: 80%;
-    height: auto !important;
-    background-color: $grey-color-section;
-    padding: 20px;
-    border-radius: 30px;
-    margin-top: 140px;
-    margin-bottom: -80px;
-    position: relative; /* Assurez que la section est positionnée correctement */
+  main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    box-sizing: border-box;
-    margin: 0;
-    margin-top: 155px;
-    
-    .title-heart-container {
+    width: 100vw;
+    img {
+      width: 100%; /* Ajustez cette valeur pour changer la largeur */
+      height: 275px;
+      object-fit: cover;
+      box-sizing: border-box;
+      margin: 0;
+      position: absolute; /* Ajouté */
+      top: 70px; /* Ajustez si nécessaire */
+      left: 50%; /* Centré horizontalement */
+      transform: translateX(-50%); /* Centré horizontalement */
+      z-index: -1;
+    }
+    .restaurant-classe {
+      width: 80%;
+      height: auto !important;
+      background-color: $grey-color-section;
+      padding: 20px;
+      border-radius: 30px;
+      margin-top: 140px;
+      margin-bottom: -80px;
+      position: relative; /* Assurez que la section est positionnée correctement */
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 10px; /* Espace entre le titre et l'icône du cœur */
-      h2 {
-        font-family: Shrikhand;
-        font-size: 28px;
-        font-style: italic;
-        font-weight: 400;
-        line-height: 40.82px;
-      }    
-      .fa-heart {
-        position: absolute; /* Position absolue pour placer l'icône de cœur */
-        top: 55px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-        right: 260px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
-        color: #000000;
-        font-size: 22px;
-        cursor: pointer;
-        transition: color 0.3s ease;
+      gap: 30px;
+      box-sizing: border-box;
+      margin: 0;
+      margin-top: 155px;
+
+      .title-heart-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Espace entre le titre et l'icône du cœur */
+        position: relative !important;
+
+        h2 {
+          font-family: Shrikhand;
+          font-size: 28px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: 40.82px;
+        }
+        .fa-heart {
+          position: absolute !important;
+          top: 32px;
+          right: 0px !important;
+          color: #000000;
+          font-size: 22px;
+          cursor: pointer;
+          transition: color 0.3s ease;
+        }
+        .heart-toggle {
+          display: none;
+        }
+        .heart-toggle:checked + .fa-heart {
+          color: transparent;
+        }
+        .heart-toggle:checked + .fa-heart::before {
+          content: '\f004'; /* Unicode for filled heart */
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900; /* Font weight for solid icon */
+          background: linear-gradient(193.33deg,$primary -11.44%,$secondary 123.93%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
       }
-      .heart-toggle {
-        display: none;
-      }
-      .heart-toggle:checked + .fa-heart {
-        color: transparent;
-      }
-      .heart-toggle:checked + .fa-heart::before {
-        content: '\f004'; /* Unicode for filled heart */
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900; /* Font weight for solid icon */
-        background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }  
-    h3 {
-      font-family: Roboto;
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 18.75px;
-      text-align: left;
-      margin-bottom: 5px;
-    }
-    .repas-titre {
-     margin-right: 700px !important;
-     position: initial;
-    }
-    .line-bar {
-      width: 35px;
-      border: 3px 0px 0px 0px;
-      border: 2px solid #99E2D0;
-      margin-right: 700px !important;
-    }
-    .rectangle {
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: space-between !important;
-      padding: 20px !important;
-      border-radius: 15px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-family: 'Roboto', sans-serif;
-      width: 70% !important ;
-      position: relative;
-      .rectangle-texte-1 {
-        font-size: 18px;
-        font-weight: 500;
+      h3 {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18.75px;
+        text-align: left;
         margin-bottom: 5px;
       }
-      .rectangle-texte-2 {
-        font-size: 15.04px;
-        font-weight: 300;
-        margin-bottom: 10px;
+      .repas-titre {
+        margin-right: 700px !important;
+        
       }
-      .prix {
-        font-size: 18px;
-        font-weight: 700;
-        position: absolute;
-        right: 20px;
-        top: 40px;
-        color: #000;
+      .line-bar {
+        width: 35px;
+        border: 3px 0px 0px 0px;
+        border: 2px solid #99e2d0;
+        margin-right: 700px !important;
       }
-    }
-    .boutton-commander {
-      width: 186px;
-      height: 50px;
-      margin-top: 50px;
-      border-radius: 25px;
-      background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-      border-color: $secondary;
-      margin-left: 50px;
-      font-family: Roboto;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 18.75px;
-      text-align: center;
-      color: $color-inverse;
-    }
-  }  
-} 
-}         
-
-@media (min-width: 768px) {
-footer {
-  flex-direction: row-reverse;
-  align-items: flex-end;
-  padding: 25px 30px 25px 30px;
-  background-color: $footer-color;
-  display: flex;
-  h2 {
-    font-family: Shrikhand;
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 400;
-    text-align: left;
-    color: $color-inverse;
-    padding-left: 130px;
-    padding-right: 60px;
-    padding-top: 10px;
-  }
-  .fa-solid {
-    color: $color-inverse;
-    margin-right: 3px;
-  }
-  ul {
-    list-style: none;
-    flex-direction: row;
-    gap: 2em;
-    @include pm-left-0;
-    padding-bottom: 10px;
-    li  {
-      font-family: Roboto;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 18.75px;
-      text-align: left;
-      color: $color-inverse;
-      line-height: 30px;
-      a {
+      .rectangle {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        padding: 20px !important;
+        border-radius: 15px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: 'Roboto', sans-serif;
+        width: 70% !important ;
+        position: relative;
+        .rectangle-texte-1 {
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 5px;
+        }
+        .rectangle-texte-2 {
+          font-size: 15.04px;
+          font-weight: 300;
+          margin-bottom: 10px;
+        }
+        .prix {
+          font-size: 18px;
+          font-weight: 700;
+          position: absolute;
+          right: 20px;
+          top: 40px;
+          color: #000;
+        }
+      }
+      .boutton-commander {
+        width: 186px;
+        height: 50px;
+        margin-top: 50px;
+        border-radius: 25px;
+        background: linear-gradient(
+          193.33deg,
+          $primary -11.44%,
+          $secondary 123.93%
+        );
+        border-color: $secondary;
+        margin-left: 50px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: center;
         color: $color-inverse;
-        @include pm-left-0;
-        text-decoration: none;
       }
     }
-  } 
+  }
 }
 
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 25px 30px 25px 30px;
+    background-color: $footer-color;
+    display: flex;
+    h2 {
+      font-family: Shrikhand;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      text-align: left;
+      color: $color-inverse;
+      padding-left: 130px;
+      padding-right: 60px;
+      padding-top: 10px;
+    }
+    .fa-solid {
+      color: $color-inverse;
+      margin-right: 3px;
+    }
+    ul {
+      list-style: none;
+      flex-direction: row;
+      gap: 2em;
+      @include pm-left-0;
+      padding-bottom: 10px;
+      li {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.75px;
+        text-align: left;
+        color: $color-inverse;
+        line-height: 30px;
+        flex: none;
+        a {
+          color: $color-inverse;
+          @include pm-left-0;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

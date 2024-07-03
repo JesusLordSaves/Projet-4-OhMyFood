@@ -102,17 +102,18 @@ main .boutton-explorer-nos-restau {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative !important;
+  padding-top: 70px;
 }
 .fonctionnement .fonctionnement-texte {
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
-  margin-top: 40px;
-  margin-left: -160px;
-  margin-bottom: 30px;
+  margin-top: -40px;
+  left: 55px;
+  position: absolute !important;
 }
 .fonctionnement .rectangle-button-container {
   display: flex; /* Transforme les boutons en flexbox */
@@ -122,30 +123,27 @@ main .boutton-explorer-nos-restau {
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section {
   width: 80vw;
   height: 72.38px;
-  top: 505px;
-  left: 32.51px;
   gap: 0px;
   border-radius: 20px;
   opacity: 0px;
   margin-top: 20px;
   color: #F6F6F6;
   border-color: #F6F6F6;
+  position: relative;
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre {
   color: #9356DC;
-  position: relative;
   text-align: left;
-  margin-left: 30px;
+  position: absolute;
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre .fa-circle {
-  position: absolute;
-  margin-left: -240px;
+  margin-left: -15px;
+  margin-top: -1px;
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .élément-nombre .fa-stack-1x {
-  margin-top: 4px;
+  margin-top: 3px;
   color: #FFFFFF;
-  position: absolute;
-  margin-left: -240px;
+  margin-left: -5px;
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .mobile-screen-button {
   color: #7e7e7e;
@@ -176,23 +174,26 @@ main .boutton-explorer-nos-restau {
 .restaurants {
   height: 1350px;
   background-color: #F6F6F6;
-  margin-top: 110px;
+  margin-top: 60px;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .restaurants .restaurants-texte {
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
-  text-align: left !important;
+  left: 55px;
+  position: absolute;
 }
 .restaurants .cards-container {
   display: flex;
   flex-direction: column; /* Change pour une disposition en colonne */
   align-items: center; /* Centre les cartes horizontalement */
   gap: 30px; /* Ajoute un espace entre les cartes */
+  padding-top: 60px;
 }
 .restaurants .cards-container .link {
   text-decoration: none;
@@ -373,33 +374,34 @@ footer .fa-solid {
   .fonctionnement {
     display: flex;
     flex-direction: row;
-    position: relative;
     justify-content: center;
   }
   .fonctionnement .fonctionnement-texte {
-    margin-top: -70px !important;
-    margin-left: -70px;
-    position: absolute;
-    top: 120px;
-    left: 160px;
+    top: 85px;
+    left: 90px;
   }
   .rectangle-button-container {
     width: 26%;
     padding-left: 20px;
+    padding-bottom: 120px;
   }
   .rectangle-button-container .fa-circle {
-    left: 125px !important;
+    left: -3px !important;
   }
   .rectangle-button-container .fa-stack-1x {
-    left: 125px !important;
+    left: -3px !important;
   }
   .restaurants {
-    margin-top: -30px;
+    margin-top: -60px;
     height: auto;
-    padding-bottom: 40px;
+    padding-bottom: 140px;
     width: 100vw;
     display: flex;
     flex-direction: column;
+    position: relative;
+  }
+  .restaurants .restaurants-texte {
+    left: 100px;
   }
   .restaurants .cards-container {
     display: grid !important;
@@ -434,7 +436,8 @@ body {
   overflow-x: hidden;
 }
 
-.logo, .header-title {
+.logo,
+.header-title {
   font-family: "Shrikhand", cursive;
 }
 
@@ -566,6 +569,7 @@ main .restaurant-classe .title-heart-container {
   align-items: center;
   justify-content: center;
   gap: 10px; /* Espace entre le titre et l'icône du cœur */
+  position: relative;
 }
 main .restaurant-classe .title-heart-container h2 {
   font-family: Shrikhand;
@@ -576,9 +580,9 @@ main .restaurant-classe .title-heart-container h2 {
   padding-right: 70px !important;
 }
 main .restaurant-classe .title-heart-container .fa-heart {
-  position: absolute; /* Position absolue pour placer l'icône de cœur */
-  top: 55px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-  right: 400px !important; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+  position: absolute !important; /* Position absolue pour placer l'icône de cœur */
+  top: 32px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
+  right: 0px !important; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
   color: #000000;
   font-size: 22px;
   cursor: pointer;
@@ -589,7 +593,7 @@ main .restaurant-classe .title-heart-container .heart-checkbox {
 }
 main .restaurant-classe .title-heart-container .heart-checkbox:hover + .fa-heart {
   color: transparent;
-  background-color: linear-gradient(45deg, #9356DC, #FF79DA);
+  background-color: linear-gradient(45deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-right: 22px;
@@ -600,7 +604,7 @@ main .restaurant-classe .title-heart-container .heart-checkbox:hover + .fa-heart
   font-weight: 900; /* Assurez-vous que la bonne version est utilisée */
   position: absolute;
   color: transparent;
-  background: linear-gradient(45deg, #9356DC, #FF79DA);
+  background: linear-gradient(45deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px transparent;
@@ -620,7 +624,7 @@ main .restaurant-classe .repas-titre {
 main .restaurant-classe .line-bar {
   width: 35px;
   border: 3px 0px 0px 0px;
-  border: 2px solid #99E2D0;
+  border: 2px solid #99e2d0;
   margin-right: auto;
 }
 main .restaurant-classe .rectangle {
@@ -635,6 +639,8 @@ main .restaurant-classe .rectangle {
   width: 95% !important;
   position: relative;
   overflow: hidden;
+  cursor: pointer; /* Ajout pour rendre le rectangle cliquable */
+  transition: all 0.5s ease-in-out; /* Ajout pour une transition fluide */
 }
 main .restaurant-classe .rectangle .rectangle-texte-1 {
   font-size: 17px;
@@ -655,32 +661,16 @@ main .restaurant-classe .rectangle .prix {
   color: #000;
   transition: right 0.5s ease-in-out; /* Animer le déplacement du prix */
 }
-main .restaurant-classe .rectangle .rectangle::after {
-  content: "✓";
-  position: absolute;
-  top: 50%;
-  right: -40px;
-  transform: translateY(-50%);
+main .restaurant-classe .rectangle .green-square {
+  height: auto;
   width: 30px;
-  height: 30px;
-  background-color: #00acc1;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  opacity: 0;
+  color: #99E2D0;
+  left: 200px;
+  top: 40px;
+  z-index: 100;
 }
 main .restaurant-classe .rectangle .rectangle:hover {
-  padding-right: 60px;
-}
-main .restaurant-classe .rectangle .rectangle:hover .prix {
-  right: 60px;
-}
-main .restaurant-classe .rectangle .rectangle:hover::after {
-  right: 10px;
-  opacity: 1;
+  padding-left: 30px;
 }
 main .restaurant-classe .boutton-commander {
   width: 186px;
@@ -751,7 +741,8 @@ footer ul li .fa-solid {
     font-family: "Roboto", sans-serif;
     margin: 0;
   }
-  .logo, .header-title {
+  .logo,
+  .header-title {
     font-family: "Shrikhand", cursive;
   }
   .header {
@@ -817,6 +808,7 @@ footer ul li .fa-solid {
     align-items: center;
     justify-content: center;
     gap: 10px; /* Espace entre le titre et l'icône du cœur */
+    position: relative !important;
   }
   main .restaurant-classe .title-heart-container h2 {
     font-family: Shrikhand;
@@ -826,9 +818,9 @@ footer ul li .fa-solid {
     line-height: 40.82px;
   }
   main .restaurant-classe .title-heart-container .fa-heart {
-    position: absolute; /* Position absolue pour placer l'icône de cœur */
-    top: 55px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-    right: 260px; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+    position: absolute !important;
+    top: 32px;
+    right: 0px !important;
     color: #000000;
     font-size: 22px;
     cursor: pointer;
@@ -863,12 +855,11 @@ footer ul li .fa-solid {
   }
   main .restaurant-classe .repas-titre {
     margin-right: 700px !important;
-    position: initial;
   }
   main .restaurant-classe .line-bar {
     width: 35px;
     border: 3px 0px 0px 0px;
-    border: 2px solid #99E2D0;
+    border: 2px solid #99e2d0;
     margin-right: 700px !important;
   }
   main .restaurant-classe .rectangle {
@@ -956,6 +947,7 @@ footer ul li .fa-solid {
     text-align: left;
     color: #FFFFFF;
     line-height: 30px;
+    flex: none;
   }
   footer ul li a {
     color: #FFFFFF;
