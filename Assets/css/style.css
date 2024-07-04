@@ -659,18 +659,52 @@ main .restaurant-classe .rectangle .prix {
   right: 20px;
   top: 40px;
   color: #000;
-  transition: right 0.5s ease-in-out; /* Animer le déplacement du prix */
+  transition: transform 0.5s ease-in-out; /* Animer le déplacement du prix */
 }
-main .restaurant-classe .rectangle .green-square {
-  height: auto;
-  width: 30px;
-  color: #99E2D0;
-  left: 200px;
+main .restaurant-classe .rectangle .carre-vert {
+  position: absolute;
+  top: 0;
+  right: -100%; /* Cache le carré vert hors de l'écran */
+  width: 100%;
+  height: 100%;
+  background-color: #99e2d0;
+  transition: transform 0.5s ease-in-out; /* Transition pour l'animation */
+}
+main .restaurant-classe .rectangle .circle {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
   top: 40px;
-  z-index: 100;
+  position: relative;
+  margin-top: -10px;
+  margin-left: 14px;
+  transition: transform 0.5s ease-in-out;
 }
-main .restaurant-classe .rectangle .rectangle:hover {
-  padding-left: 30px;
+main .restaurant-classe .rectangle .circle i {
+  color: #99e2d0;
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+main .restaurant-classe .rectangle .carre-vert i {
+  color: #99e2d0;
+  font-size: 24px;
+  opacity: 0; /* Initialement, l'icône est cachée */
+  transition: opacity 0.5s ease-in-out;
+}
+main .restaurant-classe .rectangle:hover .carre-vert {
+  transform: translateX(-4rem); /* Fait apparaître le carré vert en le déplaçant de 10rem */
+}
+main .restaurant-classe .rectangle:hover .prix {
+  transform: translateX(-4rem); /* Déplace le prix vers la gauche */
+}
+main .restaurant-classe .rectangle:hover .carre-vert i {
+  opacity: 1; /* Affiche l'icône au survol */
+}
+main .restaurant-classe .rectangle:hover .circle {
+  transform: rotate(360deg);
 }
 main .restaurant-classe .boutton-commander {
   width: 186px;
