@@ -16,12 +16,14 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 2em !important;
+
   .back-arrow {
     position: relative;
     font-size: 1.5rem; /* Ajustez la taille selon vos besoins */
     text-decoration: none;
     margin-bottom: -15px;
   }
+
   .header-title {
     font-style: italic;
     font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
@@ -89,7 +91,7 @@ body {
   }
 }
 
-/* Animation aparrition progressive */
+/* Animation apparition progressive */
 
 .restaurant-classe .rectangle {
   opacity: 0;
@@ -115,6 +117,7 @@ main {
   align-items: center;
   width: 100vw;
   min-width: 375px;
+
   img {
     width: 100%; /* Ajustez cette valeur pour changer la largeur */
     height: 275px;
@@ -127,6 +130,7 @@ main {
     transform: translateX(-50%); /* Centré horizontalement */
     z-index: -1;
   }
+
   .restaurant-classe {
     width: 100vw;
     height: auto;
@@ -143,12 +147,14 @@ main {
     margin: 0;
     margin-top: 195px;
     unicode-bidi: isolate !important;
+
     .title-heart-container {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px; /* Espace entre le titre et l'icône du cœur */
       position: relative;
+
       h2 {
         font-family: Shrikhand;
         font-size: 28px;
@@ -157,6 +163,7 @@ main {
         line-height: 40.82px;
         padding-right: 70px !important;
       }
+
       .fa-heart {
         position: absolute !important; /* Position absolue pour placer l'icône de cœur */
         top: 32px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
@@ -166,9 +173,11 @@ main {
         cursor: pointer;
         transition: color 0.3s ease;
       }
+
       .heart-checkbox {
         display: none; /* Cache la checkbox */
       }
+
       .heart-checkbox:hover + .fa-heart {
         color: transparent;
         background-color: linear-gradient(45deg, #9356dc, #ff79da);
@@ -176,6 +185,7 @@ main {
         -webkit-text-fill-color: transparent;
         padding-right: 22px;
       }
+
       .heart-checkbox:hover + .fa-heart::before {
         content: '\f004'; /* Code du coeur pour FontAwesome */
         font-family: 'Font Awesome 5 Free'; /* Assurez-vous que la bonne version est utilisée */
@@ -188,6 +198,7 @@ main {
         -webkit-text-stroke: 1px transparent;
       }
     }
+
     h3 {
       font-family: Roboto;
       font-size: 16px;
@@ -196,16 +207,19 @@ main {
       text-align: left;
       margin-bottom: 5px;
     }
+
     .repas-titre {
       margin-right: auto;
       margin-bottom: -15px;
     }
+
     .line-bar {
       width: 35px;
       border: 3px 0px 0px 0px;
       border: 2px solid #99e2d0;
       margin-right: auto;
     }
+
     .rectangle {
       display: flex !important;
       flex-direction: column !important;
@@ -215,21 +229,24 @@ main {
       background-color: #ffffff;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       font-family: 'Roboto', sans-serif;
-      width: 95% !important ;
+      width: 95% !important;
       position: relative;
       overflow: hidden;
       cursor: pointer; /* Ajout pour rendre le rectangle cliquable */
       transition: all 0.5s ease-in-out; /* Ajout pour une transition fluide */
+
       .rectangle-texte-1 {
         font-size: 17px;
         font-weight: 500;
         margin-bottom: 5px;
       }
+
       .rectangle-texte-2 {
         font-size: 14px;
         font-weight: 300;
         margin-bottom: 10px;
       }
+
       .prix {
         font-size: 18px;
         font-weight: 700;
@@ -238,8 +255,8 @@ main {
         top: 40px;
         color: #000;
         transition: transform 0.5s ease-in-out; /* Animer le déplacement du prix */
-        
       }
+
       .carre-vert {
         position: absolute;
         top: 0;
@@ -261,13 +278,13 @@ main {
         margin-top: -10px;
         margin-left: 14px;
         transition: transform 0.5s ease-in-out;
-    }
-    
+      }
+
       .circle i {
-          color: #99e2d0;
-          font-size: 1rem;
-          margin-top: 5px;
-          margin-left: 3px;
+        color: #99e2d0;
+        font-size: 1rem;
+        margin-top: 5px;
+        margin-left: 3px;
       }
 
       .carre-vert i {
@@ -276,23 +293,24 @@ main {
         opacity: 0; /* Initialement, l'icône est cachée */
         transition: opacity 0.5s ease-in-out;
       }
-      
+
       &:hover .carre-vert {
         transform: translateX(-4rem); /* Fait apparaître le carré vert en le déplaçant de 10rem */
       }
-      
+
       &:hover .prix {
-        transform: translateX(-4rem);  /* Déplace le prix vers la gauche */
+        transform: translateX(-4rem); /* Déplace le prix vers la gauche */
       }
+
       &:hover .carre-vert i {
         opacity: 1; /* Affiche l'icône au survol */
       }
-      &:hover .circle {
-        transform: rotate(360deg); 
-      }
 
-      
+      &:hover .circle {
+        transform: rotate(360deg);
+      }
     }
+
     .boutton-commander {
       width: 186px;
       height: 50px;
@@ -310,6 +328,11 @@ main {
       line-height: 18.75px;
       text-align: center;
       color: $color-inverse;
+      box-shadow: 0 4px 6px rgba(147, 86, 220, 0.5), 0 1px 3px rgba(147, 86, 220, 0.3);
+    }
+
+    .boutton-commander:hover {
+      box-shadow: 0 0px 20px rgba(147, 86, 220, 0.7), 0 4px 6px rgba(147, 86, 220, 0.5);
     }
   }
 }
@@ -322,6 +345,7 @@ footer {
   padding: 20px;
   width: 100vw;
   margin-top: 0px;
+
   h2 {
     font-family: Shrikhand;
     font-size: 18px;
@@ -331,6 +355,7 @@ footer {
     color: $color-inverse;
     margin-top: 0;
   }
+
   ul {
     list-style: none;
     @include pm-left-0;
@@ -339,6 +364,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centre horizontalement les éléments de la liste */
+
     li {
       font-family: Roboto;
       font-size: 16px;
@@ -353,6 +379,7 @@ footer {
         @include pm-left-0;
         text-decoration: none;
       }
+
       .fa-solid {
         color: $color-inverse;
         margin-right: 3px;
@@ -363,16 +390,6 @@ footer {
 
 /* Styles pour les desktops */
 @media (min-width: 1024px) {
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-  }
-
-  .logo,
-  .header-title {
-    font-family: 'Shrikhand', cursive;
-  }
-
   .header {
     position: relative;
     text-align: center;
@@ -380,12 +397,14 @@ footer {
     align-items: center;
     justify-content: center;
     margin-bottom: 2em !important;
+
     .back-arrow {
       position: relative;
       font-size: 2rem; /* Ajustez la taille selon vos besoins */
       text-decoration: none;
       margin-bottom: -15px;
     }
+
     .header-title {
       font-style: italic;
       font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
@@ -401,18 +420,7 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    img {
-      width: 100%; /* Ajustez cette valeur pour changer la largeur */
-      height: 275px;
-      object-fit: cover;
-      box-sizing: border-box;
-      margin: 0;
-      position: absolute; /* Ajouté */
-      top: 70px; /* Ajustez si nécessaire */
-      left: 50%; /* Centré horizontalement */
-      transform: translateX(-50%); /* Centré horizontalement */
-      z-index: -1;
-    }
+
     .restaurant-classe {
       width: 80%;
       height: auto !important;
@@ -444,6 +452,7 @@ footer {
           font-weight: 400;
           line-height: 40.82px;
         }
+
         .fa-heart {
           position: absolute !important;
           top: 32px;
@@ -453,17 +462,20 @@ footer {
           cursor: pointer;
           transition: color 0.3s ease;
         }
+
         .heart-toggle {
           display: none;
         }
+
         .heart-toggle:checked + .fa-heart {
           color: transparent;
         }
+
         .heart-toggle:checked + .fa-heart::before {
           content: '\f004'; /* Unicode for filled heart */
           font-family: 'Font Awesome 5 Free';
           font-weight: 900; /* Font weight for solid icon */
-          background: linear-gradient(193.33deg,$primary -11.44%,$secondary 123.93%);
+          background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           position: absolute;
@@ -473,6 +485,7 @@ footer {
           height: 100%;
         }
       }
+
       h3 {
         font-family: Roboto;
         font-size: 16px;
@@ -481,16 +494,18 @@ footer {
         text-align: left;
         margin-bottom: 5px;
       }
+
       .repas-titre {
         margin-right: 700px !important;
-        
       }
+
       .line-bar {
         width: 35px;
         border: 3px 0px 0px 0px;
         border: 2px solid #99e2d0;
         margin-right: 700px !important;
       }
+
       .rectangle {
         display: flex !important;
         flex-direction: column !important;
@@ -500,18 +515,21 @@ footer {
         background-color: #ffffff;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         font-family: 'Roboto', sans-serif;
-        width: 70% !important ;
+        width: 70% !important;
         position: relative;
+
         .rectangle-texte-1 {
           font-size: 18px;
           font-weight: 500;
           margin-bottom: 5px;
         }
+
         .rectangle-texte-2 {
           font-size: 15.04px;
           font-weight: 300;
           margin-bottom: 10px;
         }
+
         .prix {
           font-size: 18px;
           font-weight: 700;
@@ -521,6 +539,7 @@ footer {
           color: #000;
         }
       }
+
       .boutton-commander {
         width: 186px;
         height: 50px;
@@ -551,6 +570,7 @@ footer {
     padding: 25px 30px 25px 30px;
     background-color: $footer-color;
     display: flex;
+
     h2 {
       font-family: Shrikhand;
       font-size: 18px;
@@ -562,16 +582,19 @@ footer {
       padding-right: 60px;
       padding-top: 10px;
     }
+
     .fa-solid {
       color: $color-inverse;
       margin-right: 3px;
     }
+
     ul {
       list-style: none;
       flex-direction: row;
       gap: 2em;
       @include pm-left-0;
       padding-bottom: 10px;
+
       li {
         font-family: Roboto;
         font-size: 16px;
@@ -581,6 +604,7 @@ footer {
         color: $color-inverse;
         line-height: 30px;
         flex: none;
+
         a {
           color: $color-inverse;
           @include pm-left-0;

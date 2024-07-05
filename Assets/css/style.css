@@ -94,6 +94,10 @@ main .boutton-explorer-nos-restau {
   display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
   font-weight: bold;
   margin-top: -80px;
+  box-shadow: 0 4px 6px rgba(147, 86, 220, 0.5), 0 1px 3px rgba(147, 86, 220, 0.3);
+}
+main .boutton-explorer-nos-restau:hover {
+  box-shadow: 0 0px 20px rgba(147, 86, 220, 0.7), 0 4px 6px rgba(147, 86, 220, 0.5);
 }
 
 .fonctionnement {
@@ -262,14 +266,16 @@ main .boutton-explorer-nos-restau {
 .restaurants .cards-container .card-restaurants .heart-checkbox {
   display: none; /* Cache la checkbox */
 }
-.restaurants .cards-container .card-restaurants .heart-checkbox:hover + .fa-heart {
+.restaurants .cards-container .card-restaurants .heart-checkbox:hover + .fa-heart,
+.restaurants .cards-container .card-restaurants .heart-checkbox:checked + .fa-heart {
   color: transparent;
   background-color: linear-gradient(45deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-right: 22px;
 }
-.restaurants .cards-container .card-restaurants .heart-checkbox:hover + .fa-heart::before {
+.restaurants .cards-container .card-restaurants .heart-checkbox:hover + .fa-heart::before,
+.restaurants .cards-container .card-restaurants .heart-checkbox:checked + .fa-heart::before {
   content: "\f004"; /* Code du coeur pour FontAwesome */
   font-family: "Font Awesome 5 Free"; /* Assurez-vous que la bonne version est utilisée */
   font-weight: 900; /* Assurez-vous que la bonne version est utilisée */
@@ -508,7 +514,7 @@ body {
     transform: translateY(0);
   }
 }
-/* Animation aparrition progressive */
+/* Animation apparition progressive */
 .restaurant-classe .rectangle {
   opacity: 0;
   animation: fadeIn 3s forwards;
@@ -719,6 +725,10 @@ main .restaurant-classe .boutton-commander {
   line-height: 18.75px;
   text-align: center;
   color: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(147, 86, 220, 0.5), 0 1px 3px rgba(147, 86, 220, 0.3);
+}
+main .restaurant-classe .boutton-commander:hover {
+  box-shadow: 0 0px 20px rgba(147, 86, 220, 0.7), 0 4px 6px rgba(147, 86, 220, 0.5);
 }
 
 footer {
@@ -771,14 +781,6 @@ footer ul li .fa-solid {
 
 /* Styles pour les desktops */
 @media (min-width: 1024px) {
-  body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-  }
-  .logo,
-  .header-title {
-    font-family: "Shrikhand", cursive;
-  }
   .header {
     position: relative;
     text-align: center;
@@ -806,19 +808,6 @@ footer ul li .fa-solid {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-  }
-  main img {
-    width: 100%; /* Ajustez cette valeur pour changer la largeur */
-    height: 275px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    box-sizing: border-box;
-    margin: 0;
-    position: absolute; /* Ajouté */
-    top: 70px; /* Ajustez si nécessaire */
-    left: 50%; /* Centré horizontalement */
-    transform: translateX(-50%); /* Centré horizontalement */
-    z-index: -1;
   }
   main .restaurant-classe {
     width: 80%;

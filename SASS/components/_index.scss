@@ -4,7 +4,6 @@ body {
   width: 100vw;
   overflow-x: hidden;
 
-
   a {
     text-decoration: none;
   }
@@ -21,6 +20,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
   .header-title {
     font-style: italic;
     font-family: 'Shrikhand', cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
@@ -48,6 +48,7 @@ main {
     padding: 10px 0;
     gap: 1em;
   }
+
   .reservez-découvrez-txt {
     background-color: $grey-color-section;
     height: 260px;
@@ -56,6 +57,7 @@ main {
     flex-direction: column;
     align-items: center; /* Centre les éléments horizontalement */
     justify-content: center; /* Centre les éléments verticalement */
+
     .réservez-le-menu-texte {
       font-size: 24px;
       font-weight: 700;
@@ -65,6 +67,7 @@ main {
       max-width: 240px;
       margin-top: -50px !important;
     }
+
     .découvrez-des-restau-texte {
       display: flex;
       flex-direction: column;
@@ -74,15 +77,17 @@ main {
       margin-top: -30px;
     }
   }
+
   .a {
     text-decoration: none;
   }
+
   .boutton-explorer-nos-restau {
     width: fit-content;
     padding: 0 1em;
     height: 50px;
     border-radius: 25px;
-    background: linear-gradient(193.33deg,$primary -11.44%,$secondary 123.93%);
+    background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
     border-color: $secondary;
     color: $color-inverse;
     font-size: 16px;
@@ -93,6 +98,11 @@ main {
     display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
     font-weight: bold;
     margin-top: -80px;
+    box-shadow: 0 4px 6px rgba(147, 86, 220, 0.5), 0 1px 3px rgba(147, 86, 220, 0.3);
+  }
+
+  .boutton-explorer-nos-restau:hover {
+    box-shadow: 0 0px 20px rgba(147, 86, 220, 0.7), 0 4px 6px rgba(147, 86, 220, 0.5);
   }
 }
 
@@ -104,6 +114,7 @@ main {
   align-items: center;
   position: relative !important;
   padding-top: 70px;
+
   .fonctionnement-texte {
     display: flex;
     flex-direction: column;
@@ -114,10 +125,12 @@ main {
     left: 55px;
     position: absolute !important;
   }
+
   .rectangle-button-container {
     display: flex; /* Transforme les boutons en flexbox */
     justify-content: center; /* Centre les boutons horizontalement */
     align-items: center; /* Centre les boutons verticalement */
+
     #rectangle-fonctionnement-section {
       width: 80vw;
       height: 72.38px;
@@ -128,38 +141,45 @@ main {
       color: $grey-color-section;
       border-color: $grey-color-section;
       position: relative;
+
       .élément-nombre {
         color: $primary;
         text-align: left;
         position: absolute;
+
         .fa-circle {
           margin-left: -15px;
           margin-top: -1px;
         }
+
         .fa-stack-1x {
           margin-top: 3px;
           color: $color-inverse;
           margin-left: -5px;
         }
       }
+
       .mobile-screen-button {
         color: $color-logo-btn-fonctionnement;
         text-align: left;
         margin-bottom: -15px;
         margin-left: 30px;
       }
+
       .list-ul {
         color: $color-logo-btn-fonctionnement;
         text-align: left;
         margin-bottom: -15px;
         margin-left: 30px;
       }
+
       .store {
         color: $color-logo-btn-fonctionnement;
         text-align: left;
         margin-bottom: -15px;
         margin-left: 30px;
       }
+
       .txt-fonctionnement-section {
         font-family: Roboto;
         font-size: 16px;
@@ -180,6 +200,7 @@ main {
   flex-direction: column;
   align-items: center;
   position: relative;
+
   .restaurants-texte {
     font-size: 24px;
     font-weight: 700;
@@ -187,15 +208,18 @@ main {
     left: 55px;
     position: absolute;
   }
+
   .cards-container {
     display: flex;
     flex-direction: column; /* Change pour une disposition en colonne */
     align-items: center; /* Centre les cartes horizontalement */
     gap: 30px; /* Ajoute un espace entre les cartes */
     padding-top: 60px;
+
     .link {
       text-decoration: none;
     }
+
     .card-restaurants {
       width: 80vw;
       height: 231px;
@@ -210,6 +234,7 @@ main {
       margin-left: auto;
       margin-right: auto;
       position: relative;
+
       img {
         width: 100%;
         height: 150px;
@@ -221,6 +246,7 @@ main {
         z-index: 100;
         margin-top: -70px;
       }
+
       .nouveau-badge {
         position: absolute;
         top: 10px;
@@ -233,6 +259,7 @@ main {
         font-weight: bold;
         z-index: 100;
       }
+
       .card-texte-restaurant-1 {
         color: $black-color;
         font-weight: 700;
@@ -241,11 +268,13 @@ main {
         padding-left: 0.5em;
         margin-top: 150px;
       }
+
       .card-texte-restaurant-2 {
         color: $black-color;
         text-decoration: none;
         padding-left: 0.5em;
       }
+
       .fa-heart {
         position: absolute;
         top: 180px;
@@ -255,17 +284,22 @@ main {
         cursor: pointer;
         transition: color 0.3s ease, background 0.3s ease;
       }
+
       .heart-checkbox {
         display: none; /* Cache la checkbox */
       }
-      .heart-checkbox:hover + .fa-heart {
+
+      .heart-checkbox:hover + .fa-heart,
+      .heart-checkbox:checked + .fa-heart {
         color: transparent;
         background-color: linear-gradient(45deg, #9356DC, #FF79DA);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         padding-right: 22px;
       }
-      .heart-checkbox:hover + .fa-heart::before {
+
+      .heart-checkbox:hover + .fa-heart::before,
+      .heart-checkbox:checked + .fa-heart::before {
         content: "\f004"; /* Code du coeur pour FontAwesome */
         font-family: "Font Awesome 5 Free"; /* Assurez-vous que la bonne version est utilisée */
         font-weight: 900; /* Assurez-vous que la bonne version est utilisée */
@@ -287,6 +321,7 @@ footer {
   align-items: flex-start;
   background-color: $footer-color;
   width: 100%;
+
   h2 {
     font-family: Shrikhand;
     font-size: 18px;
@@ -296,6 +331,7 @@ footer {
     color: $color-inverse;
     margin-left: 20px;
   }
+
   ul {
     list-style: none;
     @include pm-left-0;
@@ -305,12 +341,15 @@ footer {
     flex-direction: column;
     align-items: center; /* Centre horizontalement les éléments de la liste */
   }
+
   .fa-utensils {
     margin-left: 20px;
   }
+
   .fa-handshake-angle {
     margin-left: -20px;
   }
+
   .ligne-1 {
     font-family: Roboto;
     font-size: 16px;
@@ -321,9 +360,9 @@ footer {
     line-height: 30px;
     margin-left: 5px;
   }
+
   .ligne-2 {
     font-family: Roboto;
-
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
@@ -332,6 +371,7 @@ footer {
     line-height: 30px;
     margin-left: 5px;
   }
+
   .ligne-3 {
     font-family: Roboto;
     font-size: 16px;
@@ -342,6 +382,7 @@ footer {
     line-height: 30px;
     margin-left: -60px;
   }
+
   .ligne-4 {
     font-family: Roboto;
     font-size: 16px;
@@ -352,11 +393,13 @@ footer {
     line-height: 30px;
     margin-left: -125px;
   }
+
   a {
     color: $color-inverse;
     @include pm-left-0;
     text-decoration: none;
   }
+
   .fa-solid {
     color: $color-inverse;
     margin-right: 3px;
@@ -369,26 +412,32 @@ footer {
     max-width: 1000px !important;
     margin-top: -60px;
   }
+
   .fonctionnement {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     .fonctionnement-texte {
       top: 85px;
       left: 90px;
     }
   }
+
   .rectangle-button-container {
     width: 26%;
     padding-left: 20px;
     padding-bottom: 120px;
+
     .fa-circle {
       left: -3px !important;
     }
+
     .fa-stack-1x {
       left: -3px !important;
     }
   }
+
   .restaurants {
     margin-top: -60px;
     height: auto;
@@ -397,35 +446,42 @@ footer {
     display: flex;
     flex-direction: column;
     position: relative;
+
     .restaurants-texte {
       left: 100px;
     }
+
     .cards-container {
       display: grid !important;
       grid-template-columns: repeat(2, 1fr) !important;
       grid-template-rows: repeat(2, 1fr) !important;
       justify-content: center !important;
       align-items: center !important;
+
       .card-restaurants {
         width: 40vw !important;
-      } 
-    }  
+      }
+    }
   }
+
   footer {
     flex-direction: row-reverse;
     align-items: flex-end;
+
     h2 {
       margin-left: -80px;
-    } 
-      .fa-utensils .ligne-1 {
-        margin-right: 150px !important;
-      }
-      .ligne-3 {
-        margin-left: -14px;
-      }
-      .ligne-4 {
-        margin-left: -20px;
-      }
+    }
+
+    .fa-utensils .ligne-1 {
+      margin-right: 150px !important;
+    }
+
+    .ligne-3 {
+      margin-left: -14px;
+    }
+
+    .ligne-4 {
+      margin-left: -20px;
+    }
   }
-  
 }
