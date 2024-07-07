@@ -24,7 +24,7 @@ header {
 }
 header .header-title {
   font-style: italic;
-  font-family: "Shrikhand", cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+  font-family: "Shrikhand", cursive;
   font-size: 3rem;
   text-align: center;
   margin: 0 auto;
@@ -40,11 +40,11 @@ main {
 }
 main .paris-section {
   background-color: #EAEAEA;
-  width: 100%; /* Ajustez la largeur selon vos besoins */
-  height: 50px; /* Ajustez la hauteur selon vos besoins */
+  width: 100%;
+  height: 50px;
   display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
+  justify-content: center;
+  align-items: center;
   padding: 10px 0;
   gap: 1em;
 }
@@ -54,15 +54,15 @@ main .reservez-découvrez-txt {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centre les éléments horizontalement */
-  justify-content: center; /* Centre les éléments verticalement */
+  align-items: center;
+  justify-content: center;
 }
 main .reservez-découvrez-txt .réservez-le-menu-texte {
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
-  text-align: center; /* Centrer le texte */
-  margin-bottom: 50px; /* Ajustez la marge selon vos besoins */
+  text-align: center;
+  margin-bottom: 50px;
   max-width: 240px;
   margin-top: -50px !important;
 }
@@ -88,10 +88,10 @@ main .boutton-explorer-nos-restau {
   color: #FFFFFF;
   font-size: 16px;
   font-weight: bold;
-  margin-top: 100px; /* Réduisez l'espacement entre le bouton et le texte précédent */
-  margin-left: auto; /* Centrez horizontalement */
-  margin-right: auto; /* Centrez horizontalement */
-  display: block; /* Assurez-vous que le bouton occupe tout l'espace disponible */
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   font-weight: bold;
   margin-top: -80px;
   box-shadow: 0 4px 6px rgba(147, 86, 220, 0.5), 0 1px 3px rgba(147, 86, 220, 0.3);
@@ -120,9 +120,9 @@ main .boutton-explorer-nos-restau:hover {
   position: absolute !important;
 }
 .fonctionnement .rectangle-button-container {
-  display: flex; /* Transforme les boutons en flexbox */
-  justify-content: center; /* Centre les boutons horizontalement */
-  align-items: center; /* Centre les boutons verticalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .fonctionnement .rectangle-button-container #rectangle-fonctionnement-section {
   width: 80vw;
@@ -194,9 +194,9 @@ main .boutton-explorer-nos-restau:hover {
 }
 .restaurants .cards-container {
   display: flex;
-  flex-direction: column; /* Change pour une disposition en colonne */
-  align-items: center; /* Centre les cartes horizontalement */
-  gap: 30px; /* Ajoute un espace entre les cartes */
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
   padding-top: 60px;
 }
 .restaurants .cards-container .link {
@@ -264,21 +264,20 @@ main .boutton-explorer-nos-restau:hover {
   transition: color 0.3s ease, background 0.3s ease;
 }
 .restaurants .cards-container .card-restaurants .heart-checkbox {
-  display: none; /* Cache la checkbox */
+  display: none;
 }
 .restaurants .cards-container .card-restaurants .heart-checkbox:hover + .fa-heart,
 .restaurants .cards-container .card-restaurants .heart-checkbox:checked + .fa-heart {
   color: transparent;
-  background-color: linear-gradient(45deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-right: 22px;
 }
 .restaurants .cards-container .card-restaurants .heart-checkbox:hover + .fa-heart::before,
 .restaurants .cards-container .card-restaurants .heart-checkbox:checked + .fa-heart::before {
-  content: "\f004"; /* Code du coeur pour FontAwesome */
-  font-family: "Font Awesome 5 Free"; /* Assurez-vous que la bonne version est utilisée */
-  font-weight: 900; /* Assurez-vous que la bonne version est utilisée */
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   position: absolute;
   color: transparent;
   background: linear-gradient(45deg, #9356DC, #FF79DA);
@@ -300,7 +299,7 @@ footer h2 {
   font-size: 18px;
   font-style: italic;
   font-weight: 400;
-  text-align: center; /* Centre le texte horizontalement */
+  text-align: center;
   color: #FFFFFF;
   margin-left: 20px;
 }
@@ -308,11 +307,11 @@ footer ul {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
-  padding: 0; /* Enlève le padding par défaut */
-  margin: 0; /* Enlève la marge par défaut */
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centre horizontalement les éléments de la liste */
+  align-items: center;
 }
 footer .fa-utensils {
   margin-left: 20px;
@@ -325,7 +324,7 @@ footer .ligne-1 {
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
-  text-align: center; /* Centre le texte horizontalement */
+  text-align: center;
   color: #FFFFFF;
   line-height: 30px;
   margin-left: 5px;
@@ -335,7 +334,7 @@ footer .ligne-2 {
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
-  text-align: center; /* Centre le texte horizontalement */
+  text-align: center;
   color: #FFFFFF;
   line-height: 30px;
   margin-left: 5px;
@@ -345,7 +344,7 @@ footer .ligne-3 {
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
-  text-align: center; /* Centre le texte horizontalement */
+  text-align: center;
   color: #FFFFFF;
   line-height: 30px;
   margin-left: -60px;
@@ -355,7 +354,7 @@ footer .ligne-4 {
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
-  text-align: center; /* Centre le texte horizontalement */
+  text-align: center;
   color: #FFFFFF;
   line-height: 30px;
   margin-left: -125px;
@@ -457,13 +456,13 @@ body {
 }
 .header .back-arrow {
   position: relative;
-  font-size: 1.5rem; /* Ajustez la taille selon vos besoins */
+  font-size: 1.5rem;
   text-decoration: none;
   margin-bottom: -15px;
 }
 .header .header-title {
   font-style: italic;
-  font-family: "Shrikhand", cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+  font-family: "Shrikhand", cursive;
   font-size: 2rem;
   text-align: center;
   margin: 0 auto;
@@ -473,15 +472,12 @@ body {
 /* Animation page loader */
 .loader {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
 }
 
 .loader.hidden {
@@ -493,9 +489,10 @@ body {
   border-radius: 50%;
   border-top: 16px solid #9356DC;
   width: 120px;
-  height: 120px; /* Safari */
+  height: 120px;
   animation: spin 2s linear infinite;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -504,6 +501,7 @@ body {
     transform: rotate(360deg);
   }
 }
+/* Animation apparition progressive */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -514,7 +512,6 @@ body {
     transform: translateY(0);
   }
 }
-/* Animation apparition progressive */
 .restaurant-classe .rectangle {
   opacity: 0;
   animation: fadeIn 3s forwards;
@@ -541,16 +538,16 @@ main {
   min-width: 375px;
 }
 main img {
-  width: 100%; /* Ajustez cette valeur pour changer la largeur */
+  width: 100%;
   height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
   box-sizing: border-box;
   margin: 0;
-  position: absolute; /* Ajouté */
-  top: 70px; /* Ajustez si nécessaire */
-  left: 50%; /* Centré horizontalement */
-  transform: translateX(-50%); /* Centré horizontalement */
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
 }
 main .restaurant-classe {
@@ -560,7 +557,7 @@ main .restaurant-classe {
   padding: 20px;
   border-radius: 50px 50px 0 0;
   margin-bottom: -80px;
-  position: relative; /* Assurez que la section est positionnée correctement */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -574,7 +571,7 @@ main .restaurant-classe .title-heart-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* Espace entre le titre et l'icône du cœur */
+  gap: 10px;
   position: relative;
 }
 main .restaurant-classe .title-heart-container h2 {
@@ -586,16 +583,16 @@ main .restaurant-classe .title-heart-container h2 {
   padding-right: 70px !important;
 }
 main .restaurant-classe .title-heart-container .fa-heart {
-  position: absolute !important; /* Position absolue pour placer l'icône de cœur */
-  top: 32px; /* Ajustez cette valeur pour déplacer l'icône verticalement */
-  right: 0px !important; /* Ajustez cette valeur pour déplacer l'icône horizontalement */
+  position: absolute !important;
+  top: 32px;
+  right: 0px !important;
   color: #000000;
   font-size: 22px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 main .restaurant-classe .title-heart-container .heart-checkbox {
-  display: none; /* Cache la checkbox */
+  display: none;
 }
 main .restaurant-classe .title-heart-container .heart-checkbox:hover + .fa-heart {
   color: transparent;
@@ -605,9 +602,9 @@ main .restaurant-classe .title-heart-container .heart-checkbox:hover + .fa-heart
   padding-right: 22px;
 }
 main .restaurant-classe .title-heart-container .heart-checkbox:hover + .fa-heart::before {
-  content: "\f004"; /* Code du coeur pour FontAwesome */
-  font-family: "Font Awesome 5 Free"; /* Assurez-vous que la bonne version est utilisée */
-  font-weight: 900; /* Assurez-vous que la bonne version est utilisée */
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   position: absolute;
   color: transparent;
   background: linear-gradient(45deg, #9356dc, #ff79da);
@@ -645,8 +642,8 @@ main .restaurant-classe .rectangle {
   width: 95% !important;
   position: relative;
   overflow: hidden;
-  cursor: pointer; /* Ajout pour rendre le rectangle cliquable */
-  transition: all 0.5s ease-in-out; /* Ajout pour une transition fluide */
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 main .restaurant-classe .rectangle .rectangle-texte-1 {
   font-size: 17px;
@@ -665,16 +662,16 @@ main .restaurant-classe .rectangle .prix {
   right: 20px;
   top: 40px;
   color: #000;
-  transition: transform 0.5s ease-in-out; /* Animer le déplacement du prix */
+  transition: transform 0.5s ease-in-out;
 }
 main .restaurant-classe .rectangle .carre-vert {
   position: absolute;
   top: 0;
-  right: -100%; /* Cache le carré vert hors de l'écran */
+  right: -100%;
   width: 100%;
   height: 100%;
   background-color: #99e2d0;
-  transition: transform 0.5s ease-in-out; /* Transition pour l'animation */
+  transition: transform 0.5s ease-in-out;
 }
 main .restaurant-classe .rectangle .circle {
   width: 2rem;
@@ -697,17 +694,17 @@ main .restaurant-classe .rectangle .circle i {
 main .restaurant-classe .rectangle .carre-vert i {
   color: #99e2d0;
   font-size: 24px;
-  opacity: 0; /* Initialement, l'icône est cachée */
+  opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 main .restaurant-classe .rectangle:hover .carre-vert {
-  transform: translateX(-4rem); /* Fait apparaître le carré vert en le déplaçant de 10rem */
+  transform: translateX(-4rem);
 }
 main .restaurant-classe .rectangle:hover .prix {
-  transform: translateX(-4rem); /* Déplace le prix vers la gauche */
+  transform: translateX(-4rem);
 }
 main .restaurant-classe .rectangle:hover .carre-vert i {
-  opacity: 1; /* Affiche l'icône au survol */
+  opacity: 1;
 }
 main .restaurant-classe .rectangle:hover .circle {
   transform: rotate(360deg);
@@ -734,7 +731,7 @@ main .restaurant-classe .boutton-commander:hover {
 footer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Centre verticalement le contenu */
+  justify-content: flex-start;
   background-color: #353535;
   padding: 20px;
   width: 100vw;
@@ -745,7 +742,7 @@ footer h2 {
   font-size: 18px;
   font-style: italic;
   font-weight: 400;
-  text-align: center; /* Centre le texte horizontalement */
+  text-align: center;
   color: #FFFFFF;
   margin-top: 0;
 }
@@ -753,18 +750,18 @@ footer ul {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
-  padding: 0; /* Enlève le padding par défaut */
-  margin: 0; /* Enlève la marge par défaut */
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centre horizontalement les éléments de la liste */
+  align-items: center;
 }
 footer ul li {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
-  text-align: center; /* Centre le texte horizontalement */
+  text-align: center;
   color: #FFFFFF;
   line-height: 30px;
 }
@@ -791,13 +788,13 @@ footer ul li .fa-solid {
   }
   .header .back-arrow {
     position: relative;
-    font-size: 2rem; /* Ajustez la taille selon vos besoins */
+    font-size: 2rem;
     text-decoration: none;
     margin-bottom: -15px;
   }
   .header .header-title {
     font-style: italic;
-    font-family: "Shrikhand", cursive; /* Assurez-vous que le titre utilise la police Shrikhand */
+    font-family: "Shrikhand", cursive;
     font-size: 2rem;
     text-align: center;
     margin: 0 auto;
@@ -817,7 +814,7 @@ footer ul li .fa-solid {
     border-radius: 30px;
     margin-top: 140px;
     margin-bottom: -80px;
-    position: relative; /* Assurez que la section est positionnée correctement */
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -830,7 +827,7 @@ footer ul li .fa-solid {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Espace entre le titre et l'icône du cœur */
+    gap: 10px;
     position: relative !important;
   }
   main .restaurant-classe .title-heart-container h2 {
@@ -856,9 +853,9 @@ footer ul li .fa-solid {
     color: transparent;
   }
   main .restaurant-classe .title-heart-container .heart-toggle:checked + .fa-heart::before {
-    content: "\f004"; /* Unicode for filled heart */
+    content: "\f004";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900; /* Font weight for solid icon */
+    font-weight: 900;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
