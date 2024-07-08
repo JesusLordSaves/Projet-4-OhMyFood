@@ -1,0 +1,2 @@
+https://github.com/JesusLordSaves/Projet-4-OhMyFood.git (Lien Repo GIT HUB) (Aller dans branche "master" pour voir le travail)
+http://127.0.0.1:5501/index.html (Lien du site) (Ouvrir fichier vs code pour accéder à cette page)
