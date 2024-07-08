@@ -687,24 +687,15 @@ main .restaurant-classe .rectangle .circle {
 }
 main .restaurant-classe .rectangle .circle i {
   color: #99e2d0;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 5px;
   margin-left: 3px;
-}
-main .restaurant-classe .rectangle .carre-vert i {
-  color: #99e2d0;
-  font-size: 24px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
 main .restaurant-classe .rectangle:hover .carre-vert {
   transform: translateX(-4rem);
 }
 main .restaurant-classe .rectangle:hover .prix {
   transform: translateX(-4rem);
-}
-main .restaurant-classe .rectangle:hover .carre-vert i {
-  opacity: 1;
 }
 main .restaurant-classe .rectangle:hover .circle {
   transform: rotate(360deg);

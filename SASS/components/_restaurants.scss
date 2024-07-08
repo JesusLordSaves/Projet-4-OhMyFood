@@ -272,28 +272,18 @@ main {
 
       .circle i {
         color: #99e2d0;
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin-top: 5px;
         margin-left: 3px;
       }
 
-      .carre-vert i {
-        color: #99e2d0;
-        font-size: 24px;
-        opacity: 0; 
-        transition: opacity 0.5s ease-in-out;
-      }
-
+      
       &:hover .carre-vert {
         transform: translateX(-4rem); 
       }
 
       &:hover .prix {
         transform: translateX(-4rem); 
-      }
-
-      &:hover .carre-vert i {
-        opacity: 1; 
       }
 
       &:hover .circle {
