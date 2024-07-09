@@ -285,11 +285,11 @@ main {
         cursor: pointer;
         transition: color 0.3s ease, background 0.3s ease;
       }
-
+      
       .heart-checkbox {
         display: none; 
       }
-
+      
       .heart-checkbox:hover + .fa-heart,
       .heart-checkbox:checked + .fa-heart {
         color: transparent;
@@ -297,7 +297,7 @@ main {
         -webkit-text-fill-color: transparent;
         padding-right: 22px;
       }
-
+      
       .heart-checkbox:hover + .fa-heart::before,
       .heart-checkbox:checked + .fa-heart::before { 
         content: "\f004"; 
@@ -305,10 +305,22 @@ main {
         font-weight: 900; 
         position: absolute;
         color: transparent;
-        background: linear-gradient(45deg, #9356DC, #FF79DA);
+        background: linear-gradient(0deg, #9356DC, #FF79DA); /* Change direction of gradient */
+        background-size: 100% 200% !important;
+        background-position: 0 100% !important;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px transparent;
+        -webkit-text-fill-color: transparent !important;
+        -webkit-text-stroke: 1px transparent !important;
+        animation: fillGradient 15s forwards !important; /* Animation to fill the gradient */
+      }
+      
+      @keyframes fillGradient {
+        from {
+          background-position: 0 100% !important;
+        }
+        to {
+          background-position: 0 0 !important;
+        }
       }
     }
   }
@@ -515,6 +527,5 @@ footer {
   .txt-fonctionnement-section-3 {
    width: 145px !important;
    padding-left: 40px;
- 
   }
  }
