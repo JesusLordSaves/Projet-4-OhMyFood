@@ -167,7 +167,9 @@ main .boutton-explorer-nos-restau:hover {
   margin-bottom: -15px;
   margin-left: 30px;
 }
-.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .txt-fonctionnement-section {
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .txt-fonctionnement-section-1,
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .txt-fonctionnement-section-2,
+.fonctionnement .rectangle-button-container #rectangle-fonctionnement-section .txt-fonctionnement-section-3 {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -435,6 +437,35 @@ footer .fa-solid {
     margin-left: -20px;
   }
 }
+/* Media query pour les écrans entre 1050px et 768px */
+@media (max-width: 1050px) and (min-width: 768px) {
+  .txt-fonctionnement-section-1 {
+    width: 145px !important;
+    padding-left: 40px;
+  }
+  .txt-fonctionnement-section-2 {
+    width: 145px !important;
+    padding-left: 50px;
+  }
+  .txt-fonctionnement-section-3 {
+    width: 145px !important;
+    padding-left: 40px;
+  }
+}
+@media (max-width: 350px) {
+  .txt-fonctionnement-section-1 {
+    width: 145px !important;
+    padding-left: 40px;
+  }
+  .txt-fonctionnement-section-2 {
+    width: 145px !important;
+    padding-left: 50px;
+  }
+  .txt-fonctionnement-section-3 {
+    width: 145px !important;
+    padding-left: 40px;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -535,7 +566,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  min-width: 375px;
+  min-width: 300px;
 }
 main img {
   width: 100%;
@@ -681,8 +712,8 @@ main .restaurant-classe .rectangle .circle {
   display: flex;
   top: 40px;
   position: relative;
-  margin-top: -10px;
-  margin-left: 14px;
+  margin-top: -19px;
+  margin-left: 16px;
   transition: transform 0.5s ease-in-out;
 }
 main .restaurant-classe .rectangle .circle i {
@@ -790,6 +821,10 @@ footer ul li .fa-solid {
     text-align: center;
     margin: 0 auto;
     margin-top: 0em;
+  }
+  .circle {
+    margin-top: -8px !important;
+    margin-left: 16px;
   }
   main {
     display: flex;
@@ -965,5 +1000,21 @@ footer ul li .fa-solid {
     padding-left: 0;
     margin-left: 0;
     text-decoration: none;
+  }
+}
+/* Ajustement largeur texte rectangles version mobile */
+@media (max-width: 360px) {
+  .rectangle-texte-1,
+  .rectangle-texte-2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50%; /* Ajuste cette valeur pour une réduction supplémentaire */
+  }
+  .rectangle {
+    padding-right: 50px; /* Ajoute un padding à droite pour espacer le texte du prix */
+  }
+  .prix {
+    right: 10px; /* Ajuste cette valeur si nécessaire pour espacer davantage */
   }
 }/*# sourceMappingURL=style.css.map */

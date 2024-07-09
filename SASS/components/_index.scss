@@ -179,8 +179,9 @@ main {
         margin-bottom: -15px;
         margin-left: 30px;
       }
-
-      .txt-fonctionnement-section {
+      .txt-fonctionnement-section-1,
+      .txt-fonctionnement-section-2,
+      .txt-fonctionnement-section-3 {
         font-family: Roboto;
         font-size: 16px;
         font-weight: 500;
@@ -484,3 +485,36 @@ footer {
     }
   }
 }
+
+/* Media query pour les écrans entre 1050px et 768px */
+@media (max-width: 1050px) and (min-width: 768px) {
+ .txt-fonctionnement-section-1 {
+  width: 145px !important;
+  padding-left: 40px;
+ }
+ .txt-fonctionnement-section-2 {
+  width: 145px !important;
+  padding-left: 50px;
+ }
+ .txt-fonctionnement-section-3 {
+  width: 145px !important;
+  padding-left: 40px;
+
+ }
+}
+
+@media (max-width: 350px) {
+  .txt-fonctionnement-section-1 {
+   width: 145px !important;
+   padding-left: 40px;
+  }
+  .txt-fonctionnement-section-2 {
+   width: 145px !important;
+   padding-left: 50px;
+  }
+  .txt-fonctionnement-section-3 {
+   width: 145px !important;
+   padding-left: 40px;
+ 
+  }
+ }
