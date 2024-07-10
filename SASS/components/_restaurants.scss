@@ -154,38 +154,33 @@ main {
         padding-right: 70px !important;
       }
 
-      .fa-heart {
-        position: absolute !important; 
-        top: 32px; 
-        right: 0px !important; 
-        color: #000000;
-        font-size: 22px;
+      .heart-container {
+        position: absolute;
+        display: inline-block;
         cursor: pointer;
-        transition: color 0.3s ease;
+        top: 23px;
+        right: 10px;
       }
 
       .heart-checkbox {
-        display: none; 
-      }
-
-      .heart-checkbox:hover + .fa-heart {
-        color: transparent;
-        background-color: linear-gradient(45deg, #9356dc, #ff79da);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        padding-right: 22px;
-      }
-
-      .heart-checkbox:hover + .fa-heart::before {
-        content: '\f004'; 
-        font-family: 'Font Awesome 5 Free'; 
-        font-weight: 900; 
         position: absolute;
-        color: transparent;
-        background: linear-gradient(45deg, #9356dc, #ff79da);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px transparent;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .heart-fill {
+        fill: $secondary;
+        stroke: black;
+        stroke-width: 1;
+        clip-path: inset(100% 0 0 0);
+        transition: clip-path 0.5s;
+      }
+
+      .heart-checkbox:checked + svg .heart-fill {
+        clip-path: inset(0 0 0 0);
+      }
+      .heart-checkbox:hover + svg .heart-fill {
+        clip-path: inset(0 0 0 0);
       }
     }
 
@@ -448,7 +443,7 @@ footer {
           transition: color 0.3s ease;
         }
 
-        .heart-toggle {
+        .heart-checkbox {
           display: none;
         }
 
@@ -601,7 +596,7 @@ footer {
 }
 
    /* Ajustement largeur texte rectangles version mobile */
-   @media (max-width: 360px) {
+   @media (max-width: 415px) {
     .rectangle-texte-1,
     .rectangle-texte-2 {
       white-space: nowrap;
